@@ -1,0 +1,176 @@
+/*
+Theme Name: Academia de Jose Carlos
+Theme URI: https://www.ejemplo.com
+Author: Nino
+Author URI: https://www.tusitio.com
+Description: pagina personal
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Academia de Jose Carlos
+*/
+/* Aquí puedes comenzar a escribir tus estilos CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.main-navigation {
+  display: none;
+}
+
+body {
+  background-color: rgb(238, 227, 209);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.7s;
+  z-index: 10;
+}
+
+header.abajo {
+  background: rgb(42, 42, 111);
+  padding: 15px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: rgb(42, 42, 111);
+  border-radius: 3px;
+}
+
+.logo {
+  color: rgb(237, 236, 236);
+  width: 30%;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+}
+
+.nav-link li {
+  list-style: none;
+}
+
+.nav-link a {
+  color: rgb(237, 236, 236);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-link a::after {
+  display: block;
+  width: 0;
+  height: 3px;
+  border-radius: 1px;
+  transition: width .3s;
+}
+
+.nav-link a:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px 0 5px 0;
+  border-radius: 20px;
+  background-color: rgb(241, 235, 235);
+  transition: all 1s ease;
+}
+
+.toggle .burger-line1 {
+  transform: translate(0px, 9px) rotate(-30deg);
+}
+
+.toggle .burger-line2 {
+  opacity: 0;
+}
+
+.toggle .burger-line3 {
+  transform: translate(0px, -7px) rotate(30deg);
+}
+
+.texto-404 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-link {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(42, 42, 111);
+    ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-link-activated {
+    transition: transform 0.5s ease-in;
+    transform: translateX(0%);
+  }
+
+  .nav-link li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-link {
+    width: 60%;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
