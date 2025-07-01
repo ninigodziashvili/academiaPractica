@@ -39,7 +39,7 @@ Template Name: Cursos
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.1;
+    opacity: 0.2;
     z-index: 1;
 }
 
@@ -67,6 +67,15 @@ Template Name: Cursos
 
 .cursos-primera-section a:hover {
     background-color: #eeeeee;
+}
+
+.text-expertos {
+    text-align: center;
+    font-size: 35px;
+}
+
+.moving-texts {
+    margin-top: 5em;
 }
 
 /* ✅ MEDIA QUERIES */
@@ -110,7 +119,7 @@ Template Name: Cursos
 /* MacBook Pro (13", M1, 2020) and similar */
 @media (min-width: 1280px) and (max-width: 1440px) {
     .cursos-primera-section {
-        min-height: 90vh;
+        min-height: 110vh;
     }
 }
 
@@ -133,6 +142,63 @@ Template Name: Cursos
         padding: 20px 28px;
     }
 }
+
+/* Moving text styles */
+.moving-texts {
+    margin-top: 5em;
+}
+
+.text-expertos {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.ticker-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 60px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.ticker-track {
+    display: inline-block;
+    white-space: nowrap;
+    /* animation removed here */
+    will-change: transform;
+}
+
+/* New class that adds the animation */
+.ticker-track.animate {
+    animation: scrollLeft 25s linear infinite;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 2em;
+    font-size: 2em;
+    font-weight: bold;
+    color: #222;
+    transition: color 0.4s ease, font-size 0.4s ease;
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ticker-item {
+        font-size: 1.4em;
+        padding: 0 1em;
+    }
+}
+
 </style>
 
 <section class="cursos-primera-section">
@@ -142,4 +208,54 @@ Template Name: Cursos
         <a href="#">¡Despierta tu instinto!</a>
     </div>
 </section>
+
+<section class="moving-texts">
+    <div class="text-expertos"><h1>Somos Expertos en</h1></div>
+    <div class="ticker-container">
+        <div class="ticker-track">
+            <span class="ticker-item">Tecnología</span>
+            <span class="ticker-item">Ciberseguridad</span>
+            <span class="ticker-item">Data & IA</span>
+            <span class="ticker-item">Desarrollo Web</span>
+            <span class="ticker-item">UX/UI</span>
+            <span class="ticker-item">Marketing Digital</span>
+            <span class="ticker-item">DevOps</span>
+            <span class="ticker-item">Product Management</span>
+            <span class="ticker-item">Cloud Computing</span>
+            <span class="ticker-item">Inteligencia Artificial</span>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".ticker-item");
+  const container = document.querySelector(".ticker-container");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.color = "#e91e63";
+          entry.target.style.fontSize = "2.3em";
+          setTimeout(() => {
+            entry.target.style.color = "#222";
+            entry.target.style.fontSize = "2em";
+          }, 1500);
+        }
+      });
+    },
+    {
+      root: container,
+      rootMargin: "-10% 0% -10% 0%",
+      threshold: 0.5
+    }
+  );
+
+  items.forEach(item => observer.observe(item));
+});
+</script>
+
+
+
 <?php get_footer(); ?>
