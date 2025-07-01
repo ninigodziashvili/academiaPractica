@@ -181,7 +181,7 @@ Template Name: Cursos
 }
 
 @keyframes scrollLeft {
-    0% { transform: translateX(100%); }
+    0% { transform: translateX(0%); }     /* Start visible instead of translateX(100%) */
     100% { transform: translateX(-100%); }
 }
 
@@ -204,19 +204,18 @@ Template Name: Cursos
 </section>
 
 <section class="moving-texts">
-    <div class="text-expertos"><h1>Somos Expertos en</h1></div>
+    <div class="text-expertos"><h1>Soy experto en</h1></div>
     <div class="ticker-container">
         <div class="ticker-track">
-            <span class="ticker-item">Tecnología</span>
-            <span class="ticker-item">Ciberseguridad</span>
-            <span class="ticker-item">Data & IA</span>
-            <span class="ticker-item">Desarrollo Web</span>
-            <span class="ticker-item">UX/UI</span>
-            <span class="ticker-item">Marketing Digital</span>
-            <span class="ticker-item">DevOps</span>
-            <span class="ticker-item">Product Management</span>
-            <span class="ticker-item">Cloud Computing</span>
-            <span class="ticker-item">Inteligencia Artificial</span>
+            <span class="ticker-item">Patronaje técnico</span>
+            <span class="ticker-item">Desarrollo creativo</span>
+            <span class="ticker-item">Técnicas de confección</span>
+            <span class="ticker-item">Formación de profesionales</span>
+            <span class="ticker-item">Soluciones técnicas al volumen especifico del seno</span>
+            <span class="ticker-item">Análisis de la morfología corporal</span>
+            <span class="ticker-item">Drapeados y volúmenes</span>
+            <span class="ticker-item">Estructuras interiores</span>
+            <span class="ticker-item">Sastrería y solución a las mangas</span>
         </div>
     </div>
 </section>
@@ -234,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
           setTimeout(() => {
             entry.target.style.color = "#222";
             entry.target.style.fontSize = "2em";
-          }, 1500);
+          }, 15);
         }
       });
     },
@@ -248,6 +247,4 @@ document.addEventListener("DOMContentLoaded", () => {
   items.forEach(item => observer.observe(item));
 });
 </script>
-
-
 <?php get_footer(); ?>
