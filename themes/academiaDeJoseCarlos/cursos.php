@@ -114,7 +114,7 @@ Template Name: Cursos
     font-size: 2em;
     font-weight: bold;
     color: #f0eee9;
-    transition: color 0.4s ease, transform 0.4s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     will-change: transform, color;
 }
 
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function animateHighlight() {
     const centerX = window.innerWidth / 2;
-    const maxDistance = 160; // Start highlight earlier
+    const maxDistance = 160;
 
     items.forEach(item => {
       const rect = item.getBoundingClientRect();
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (distance < maxDistance) {
         const intensity = 1 - (distance / maxDistance);
-        const scale = 1 + intensity * 0.2; // Up to 1.2x size
+        const scale = 1 + intensity * 0.2;
         item.style.color = "#d4a528";
         item.style.transform = `scale(${scale})`;
       } else {
