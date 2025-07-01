@@ -152,7 +152,7 @@ Template Name: Cursos
     text-align: center;
     font-size: 35px;
     font-weight: 700;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .ticker-container {
@@ -181,8 +181,8 @@ Template Name: Cursos
 }
 
 @keyframes scrollLeft {
-    0% { transform: translateX(0%); }     /* Start visible instead of translateX(100%) */
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
 }
 
 /* Responsive */
@@ -228,10 +228,10 @@ document.addEventListener("DOMContentLoaded", () => {
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.color = "#e91e63";
+          entry.target.style.color = "#222";
           entry.target.style.fontSize = "2.3em";
           setTimeout(() => {
-            entry.target.style.color = "#222";
+            entry.target.style.color = "#FFFFFF";
             entry.target.style.fontSize = "2em";
           }, 15);
         }
