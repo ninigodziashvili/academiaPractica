@@ -168,12 +168,6 @@ Template Name: Cursos
 .ticker-track {
     display: inline-block;
     white-space: nowrap;
-    /* animation removed here */
-    will-change: transform;
-}
-
-/* New class that adds the animation */
-.ticker-track.animate {
     animation: scrollLeft 25s linear infinite;
 }
 
@@ -226,7 +220,6 @@ Template Name: Cursos
         </div>
     </div>
 </section>
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".ticker-item");
@@ -255,7 +248,6 @@ document.addEventListener("DOMContentLoaded", () => {
   items.forEach(item => observer.observe(item));
 });
 </script>
-
 
 
 <?php get_footer(); ?>
