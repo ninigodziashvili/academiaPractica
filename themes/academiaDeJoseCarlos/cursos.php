@@ -9,6 +9,7 @@ Template Name: Cursos
 <?php $image_url = get_stylesheet_directory_uri() . '/assets/img/1.png'; ?>
 
 <style>
+/* === HERO SECTION === */
 .cursos-primera-section {
     position: relative;
     width: 100%;
@@ -43,7 +44,6 @@ Template Name: Cursos
     z-index: 1;
 }
 
-/* Typography and button */
 .cursos-primera-section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -69,12 +69,7 @@ Template Name: Cursos
     background-color: #eeeeee;
 }
 
-.text-expertos {
-    color: #d4a628d5;
-    text-align: center;
-    font-size: 35px;
-}
-
+/* === MOVING TEXT SECTION === */
 .moving-texts {
     background-color: #3b3b38;
     margin-top: 5em;
@@ -82,77 +77,8 @@ Template Name: Cursos
     height: 25em;
 }
 
-/* ✅ MEDIA QUERIES */
-
-/* Tablet */
-@media (max-width: 768px) {
-    .cursos-primera-section {
-        padding: 40px 20px;
-    }
-
-    .cursos-primera-section h2 {
-        font-size: 1.8em;
-    }
-
-    .cursos-primera-section p {
-        font-size: 1em;
-    }
-
-    .cursos-primera-section a {
-        padding: 14px 18px;
-        font-size: 1em;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .cursos-primera-section h2 {
-        font-size: 1.5em;
-    }
-
-    .cursos-primera-section p {
-        font-size: 0.95em;
-    }
-
-    .cursos-primera-section a {
-        padding: 12px 16px;
-        font-size: 0.95em;
-    }
-}
-
-/* MacBook Pro (13", M1, 2020) and similar */
-@media (min-width: 1280px) and (max-width: 1440px) {
-    .cursos-primera-section {
-        min-height: 110vh;
-    }
-}
-
-/* Larger screens (iMac, 16" MBP) */
-@media (min-width: 1680px) {
-    .cursos-primera-section {
-        min-height: 85vh;
-    }
-
-    .cursos-primera-section h2 {
-        font-size: 3.2em;
-    }
-
-    .cursos-primera-section p {
-        font-size: 1.5em;
-    }
-
-    .cursos-primera-section a {
-        font-size: 1.3em;
-        padding: 20px 28px;
-    }
-}
-
-/* Moving text styles */
-.moving-texts {
-    margin-top: 5em;
-}
-
 .text-expertos {
+    color: #d4a628d5;
     text-align: center;
     font-size: 35px;
     font-weight: 700;
@@ -173,37 +99,96 @@ Template Name: Cursos
 .ticker-track {
     display: inline-block;
     white-space: nowrap;
-    animation: scrollLeft 25s linear infinite;
-}
-
-#highlight-zone {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100vh;
-  pointer-events: none;
-}
-
-.ticker-item {
-  display: inline-block;
-  padding: 0 2em;
-  font-size: 2em;
-  font-weight: bold;
-  color: #f0eee9;
-  transition: color 0.3s ease;
+    animation: scrollLeft 35s linear infinite;
+    will-change: transform;
 }
 
 @keyframes scrollLeft {
-    0% { transform: translateX(0%); }
+    0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
-/* Responsive */
+.ticker-item {
+    display: inline-block;
+    padding: 0 2em;
+    font-size: 2em;
+    font-weight: bold;
+    color: #f0eee9;
+    transition: color 0.4s ease, transform 0.4s ease;
+    will-change: transform, color;
+}
+
+#highlight-zone {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100vh;
+    pointer-events: none;
+}
+
+/* === MEDIA QUERIES === */
 @media (max-width: 768px) {
+    .cursos-primera-section {
+        padding: 40px 20px;
+    }
+
+    .cursos-primera-section h2 {
+        font-size: 1.8em;
+    }
+
+    .cursos-primera-section p {
+        font-size: 1em;
+    }
+
+    .cursos-primera-section a {
+        padding: 14px 18px;
+        font-size: 1em;
+    }
+
     .ticker-item {
         font-size: 1.4em;
         padding: 0 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .cursos-primera-section h2 {
+        font-size: 1.5em;
+    }
+
+    .cursos-primera-section p {
+        font-size: 0.95em;
+    }
+
+    .cursos-primera-section a {
+        padding: 12px 16px;
+        font-size: 0.95em;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .cursos-primera-section {
+        min-height: 110vh;
+    }
+}
+
+@media (min-width: 1680px) {
+    .cursos-primera-section {
+        min-height: 85vh;
+    }
+
+    .cursos-primera-section h2 {
+        font-size: 3.2em;
+    }
+
+    .cursos-primera-section p {
+        font-size: 1.5em;
+    }
+
+    .cursos-primera-section a {
+        font-size: 1.3em;
+        padding: 20px 28px;
     }
 }
 </style>
@@ -217,22 +202,21 @@ Template Name: Cursos
 </section>
 
 <section class="moving-texts">
-   <div class="text-expertos">
-  <h1>Especialista en</h1>
-  <div id="highlight-zone"></div> <!-- invisible marker -->
-</div>
-
+    <div class="text-expertos">
+        <h1>Especialista en</h1>
+        <div id="highlight-zone"></div>
+    </div>
     <div class="ticker-container">
         <div class="ticker-track">
-            <span class="ticker-item">Patronaje técnico</span>
-            <span class="ticker-item">Desarrollo creativo</span>
-            <span class="ticker-item">Técnicas de confección</span>
-            <span class="ticker-item">Formación de profesionales</span>
-            <span class="ticker-item">Soluciones técnicas al volumen especifico del seno</span>
-            <span class="ticker-item">Análisis de la morfología corporal</span>
-            <span class="ticker-item">Drapeados y volúmenes</span>
-            <span class="ticker-item">Estructuras interiores</span>
-            <span class="ticker-item">Sastrería y solución a las mangas</span>
+            <span class="ticker-item">Patronaje</span>
+            <span class="ticker-item">Desarrollo</span>
+            <span class="ticker-item">Técnicas</span>
+            <span class="ticker-item">Formación</span>
+            <span class="ticker-item">Soluciones</span>
+            <span class="ticker-item">Análisis</span>
+            <span class="ticker-item">Drapeados</span>
+            <span class="ticker-item">Estructuras</span>
+            <span class="ticker-item">Sastrería</span>
         </div>
     </div>
 </section>
@@ -240,24 +224,31 @@ Template Name: Cursos
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".ticker-item");
 
-  function checkHighlight() {
+  function animateHighlight() {
     const centerX = window.innerWidth / 2;
+    const maxDistance = 160; // Start highlight earlier
 
     items.forEach(item => {
       const rect = item.getBoundingClientRect();
       const itemCenter = rect.left + rect.width / 2;
+      const distance = Math.abs(centerX - itemCenter);
 
-      if (itemCenter > centerX - 30 && itemCenter < centerX + 30) {
+      if (distance < maxDistance) {
+        const intensity = 1 - (distance / maxDistance);
+        const scale = 1 + intensity * 0.2; // Up to 1.2x size
         item.style.color = "#d4a528";
+        item.style.transform = `scale(${scale})`;
       } else {
         item.style.color = "#f0eee9";
+        item.style.transform = "scale(1)";
       }
     });
 
-    requestAnimationFrame(checkHighlight);
+    requestAnimationFrame(animateHighlight);
   }
 
-  requestAnimationFrame(checkHighlight);
+  requestAnimationFrame(animateHighlight);
 });
 </script>
+
 <?php get_footer(); ?>
