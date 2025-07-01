@@ -70,12 +70,16 @@ Template Name: Cursos
 }
 
 .text-expertos {
+    color: #d4a628d5;
     text-align: center;
     font-size: 35px;
 }
 
 .moving-texts {
+    background-color: #3b3b38;
     margin-top: 5em;
+    width: 100%;
+    height: 25em;
 }
 
 /* ✅ MEDIA QUERIES */
@@ -153,6 +157,7 @@ Template Name: Cursos
     font-size: 35px;
     font-weight: 700;
     margin-bottom: 2em;
+    padding-top: 2em;
 }
 
 .ticker-container {
@@ -171,13 +176,22 @@ Template Name: Cursos
     animation: scrollLeft 25s linear infinite;
 }
 
+#highlight-zone {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100vh;
+  pointer-events: none;
+}
+
 .ticker-item {
-    display: inline-block;
-    padding: 0 2em;
-    font-size: 2em;
-    font-weight: bold;
-    color: #222;
-    transition: color 0.4s ease, font-size 0.4s ease;
+  display: inline-block;
+  padding: 0 2em;
+  font-size: 2em;
+  font-weight: bold;
+  color: #f0eee9;
+  transition: color 0.3s ease;
 }
 
 @keyframes scrollLeft {
@@ -192,7 +206,6 @@ Template Name: Cursos
         padding: 0 1em;
     }
 }
-
 </style>
 
 <section class="cursos-primera-section">
@@ -204,7 +217,11 @@ Template Name: Cursos
 </section>
 
 <section class="moving-texts">
-    <div class="text-expertos"><h1>Soy experto en</h1></div>
+   <div class="text-expertos">
+  <h1>Especialista en</h1>
+  <div id="highlight-zone"></div> <!-- invisible marker -->
+</div>
+
     <div class="ticker-container">
         <div class="ticker-track">
             <span class="ticker-item">Patronaje técnico</span>
@@ -222,29 +239,25 @@ Template Name: Cursos
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".ticker-item");
-  const container = document.querySelector(".ticker-container");
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.color = "#222";
-          entry.target.style.fontSize = "2.3em";
-          setTimeout(() => {
-            entry.target.style.color = "#FFFFFF";
-            entry.target.style.fontSize = "2em";
-          }, 15);
-        }
-      });
-    },
-    {
-      root: container,
-      rootMargin: "-10% 0% -10% 0%",
-      threshold: 0.5
-    }
-  );
+  function checkHighlight() {
+    const centerX = window.innerWidth / 2;
 
-  items.forEach(item => observer.observe(item));
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      const itemCenter = rect.left + rect.width / 2;
+
+      if (itemCenter > centerX - 30 && itemCenter < centerX + 30) {
+        item.style.color = "#d4a528";
+      } else {
+        item.style.color = "#f0eee9";
+      }
+    });
+
+    requestAnimationFrame(checkHighlight);
+  }
+
+  requestAnimationFrame(checkHighlight);
 });
 </script>
 <?php get_footer(); ?>
