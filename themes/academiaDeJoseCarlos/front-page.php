@@ -3,7 +3,7 @@
     <section class="inicio">
         <div class="fondo-video">
             <!--<video autoplay loop muted playsinline src="videos/9511251-uhd_4096_2160_25fps.mp4"></video>   -->
-            <img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3648.png" alt="">
+           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/navegacion.png" alt="My Image">
         </div>
         <div class="inicio_contenido">
             <h1>"nada es imposible hay que encontrarle la manera"</h1>
@@ -35,8 +35,7 @@
 
         <!-- Curso 1 -->
         <div class="curso" data-aos="fade-right">
-            <img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3665.png"
-                alt="Curso de Diseño de Moda Básico" />
+           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico"/>
             <div>
                 <h3>taller de patrón técnico de corset a medida (20h)</h3>
                 <strong>resuelve el volumen del seno con presición y adapta cualquier copa a la morfología de la persona.</strong>
@@ -60,8 +59,7 @@
                 </p>
                 <a href="/curso2" class="btn-acento">Más información</a>
             </div>
-            <img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3631.png"
-                alt="Curso de Patronaje Avanzado" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso claseSAM3631.png" alt="Curso de Diseño de Moda Básico"/>
         </div>
     </section>
     <section class="testimonios">
@@ -118,16 +116,12 @@
         </div>
     </section>
     <section class="galeria2">
-
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/SAM3610.png" alt="Foto 1"></div>
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/curso-de-moulage-tecnico-de-Jose-Carlos-Herrera-en-Cose-Madrid-2.webp" alt="Foto 2"></div>
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3665.png" alt="Foto 3"></div>
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/curso-de-moulage-tecnico-de-Jose-Carlos-Herrera-en-Cose-Madrid-8.webp" alt="Foto 4"></div>
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3631.png" alt="Foto 5"></div>
-
+      <div class="foto"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/1.png" alt="My Image"></div>
+      <div class="foto"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/2.webp" alt="My Image"></div>
+      <div class="foto"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/3.png" alt="My Image"></div>
+      <div class="foto"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/4.webp" alt="My Image"></div>
+      <div class="foto"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/5.png" alt="My Image"></div>
     </section>
-
-
 </main>
 
 <?php get_footer(); ?>
