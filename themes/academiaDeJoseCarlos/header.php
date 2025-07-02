@@ -7,11 +7,9 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-            </div>
-            <ul class="nav-link">
+  <header>
+        <nav class="nav" id="navbar">
+            <ul class="nav-list">
                 <li>
                     <a href="<?php echo home_url(); ?>">Blog</a>
                 </li>
@@ -28,10 +26,5 @@
                     <a href="/contacto/">Contacto</a>
                 </li>
             </ul>
-            <div class="burger">
-                <div class="burger-line1"></div>
-                <div class="burger-line2"></div>
-                <div class="burger-line3"></div>
-            </div>
         </nav>
     </header>
