@@ -37,6 +37,20 @@ Text Domain: Academia de Jose Carlos
 
 
 
+:root {
+  /* Colores base */
+  --color-fondo: #d4a528;
+  --color-fondo-buttom: #d4a628d5;
+  --color-fondo2: #2B2B28; /* Menu de navegacion */
+  --color-fondo2-hover: #3b3b38;
+  --nav-texto: #f0eee9; /* Background */
+  --nav-hover: var(--color-primario);
+
+  /* Sombra y blur */
+  --blur: blur(10px);
+  --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
