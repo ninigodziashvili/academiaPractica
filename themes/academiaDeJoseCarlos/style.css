@@ -675,6 +675,7 @@ galeria de imagenes
      padding: 2rem;
      color: var(--nav-texto);
      text-align: center;
+     margin-top: 3em;
  }
 
  #calendario h2 {

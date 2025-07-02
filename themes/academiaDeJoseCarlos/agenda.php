@@ -53,37 +53,39 @@ Template Name: Agenda
         </ul>
     </div>
 
-    <div class="mapa-wrapper">
-        <div class="mapa-container">
-            <img src="assets/img/mapa.png" alt="Mapa de España">
+<div class="mapa-wrapper">
+    <div class="mapa-container">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/agenda/mapa.png" alt="Mapa de España">
+        <?php
+        $mapPins = [
+            "madrid" => ["https://cosemadrid.com/", "cosemadrid.webp"],
+            "zaragoza" => ["https://victorialopez.eu/", "lopez.jpg"],
+            "getafe" => ["https://www.lolamyatelier.com/", "lolamy-atelier_0.jpg"],
+            "gijon" => ["https://efectoseda.com/", "efecto-seda.jpg"],
+            "merida" => ["https://marsegovia.com/", "mar-segovia.jpg"],
+            "huelva" => ["https://maps.app.goo.gl/LVLVWykKv4dahcd38", "maps.png"],
+            "sevilla" => ["https://fashionworkshop.org/", "fashion.jpg"],
+            "tarragona" => ["https://www.instagram.com/martacasanova_academia/?hl=es", "marta.jpg"],
+            "valencia" => ["https://victoriaburek.com/", "victoria.jpg"],
+            "gandia" => ["https://corteyconfeccionmila.com/", "mila.png"],
+            "vitoria" => ["https://mclassmoda.com/", "mclass.jpeg"]
+        ];
 
-            <?php
-            $mapPins = [
-                "madrid" => ["https://cosemadrid.com/", "cosemadrid.webp"],
-                "zaragoza" => ["https://victorialopez.eu/", "lopez.jpg"],
-                "getafe" => ["https://www.lolamyatelier.com/", "lolamy-atelier_0.jpg"],
-                "gijon" => ["https://efectoseda.com/", "efecto-seda.jpg"],
-                "merida" => ["https://marsegovia.com/", "mar-segovia.jpg"],
-                "huelva" => ["https://maps.app.goo.gl/LVLVWykKv4dahcd38", "maps.png"],
-                "sevilla" => ["https://fashionworkshop.org/", "fashion.jpg"],
-                "tarragona" => ["https://www.instagram.com/martacasanova_academia/?hl=es", "marta.jpg"],
-                "valencia" => ["https://victoriaburek.com/", "victoria.jpg"],
-                "gandia" => ["https://corteyconfeccionmila.com/", "mila.png"],
-                "vitoria" => ["https://mclassmoda.com/", "mclass.jpeg"]
-            ];
+        $theme_url = get_template_directory_uri();
 
-            foreach ($mapPins as $city => [$url, $image]) {
-                echo "
-                <div class=\"pin-wrapper $city\">
-                    <div class=\"pin\">📍</div>
-                    <a href=\"$url\" target=\"_blank\" class=\"globo\">
-                        <img src=\"assets/img/escuelas/$image\" alt=\"\">
-                    </a>
-                </div>";
-            }
-            ?>
-        </div>
+        foreach ($mapPins as $city => [$url, $image]) {
+            echo "
+            <div class=\"pin-wrapper $city\">
+                <div class=\"pin\">📍</div>
+                <a href=\"$url\" target=\"_blank\" class=\"globo\">
+                    <img src=\"$theme_url/assets/img/agenda/$image\" alt=\"\">
+                </a>
+            </div>";
+        }
+        ?>
     </div>
+</div>
+
 </div>
 <script>
 
