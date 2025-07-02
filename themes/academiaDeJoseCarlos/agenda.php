@@ -85,35 +85,4 @@ Template Name: Agenda
         ?>
     </div>
 </div>
-
-</div>
-<script>
-
-window.addEventListener('load', function () {
-  setTimeout(function () {
-    const loader = document.querySelector('.pespunte-loader');
-    if (loader) {
-      loader.style.display = 'none';
-    }
-  }, 20); // 2000 milisegundos = 2 segundos
-});
-
-document.querySelectorAll('.escuelas-lista li').forEach(item => {
-  item.addEventListener('click', () => {
-    const escuela = item.getAttribute('data-escuela');
-    const wrapper = document.querySelector(`.pin-wrapper.${escuela}`);
-
-    if (wrapper.classList.contains('activo')) {
-      // Si ya está activo, lo desactivamos
-      wrapper.classList.remove('activo');
-    } else {
-      // Si no está activo, quitamos los activos y activamos este
-      document.querySelectorAll('.pin-wrapper').forEach(w => {
-        w.classList.remove('activo');
-      });
-      wrapper.classList.add('activo');
-    }
-  });
-});
-</script>
 <?php get_footer(); ?>
