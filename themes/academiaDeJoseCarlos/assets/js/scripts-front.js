@@ -38,6 +38,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const botones = document.querySelectorAll(".boton-leermas");
+
+  botones.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const mensaje = btn.parentElement;
+      const resumen = mensaje.querySelector(".resumen");
+      const completo = mensaje.querySelector(".completo");
+
+      if (completo.classList.contains("oculto")) {
+        completo.classList.remove("oculto");
+        resumen.style.display = "none";
+        btn.textContent = "Leer menos";
+      } else {
+        completo.classList.add("oculto");
+        resumen.style.display = "inline";
+        btn.textContent = "Leer más";
+      }
+    });
+  });
+});
+
+
+
+
+
+
 //nav 
 //barra de navegacion 
 window.addEventListener('scroll', function () {
