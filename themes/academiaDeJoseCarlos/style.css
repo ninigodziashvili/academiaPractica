@@ -10,6 +10,32 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Academia de Jose Carlos
 */
 /* Aquí puedes comenzar a escribir tus estilos CSS */
+:root {
+  /* Colores base */
+  --color-fondo: #f0eee9;
+  ;
+  --color-fondo-buttom: #d4a628d5;
+  --color-fondo2: #2B2B28;
+  --color-fondo2-hover: #3b3b38;
+  --nav-texto: #d4a528;
+  --nav-hover: var(--color-primario);
+
+  /* Sombra y blur */
+  --blur: blur(10px);
+  --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+  font-family: lato-titulo;
+  src: url(assets/font/Lato/Lato-Black.ttf);
+}
+
+@font-face {
+  font-family: lato-contenido;
+  src: url(assets/font/Lato/Lato-Regular.ttf);
+}
+
+
 
 :root {
   /* Colores base */
@@ -36,96 +62,206 @@ Text Domain: Academia de Jose Carlos
   display: none;
 }
 
+/*
+=================================
+front-page: Axel Sanchez
+=================================
+*/
+
 body {
-  background-color: var(--nav-texto)
+  background-color: var(--color-fondo);
+  font-family: lato-contenido;
 }
 
-header {
+.nav {
   position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--color-fondo2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 0 20px;
+}
+
+.nav-list a {
+  display: block;
+  padding: 15px 20px;
+  font-size: 15px;
+  color: var(--nav-texto);
+  text-decoration: none;
+  border-radius: 20px;
+  font-family: lato-contenido;
+  transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+  background-color: var(--color-fondo2-hover);
+}
+
+/* Ahora el estilo .scrolled va en .nav, no en .nav-list */
+.nav.scrolled {
+  margin: 10px 20em;
+  width: 70%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-fondo);
+}
+
+
+/*Axel Sanchez Front-page inicio*/
+
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+/* From Uiverse.io by andrew-demchenk0 */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  gap: 8px;
+  height: 40px;
+  width: 201px;
+  border: none;
+  background: var(--nav-texto);
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: lato-titulo;
+  transition: all 0.3s ease;
+}
+
+.lable {
+  line-height: 22px;
+  font-size: 17px;
+  color: #fff;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-family: lato-titulo;
+
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.button:hover .svg-icon {
+  animation: slope 1s linear infinite;
+}
+
+@keyframes slope {
+  0% {}
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {}
+}
+
+.boton1 {
+  border: 2px solid var(--nav-texto);
+  text-transform: capitalize;
+  color: var(--color-fondo);
+  font-size: 17px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: lato-contenido;
+  transition: all 0.3s ease;
+}
+
+.boton1:hover {
+  background-color: var(--nav-texto);
+  color: var(--color-fondo);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.inicio {
+  position: relative;
+  /* Necesario para que el video se posicione dentro */
+  height: 100vh;
+  overflow: hidden;
+  /* Oculta cualquier desbordamiento */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fondo-video {
+  position: absolute;
+  /* Posiciona el video sobre toda la sección */
   top: 0;
   left: 0;
   width: 100%;
-  transition: 0.7s;
-  z-index: 10;
+  height: 100%;
+  z-index: -1;
 }
 
-header.abajo {
-  background: rgb(42, 42, 111);
-  padding: 15px 20px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background-color: rgb(42, 42, 111);
-  border-radius: 3px;
-}
-
-.logo {
-  color: rgb(237, 236, 236);
-  width: 30%;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-
-.nav-link {
-  display: flex;
-  width: 40%;
-  justify-content: space-around;
-}
-
-.nav-link li {
-  list-style: none;
-}
-
-.nav-link a {
-  color: rgb(237, 236, 236);
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.nav-link a::after {
-  display: block;
-  width: 0;
-  height: 3px;
-  border-radius: 1px;
-  transition: width .3s;
-}
-
-.nav-link a:hover::after {
+.fondo-video img {
   width: 100%;
-  transition: width .3s;
+  height: 100%;
+  object-fit: cover;
+  /* Para que el video se recorte y llene bien */
+  filter: brightness(0.5);
+
 }
 
-.burger {
-  display: none;
+.inicio_contenido h1 {
+  color: var(--color-fondo);
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: lato-titulo;
+  margin-top: 20em;
 }
 
-.burger div {
-  width: 25px;
-  height: 3px;
-  margin: 5px 0 5px 0;
-  border-radius: 20px;
-  background-color: rgb(241, 235, 235);
-  transition: all 1s ease;
+.inicio_contenido p {
+  color: var(--nav-texto);
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: lato-contenido;
+
 }
 
-.toggle .burger-line1 {
-  transform: translate(0px, 9px) rotate(-30deg);
+/*
+============================================
+fotogaleria
+==========================================
+*/
+.foto_galeria {
+  height: 100vh;
+  background-color: var(--color-fondo2);
 }
 
-.toggle .burger-line2 {
-  opacity: 0;
-}
 
-.toggle .burger-line3 {
-  transform: translate(0px, -7px) rotate(30deg);
-}
-
+/*
+=======================================
+error 404
+=======================================
+*/
 .texto-404 {
   position: absolute;
   top: 30%;
@@ -137,54 +273,783 @@ nav {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+/*
+===============================================
+testimonios
+==============================================
+*/
+.testimonios {
+  height: 100vh;
+  background-image: url(https://audaces.com/wp-content/uploads/2023/09/desfile-de-moda-o-dia-1024x574.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Esto hace que la imagen ocupe todo el ancho y alto posible */
+  background-position: center;
+  /* Esto centra la imagen en caso de que se recorte */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  background-attachment: fixed;
+  /* la imagen aparesca fija y haga scroll sin usar position */
+  z-index: 1;
+
+}
+
+
+.testimonios_container {
+  height: 20em;
+  background-color: rgba(255, 255, 255, 0.315);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 0 2em;
+  gap: 0.5em;
+  /* EFECTO DE BORDE IRREGULAR (TELA) */
+  clip-path: polygon(0% 10%, 5% 0%, 15% 5%, 25% 0%, 35% 8%, 45% 0%,
+      55% 10%, 65% 0%, 75% 5%, 85% 0%, 95% 10%, 100% 0%,
+      100% 90%, 95% 100%, 85% 95%, 75% 100%, 65% 92%,
+      55% 100%, 45% 90%, 35% 100%, 25% 95%, 15% 100%,
+      5% 92%, 0% 100%);
+}
+
+.testimonios_container2 {
+  position: absolute;
+  height: 20em;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 0 2em;
+  gap: 0.5em;
+
+}
+
+.testimonios_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('http://jose-carlos-herrera.local/wp-content/uploads/2025/07/fondo-abstracto-textura-tela-tela-gris-tapiceria-muebles_166373-2498.avif');
+  /* busca una textura suave de tela o lienzo */
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.carta {
+  background: var(--color-fondo);
+  padding: 20px;
+  border-radius: 16px;
+  min-width: 300px;
+  max-width: 300px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  display: inline-block;
+  margin: 0;
+  flex-shrink: 0;
+  transition: 1s all;
+  z-index: 10000;
+  position: relative;
+  transform-origin: center center;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.carta:hover {
+  transform: scale(1.05) translateZ(0);
+    backface-visibility: hidden;
+  box-shadow: 0 4px 20px var(--color-fondo2);
+
+}
+
+.carta img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.usuario {
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.mensaje {
+  font-size: 14px;
+  color: var(--color-fondo2);
+  position: relative;
+  text-transform: capitalize;
+}
+
+.testimonios_container::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonios_container {
+  scrollbar-width: none;
+}
+
+.indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.indicador {
+  width: 40px;
+  height: 4px;
+  background-color: var(--nav-texto);
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.indicador.activo {
+  background-color: var(--color-fondo2);
+}
+
+
+
+.oculto {
+  display: none;
+ line-height: 1.8;
+}
+
+
+
+.boton-leermas {
+  background: none;
+  border: none;
+  color: var(--nav-texto);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 5px;
+}
+
+/*
+=======================================
+cursos
+======================================
+*/
+.cursos h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #282b29;
+  padding: 2em;
+  background-color: var(--color-fondo);
+  font-family: lato-titulo;
+}
+
+.curso {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  background-color: rgba(255, 255, 255, 0.974);
+  border: 3px dashed #D4A528;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+  width: 90%;
+  margin-left: 5em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('http://jose-carlos-herrera.local/wp-content/uploads/2025/07/fondo-abstracto-textura-tela-tela-gris-tapiceria-muebles_166373-2498.avif');
+  /* busca una textura suave de tela o lienzo */
+  mix-blend-mode: multiply;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.curso:hover {
+  transform: scale(1.03);
+}
+
 @media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
+  .curso {
+    margin-left: 20px;
   }
 
-  .nav-link {
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: rgb(42, 42, 111);
-    ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+  .inicio_contenido h1 {
+    margin-top: 10em;
+    text-align: center;
+    font-size: 1.5em;
   }
 
-  .nav-link-activated {
-    transition: transform 0.5s ease-in;
-    transform: translateX(0%);
+  .botones {
+    padding: 2em;
+    gap: 15px;
   }
 
-  .nav-link li {
-    opacity: 0;
-  }
-
-  .burger {
-    display: block;
+  .boton1 {
+    padding: 6px 20px;
+    font-size: 15px;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .nav-link {
-    width: 60%;
+.curso::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px dotted #D4A528;
+  border-radius: 1rem;
+  pointer-events: none;
+  box-shadow: inset 0 0 6px rgba(212, 165, 40, 0.2);
+  box-shadow:
+    inset 0 0 0 4px #f0eee9,
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 0 0 10px rgba(212, 165, 40, 0.25);
+}
+
+@media (min-width: 768px) {
+  .curso {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
+.curso img {
+  width: 100%;
+  max-height: 16rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
-  to {
-    opacity: 1;
-    transform: translateX(0px);
+.curso h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #282b29;
+  text-transform: capitalize;
+}
+
+.curso p {
+  margin-bottom: 1rem;
+}
+
+.curso strong {
+  text-transform: capitalize;
+}
+
+.btn-acento {
+  display: inline-block;
+  background-color: var(--nav-texto);
+  color: var(--color-fondo);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-acento:hover {
+  background-color: var(--color-fondo-buttom);
+}
+
+.ml-md-5 {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .ml-md-5 {
+    margin-left: 1.25rem;
   }
 }
+
+/*
+=============================
+galeria de imagenes
+============================
+*/
+.galeria2 {
+  height: 100vh;
+}
+
+.galeria2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 40px;
+}
+
+.foto {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 3px dashed #D4A528;
+  ;
+  transition: transform 0.3s ease;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+  filter: brightness(90%);
+}
+
+.foto:hover img {
+  transform: scale(1.05);
+}
+
+.foto:hover {
+  transform: scale(1.05);
+
+}
+
+/* Agenda */
+
+ :root {
+     /* Colores base */
+     --color-fondo: #f0eee9;
+     ;
+     --color-fondo-buttom: #d4a628d5;
+     --color-fondo2: #2B2B28;
+     --color-fondo2-hover: #3b3b38;
+     --nav-texto: #d4a528;
+     --nav-hover: var(--color-primario);
+
+     /* Sombra y blur */
+     --blur: blur(10px);
+     --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
+ }
+
+ @font-face {
+     font-family: lato;
+     src: url(assets/fonts/Lato/Lato-Regular.ttf);
+ }
+
+ body {
+     font-family: lato;
+     background: var(--color-fondo);
+
+ }
+
+ /* loader */
+
+ .pespunte-loader {
+     display: flex;
+     gap: 8px;
+     justify-content: center;
+     align-items: center;
+     height: 20px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 1;
+ }
+
+
+ .pespunte-loader span {
+     display: block;
+     width: 30px;
+     height: 8px;
+     background: var(--color-fondo-buttom);
+     /* Cambia el color aquí si quieres */
+     animation: pespunte 1s linear infinite;
+ }
+
+ .pespunte-loader span:nth-child(1) {
+     animation-delay: 0s;
+ }
+
+ .pespunte-loader span:nth-child(2) {
+     animation-delay: 0.2s;
+ }
+
+ .pespunte-loader span:nth-child(3) {
+     animation-delay: 0.4s;
+ }
+
+ .pespunte-loader span:nth-child(4) {
+     animation-delay: 0.6s;
+ }
+
+ .pespunte-loader span:nth-child(5) {
+     animation-delay: 0.8s;
+ }
+
+ @keyframes pespunte {
+     0% {
+         opacity: 0.2;
+         transform: scaleX(0.5);
+     }
+
+     50% {
+         opacity: 1;
+         transform: scaleX(1);
+     }
+
+     100% {
+         opacity: 0.2;
+         transform: scaleX(0.5);
+     }
+ }
+
+
+ /* calendario */
+
+ #calendario {
+     padding: 2rem;
+     color: var(--nav-texto);
+     text-align: center;
+     margin-top: 3em;
+ }
+
+ #calendario h2 {
+     margin-bottom: 1rem;
+     font-size: 2rem;
+ }
+
+ .calendario-container {
+     background: var(--color-fondo2);
+     position: relative;
+     padding: 1rem;
+     border-radius: 12px;
+     box-shadow: var(--sombra-suave);
+     overflow: hidden;
+     max-width: 850px;
+     margin: 0 auto;
+ }
+
+ .calendario-container iframe {
+     width: 100%;
+     height: 600px;
+     border: none;
+     border-radius: 8px;
+     z-index: 2;
+ }
+
+ /* mapa */
+
+ .mapa {
+     display: flex;
+     justify-content: center;
+     color: var(--nav-texto);
+     align-items: center;
+
+ }
+
+ .mapa h2 {
+     margin-bottom: 1rem;
+     font-size: 2rem;
+ }
+
+ .mapa-contenedor-flex {
+     display: flex;
+     justify-content: center;
+     gap: 2rem;
+     flex-wrap: wrap;
+ }
+
+ .escuelas-lista {
+     background: var(--color-fondo2);
+     padding: 1rem;
+     border-radius: 12px;
+     box-shadow: var(--sombra-suave);
+     color: var(--nav-texto);
+     flex: 0 0 220px;
+     max-height: 80vh;
+     overflow-y: auto;
+ }
+
+ .escuelas-lista ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .escuelas-lista li {
+     padding: 0.75rem 1rem;
+     margin-bottom: 0.5rem;
+     background: rgba(255, 255, 255, 0.05);
+     border-radius: 8px;
+     transition: background 0.2s ease, box-shadow 0.2s ease;
+     position: relative;
+ }
+
+ .escuelas-lista li::after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 1rem;
+     right: 1rem;
+     height: 1px;
+     background: rgba(255, 255, 255, 0.1);
+ }
+
+ .escuelas-lista li:last-child::after {
+     display: none;
+ }
+
+ .escuelas-lista li:hover {
+     background: var(--color-fondo2-hover);
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+     cursor: pointer;
+ }
+
+
+ .mapa-wrapper {
+     background: var(--color-fondo2);
+     padding: 1rem;
+     border-radius: 12px;
+     box-shadow: var(--sombra-suave);
+     max-width: 800px;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .mapa-container {
+     position: relative;
+     width: 100%;
+ }
+
+ .mapa-container img {
+     width: 100%;
+     height: auto;
+     display: block;
+ }
+
+ .pin-wrapper {
+     position: absolute;
+     transform: translate(-50%, -50%);
+     width: 16px;
+     height: 16px;
+ }
+
+ .pin {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     font-size: 24px;
+     transform: translate(-50%, -50%);
+     cursor: pointer;
+     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+ }
+
+ .globo {
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     background: white;
+     border-radius: 8px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     opacity: 0;
+     transform: translate(-50%, -50%) scale(0.2);
+     transition: all 0.5s ease;
+     padding: 4px;
+     z-index: 1;
+ }
+
+ .globo img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+ }
+
+ /* Hover o activo */
+ .pin-wrapper:hover .globo,
+ .pin-wrapper.activo .globo {
+     opacity: 1;
+     transform: translate(-50%, -50%) scale(1);
+ }
+
+ /* Posiciones */
+ .madrid {
+     top: 38%;
+     left: 42%;
+ }
+
+ .madrid .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .madrid:hover .globo,
+ .madrid.activo .globo {
+     top: calc(50% - 70px);
+ }
+
+ .zaragoza {
+     top: 25%;
+     left: 62%;
+ }
+
+ .zaragoza .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .zaragoza:hover .globo,
+ .zaragoza.activo .globo {
+     top: calc(50% - 60px);
+ }
+
+ .getafe {
+     top: 41%;
+     left: 39%;
+ }
+
+ .getafe .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .getafe:hover .globo,
+ .getafe.activo .globo {
+     top: calc(50% - 70px);
+ }
+
+ .gijon {
+     top: 2%;
+     left: 26%;
+ }
+
+ .gijon .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .gijon:hover .globo,
+ .gijon.activo .globo {
+     top: 5em;
+ }
+
+ .merida {
+     top: 64%;
+     left: 23%;
+ }
+
+ .merida .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .merida:hover .globo,
+ .merida.activo .globo {
+     top: calc(50% - 70px);
+ }
+
+ .huelva {
+     top: 73%;
+     left: 17%;
+ }
+
+ .huelva .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .huelva:hover .globo,
+ .huelva.activo .globo {
+     top: calc(50% - 70px);
+ }
+
+ .sevilla {
+     top: 73%;
+     left: 24%;
+ }
+
+ .sevilla .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .sevilla:hover .globo,
+ .sevilla.activo .globo {
+     top: calc(50% - 70px);
+ }
+
+ .tarragona {
+     top: 30%;
+     left: 78%;
+ }
+
+ .tarragona .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .tarragona:hover .globo,
+ .tarragona.activo .globo {
+     top: calc(50% - 60px);
+ }
+
+ .valencia {
+     top: 52%;
+     left: 65%;
+ }
+
+ .valencia .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .valencia:hover .globo,
+ .valencia.activo .globo {
+     top: calc(50% - 60px);
+ }
+
+ .gandia {
+     top: 58%;
+     left: 68%;
+ }
+
+ .gandia .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .gandia:hover .globo,
+ .gandia.activo .globo {
+     top: calc(50% - 60px);
+ }
+
+ .vitoria {
+     top: 10%;
+     left: 48%;
+ }
+
+ .vitoria .globo {
+     top: 50%;
+     left: 50%;
+ }
+
+ .vitoria:hover .globo,
+ .vitoria.activo .globo {
+     top: 5em;
+ }
