@@ -5,7 +5,6 @@ Template Name: Cursos
 ?>
 
 <?php get_header(); ?>
-
 <?php $image_url = get_stylesheet_directory_uri() . '/assets/img/1.png'; ?>
 
 <style>
