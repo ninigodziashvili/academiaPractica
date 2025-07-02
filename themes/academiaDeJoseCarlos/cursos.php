@@ -72,7 +72,6 @@ Template Name: Cursos
 /* === MOVING TEXT SECTION === */
 .moving-texts {
     background-color: #3b3b38;
-    margin-top: 5em;
     width: 100%;
     height: 25em;
 }
@@ -283,63 +282,14 @@ Template Name: Cursos
          opacity: 1;
          transition: all 0.6s ease;
       }
-
-      .social {
-         opacity: 1;
-
-         .icon {
-            opacity: 0.9;
-         }
-
-         &:hover {
-            background-size: 28px;
-            .icon {
-               background-size: 65%;
-               opacity: 1;
-            }
-         }
-
-         &.portfolio {
-            right: 0;
-            bottom: calc(100% - 40px);
-            transition: all 0.3s 0s $cubic;
-            .icon {
-               &:hover {
-                  background-color: #698fb7;
-               }
-            }
-         }
-
-         &.dribbble {
-            bottom: 45%;
-            right: 45%;
-            transition: all 0.3s 0.15s $cubic;
-            .icon {
-               &:hover {
-                  background-color: #ea4c89;
-               }
-            }
-         }
-
-         &.linkedin {
-            bottom: 0;
-            right: calc(100% - 40px);
-            transition: all 0.3s 0.25s $cubic;
-            .icon {
-               &:hover {
-                  background-color: #0077b5;
-               }
-            }
-         }
       }
    }
-}
 
 .wrapper {
    width: 100vw;
    margin: 0 auto;
    height: 400px;
-   background-color: #161616;
+   background-color: #3b3b38;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -365,7 +315,6 @@ Template Name: Cursos
 
 @media screen and (max-width: 767px) {
    .content {
-      padding-top: 300px;
       flex-direction: column;
    }
 }
@@ -375,7 +324,7 @@ Template Name: Cursos
    max-width: 300px;
    min-width: 200px;
    height: 250px;
-   background-color: #292929;
+   background-color: #3b3b38;
    margin: 10px;
    border-radius: 10px;
    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
@@ -463,6 +412,10 @@ Template Name: Cursos
 	-webkit-text-fill-color: transparent;
    opacity: 1;
    transition: all 0.3s ease;
+}
+
+.cursos-apuntarse {
+    height: 40em;
 }
 
 .cursos-apuntarse-p {

@@ -37,7 +37,7 @@ Text Domain: Academia de Jose Carlos
 }
 
 body {
-  background-color: rgb(238, 227, 209);
+  background-color: var(--nav-texto)
 }
 
 header {
