@@ -206,13 +206,28 @@ body {
   z-index: -1;
 }
 
-.fondo-video img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Para que el video se recorte y llene bien */
-  filter: brightness(0.5);
 
+iframe {
+   width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Para que no se pueda hacer clic */
+}
+
+/* En pantallas más anchas que altas */
+@media (min-aspect-ratio: 16/9) {
+  .video-fondo iframe {
+    width: 100vw;
+    height: 56.25vw;
+    /* 100vw * (9 / 16) = 56.25vw */
+  }
+}
+
+/* En pantallas más altas que anchas */
+@media (max-aspect-ratio: 16/9) {
+  .video-fondo iframe {
+    width: 177.78vh;
+    height: 100vh;
+  }
 }
 
 .inicio_contenido h1 {
@@ -220,7 +235,7 @@ body {
   font-size: 2em;
   text-transform: uppercase;
   font-family: lato-titulo;
-  margin-top: 20em;
+  margin-top: 10em;
 }
 
 .inicio_contenido p {
@@ -357,7 +372,7 @@ testimonios
 
 .carta:hover {
   transform: scale(1.05) translateZ(0);
-    backface-visibility: hidden;
+  backface-visibility: hidden;
   box-shadow: 0 4px 20px var(--color-fondo2);
 
 }
@@ -414,7 +429,7 @@ testimonios
 
 .oculto {
   display: none;
- line-height: 1.8;
+  line-height: 1.8;
 }
 
 

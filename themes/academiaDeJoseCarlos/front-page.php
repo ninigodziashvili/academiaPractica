@@ -3,10 +3,15 @@
     <section class="inicio">
         <div class="fondo-video">
             <!--<video autoplay loop muted playsinline src="videos/9511251-uhd_4096_2160_25fps.mp4"></video>   -->
-            <img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3648.png" alt="">
+            <iframe src="https://www.youtube.com/embed/v3hvmNIQ_hI?start=360&autoplay=1&mute=1&loop=1&playlist=v3hvmNIQ_hI&controls=0&showinfo=0&modestbranding=1"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
         </div>
         <div class="inicio_contenido">
-            <h1>"nada es imposible hay que encontrarle la manera"</h1>
+            <h1>"nada es imposible solo hay que encontrar la manera"</h1>
             <p>jose carlos herrera</p>
             <div class="botones">
                 <!-- From Uiverse.io by andrew-demchenk0 -->
@@ -60,7 +65,7 @@
                 </p>
                 <a href="/curso2" class="btn-acento">Más información</a>
             </div>
-            <img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3631.png"
+            <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3888.png"
                 alt="Curso de Patronaje Avanzado" />
         </div>
     </section>
@@ -162,48 +167,48 @@
                     <button class="boton-leermas">Leer mas</button>
                 </div>
             </div>
-              <div class="carta">
+            <div class="carta">
                 <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-comentarios/claudio.jpg" alt="Usuario">
                 <div class="usuario">claudio manuel ramos cabrera</div>
                 <div class="mensaje">
-                    <strong>profesor técnico de formación profecional perteneciente a la familia de textil, 
+                    <strong>profesor técnico de formación profecional perteneciente a la familia de textil,
                         confección y piel
                     </strong>
                     <p class="resumen">
                         tuve la oportunidad de realizar el curso moulage tecnico hace ya 6 años y este año....
                     </p>
                     <p class="completo oculto">
-                         tuve la oportunidad de realizar el curso moulage tecnico hace ya 6 años y este año he repetido la experiencia
-                         con el de patrón técnico de corset a medida y no puedo más que destacar la experiencia como profundamente enriquecedora.
-                         josé carlos es un gran profesional del paatronaje y la confección, con un dominio técnico admirable y una trayectoria que se 
-                         refreja en cada explicación, corrección y demostración que realiza. lo que más valoro de los cursos, además del contenido bien 
-                         estructurado y organizado en cuanto al tiempo, es su trato personal, cercano, respetuoso y siempre dispuesto a acompañar y ayudar 
-                         a todos. se nota en su manera de enseñar la pasión por este gremio. recomiendo sus cursos sin dudarlo a cualquier persona interesada en el 
-                         mundo del patronaje, la confección o la moda en general. tanto si estás dando tus primeros pasos como si ya tienes experiencia, aprender con 
-                         josé carlos es una oportunidad para crecer técnica y creativamente.
+                        tuve la oportunidad de realizar el curso moulage tecnico hace ya 6 años y este año he repetido la experiencia
+                        con el de patrón técnico de corset a medida y no puedo más que destacar la experiencia como profundamente enriquecedora.
+                        josé carlos es un gran profesional del paatronaje y la confección, con un dominio técnico admirable y una trayectoria que se
+                        refreja en cada explicación, corrección y demostración que realiza. lo que más valoro de los cursos, además del contenido bien
+                        estructurado y organizado en cuanto al tiempo, es su trato personal, cercano, respetuoso y siempre dispuesto a acompañar y ayudar
+                        a todos. se nota en su manera de enseñar la pasión por este gremio. recomiendo sus cursos sin dudarlo a cualquier persona interesada en el
+                        mundo del patronaje, la confección o la moda en general. tanto si estás dando tus primeros pasos como si ya tienes experiencia, aprender con
+                        josé carlos es una oportunidad para crecer técnica y creativamente.
                     </p>
                     <button class="boton-leermas">Leer mas</button>
                 </div>
             </div>
-                 <div class="carta">
+            <div class="carta">
                 <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-comentarios/claudio.jpg" alt="Usuario">
                 <div class="usuario">claudio manuel ramos cabrera</div>
                 <div class="mensaje">
-                    <strong>profesor técnico de formación profecional perteneciente a la familia de textil, 
+                    <strong>profesor técnico de formación profecional perteneciente a la familia de textil,
                         confección y piel
                     </strong>
                     <p class="resumen">
                         tuve la oportunidad de realizar el curso moulage tecnico hace ya 6 años y este año....
                     </p>
                     <p class="completo oculto">
-                         tuve la oportunidad de realizar el curso moulage tecnico hace ya 6 años y este año he repetido la experiencia
-                         con el de patrón técnico de corset a medida y no puedo más que destacar la experiencia como profundamente enriquecedora.
-                         josé carlos es un gran profesional del paatronaje y la confección, con un dominio técnico admirable y una trayectoria que se 
-                         refreja en cada explicación, corrección y demostración que realiza. lo que más valoro de los cursos, además del contenido bien 
-                         estructurado y organizado en cuanto al tiempo, es su trato personal, cercano, respetuoso y siempre dispuesto a acompañar y ayudar 
-                         a todos. se nota en su manera de enseñar la pasión por este gremio. recomiendo sus cursos sin dudarlo a cualquier persona interesada en el 
-                         mundo del patronaje, la confección o la moda en general. tanto si estás dando tus primeros pasos como si ya tienes experiencia, aprender con 
-                         josé carlos es una oportunidad para crecer técnica y creativamente.
+                        tuve la oportunidad de realizar el curso moulage tecnico hace ya 6 años y este año he repetido la experiencia
+                        con el de patrón técnico de corset a medida y no puedo más que destacar la experiencia como profundamente enriquecedora.
+                        josé carlos es un gran profesional del paatronaje y la confección, con un dominio técnico admirable y una trayectoria que se
+                        refreja en cada explicación, corrección y demostración que realiza. lo que más valoro de los cursos, además del contenido bien
+                        estructurado y organizado en cuanto al tiempo, es su trato personal, cercano, respetuoso y siempre dispuesto a acompañar y ayudar
+                        a todos. se nota en su manera de enseñar la pasión por este gremio. recomiendo sus cursos sin dudarlo a cualquier persona interesada en el
+                        mundo del patronaje, la confección o la moda en general. tanto si estás dando tus primeros pasos como si ya tienes experiencia, aprender con
+                        josé carlos es una oportunidad para crecer técnica y creativamente.
                     </p>
                     <button class="boton-leermas">Leer mas</button>
                 </div>
@@ -223,11 +228,11 @@
     </section>
     <section class="galeria2">
 
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/SAM3610.png" alt="Foto 1"></div>
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/curso-de-moulage-tecnico-de-Jose-Carlos-Herrera-en-Cose-Madrid-2.webp" alt="Foto 2"></div>
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3665.png" alt="Foto 3"></div>
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/curso-de-moulage-tecnico-de-Jose-Carlos-Herrera-en-Cose-Madrid-8.webp" alt="Foto 4"></div>
-        <div class="foto"><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3631.png" alt="Foto 5"></div>
+        <div class="foto "><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/SAM3610.png" alt="Foto 1"></div>
+        <div class="foto "><img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3876.png" alt="Foto 2"></div>
+        <div class="foto "><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3665.png" alt="Foto 3"></div>
+        <div class="foto "><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/curso-de-moulage-tecnico-de-Jose-Carlos-Herrera-en-Cose-Madrid-8.webp" alt="Foto 4"></div>
+        <div class="foto "><img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3880.png" alt="Foto 5"></div>
 
     </section>
 
