@@ -383,7 +383,6 @@ Template Name: Cursos
    opacity: 0;
    max-height:0;
    transition: all 0.3s ease;
-   overflow: scroll;
 }
 
 .card:hover {
