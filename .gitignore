@@ -1,12 +1,3 @@
 # Common cache folders
 cache/
-upgrade/
-uploads/
 languages/
-
-# Ignore backup and log files
-*.log
-*.zip
-*.tar.gz
-*.sql
-*.bak
