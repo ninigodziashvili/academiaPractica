@@ -595,35 +595,35 @@ Template Name: Cursos
          
             <div class="icon"><i class="material-icons md-36">face</i></div>
             <p class="title">Domina técnicas que pocos conocen</p>
-            <p class="text">Mis talleres están diseñados para ir más allá de lo básico. Aprenderás métodos técnicos de alta precisión que no suelen enseñarse en cursos convencionales.</p>
+            <p class="text">Mis talleres</p>
          
       </div>
       <div class="card">
          
             <div class="icon"><i class="material-icons md-36">favorite_border</i></div>
             <p class="title">Aprende haciendo</p>
-            <p class="text">Tanto en el taller de Corset como en el de Moulage, trabajarás con tus manos desde el primer momento. Crearás piezas reales y tangibles, que podrás usar como base para futuras colecciones o producciones.</p>
+            <p class="text">Tanto en el taller</p>
          
       </div>
       <div class="card">
          
             <div class="icon"><i class="material-icons md-36">alternate_email</i></div>
             <p class="title">Mejora tu técnica, seas principiante o profesional</p>
-            <p class="text">No importa si estás empezando o ya trabajas en el sector: estas técnicas te ayudarán a afinar tus conocimientos, ahorrar tiempo en pruebas y errores, y alcanzar un nivel de acabado profesional.</p>
+            <p class="text">No importa si estás</p>
          
       </div>
             <div class="card">
          
             <div class="icon"><i class="material-icons md-36">alternate_email</i></div>
             <p class="title">Amplía tus posibilidades creativas</p>
-            <p class="text">Con el corset técnico podrás construir prendas estructuradas para vestidos de alta costura o piezas exteriores únicas. Con el moulage, liberarás tu creatividad al modelar directamente sobre el maniquí.</p>
+            <p class="text">Con el corset técnico podrás</p>
          
       </div>
             <div class="card">
          
             <div class="icon"><i class="material-icons md-36">alternate_email</i></div>
             <p class="title">Lleva tu diseño al siguiente nivel</p>
-            <p class="text">Estos cursos te darán herramientas que te acompañarán en toda tu carrera. La precisión del patrón técnico y la libertad del moulage se convertirán en aliados clave de tu proceso creativo.</p>
+            <p class="text">Estos cursos te darán herramientas</p>
          
       </div>
    </div>
