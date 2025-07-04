@@ -5,7 +5,7 @@ Template Name: Cursos
 ?>
 
 <?php get_header(); ?>
-<?php $image_url = get_stylesheet_directory_uri() . '/assets/img/1.png'; ?>
+<?php $image_url = get_stylesheet_directory_uri() . '/assets/img/portada/3.png'; ?>
 
 <style>
 /* === HERO SECTION === */
@@ -39,7 +39,7 @@ Template Name: Cursos
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.2;
+    opacity: 0.4;
     z-index: 1;
 }
 
@@ -414,7 +414,7 @@ Template Name: Cursos
 }
 
 .cursos-apuntarse {
-    height: 40em;
+    height: 30em;
 }
 
 .cursos-apuntarse-p {
@@ -422,6 +422,140 @@ Template Name: Cursos
     text-align:center;
     font-size: 40px;
     font-weight: bold;
+}
+
+.iletisim_form{
+	width: 100%;
+	float: left;
+
+}
+.sol50{
+	float: left;
+	width: 50%;
+	padding-right: 15px;
+}
+.sag50{
+	float: right;
+	width: 50%;
+	padding-left: 15px;
+}
+.full100{
+	float: left;
+	width: 100%;
+}
+.iletisim_form .sag50, .iletisim_form .sol50, .iletisim_form .full100{
+	margin:5px 0;
+	position: relative;
+
+}
+.iletisim_form label{
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	position: relative;
+	top: 38px;
+	transition:300ms;
+  font-family: 'Roboto', sans-serif;
+    padding-left:15px;
+    font-size: 14px;
+  height:17px;
+}
+.iletisim_form input{
+	float: left;
+	width: 100%;
+	height: 50px;
+	padding:0 15px;
+	border:none;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	transition:300ms;
+	background:rgba(0,0,0,0.05);
+  font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+}
+.iletisim_form button{
+	float: left;
+	width: 100%;
+	height: 50px;
+	padding:0 10px;
+	border:none;
+	background:rgba(0,0,0,0.05);
+	color:rgba(0,0,0,0.9);
+	transition:300ms;
+  font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+.iletisim_form button:hover{
+	opacity: .7;
+}
+.iletisim_form textarea{
+	float: left;
+	width: 100%;
+	height:140px;
+	padding:10px;
+	border:none;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+	transition:300ms;
+  font-family: 'Roboto', sans-serif;
+	background:rgba(0,0,0,0.05);
+}
+.iletisim_form input:focus{
+	border-bottom: 1px solid rgba(0,0,0,0);
+
+}
+.iletisim_form div span:before{
+	content: "";
+	width: 0%;
+  left:0;
+	position: absolute;
+	height: 100%;
+	border-bottom: 2px solid #1a5888;
+	transition:700ms;
+}
+.iletisim_form div span{
+	width: 100%;
+	float: left;
+	height: 100%;
+	position: relative;
+}
+@media  (max-width:768px){
+  .sag50,.sol50{
+		width: 100%;
+		padding:0;
+	}
+}
+
+.container{
+  width: 100%;
+  max-width:800px;
+  margin:0 auto;
+     text-decoration: none;
+    list-style-type: none;
+    outline: none;
+}
+
+.contact-section .title {
+    content: "";
+   text-align: center;
+    height: 5px;
+}
+
+.contact-section {
+    margin-top: 3em;
+    background-color: #d7d5d1;;
+    height: 40em;
+    margin: 5em;
+    border-radius: 15px;
+}
+
+.contact-section .cursos-apuntarse-p {
+    margin-top: 1em;
 }
 
 </style>
@@ -495,6 +629,49 @@ Template Name: Cursos
    </div>
 </div>
 </section>
+<section class="contact-section">
+    <div class="container">
+  <h1 class="cursos-apuntarse-p">Déjanos tus datos y nos pondremos en contacto contigo para ampliarte información.</h1>
+  <form class="iletisim_form" action="">
+    <div class="style"></div>
+  <div class="sol50">
+    <span>
+      <label for="namesurmane">Name Surname</label>
+      <input type="text" name="namesurmane" id="namesurmane">
+    </span>
+  </div>
+  <div class="sag50">
+    <span>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+    </span>
+  </div>
+  <div class="sol50">
+    <span>
+      <label for="subject">Subject</label>
+      <input type="text" name="subject" id="subject">
+    </span>
+  </div>
+  <div class="sag50">
+    <span>
+      <label for="denetleme">text</label>
+      <input type="text" name="denetleme" id="denetleme">
+    </span>
+  </div>
+  <div class="full100">
+    <span>
+      <label for="messenger">Messenger</label>
+      <textarea name="messenger" id="messenger"></textarea>
+    </span>
+  </div>
+  <div class="full100">
+    <span>
+      <button>Send</button>
+    </span>
+  </div>
+  </form>
+</div>
+</section>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -525,6 +702,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   requestAnimationFrame(animateHighlight);
 });
+
+
+$(".iletisim_form input,.iletisim_form textarea").focus(function() {
+		$(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:0px;top:0px;font-size: 11px;");
+		$(this).parent().parent().addClass(this.id);
+		$(".style").html("<style>div."+this.id+" span:before{width:100%;}</style>");
+	}).blur(function() {
+		$(".style").html("<style>div."+this.id+" span:before{width:0%;}</style>");
+		if($(this).val() == ""){
+			$(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:15px;top:38px;font-size: 14px;");
+			$(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(249, 52, 52, 1);}</style>");
+		}else{
+			$(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(40, 226, 19, 1);}</style>");
+		}
+	});
+
 </script>
 
 <?php get_footer(); ?>
