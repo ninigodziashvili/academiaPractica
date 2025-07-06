@@ -56,8 +56,8 @@ Template Name: Cursos
 .cursos-primera-section a {
     display: inline-block;
     padding: 17px 20px;
-    background-color: #ffffff;
-    color: #333333;
+    background-color: #d4a528;
+    color: white;
     text-decoration: none;
     font-size: 1.1em;
     border-radius: 15px;
@@ -65,7 +65,7 @@ Template Name: Cursos
 }
 
 .cursos-primera-section a:hover {
-    background-color: #eeeeee;
+    background-color: #3b3b38;
 }
 
 /* === MOVING TEXT SECTION === */
@@ -494,18 +494,6 @@ Template Name: Cursos
     min-height: 120px;
 }
 
-.iletisim_form button {
-    background-color: #d4a528;
-    color: #fff;
-    padding: 14px 24px;
-    font-size: 1em;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    align-self: flex-start;
-}
-
 .iletisim_form button:hover {
     background-color: #3b3b38;
 }
@@ -521,6 +509,21 @@ Template Name: Cursos
         flex: 1 1 100%;
     }
 }
+
+.iletisim_form button {
+    display: inline-block;
+    padding: 17px 20px;
+    background-color: #d4a528;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    align-items: center; 
+}
+
 </style>
 
 <section class="cursos-primera-section">
