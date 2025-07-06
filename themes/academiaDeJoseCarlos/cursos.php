@@ -190,9 +190,6 @@ Template Name: Cursos
     }
 }
 .about {
-   $cubic: cubic-bezier(0.64, 0.01, 0.07, 1.65);
-   $transition: 0.6s $cubic;
-   $size: 40px;
    position: fixed;
    z-index: 10;
    bottom: 10px;
@@ -635,4 +632,51 @@ Template Name: Cursos
         </form>
     </div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".ticker-item");
+
+  function animateHighlight() {
+    const centerX = window.innerWidth / 2;
+    const maxDistance = 160;
+
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      const itemCenter = rect.left + rect.width / 2;
+      const distance = Math.abs(centerX - itemCenter);
+
+      if (distance < maxDistance) {
+        const intensity = 1 - (distance / maxDistance);
+        const scale = 1 + intensity * 0.2;
+        item.style.color = "#d4a528";
+        item.style.transform = `scale(${scale})`;
+      } else {
+        item.style.color = "#f0eee9";
+        item.style.transform = "scale(1)";
+      }
+    });
+
+    requestAnimationFrame(animateHighlight);
+  }
+
+  requestAnimationFrame(animateHighlight);
+});
+
+
+$(".iletisim_form input,.iletisim_form textarea").focus(function() {
+        $(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:0px;top:0px;font-size: 11px;");
+        $(this).parent().parent().addClass(this.id);
+        $(".style").html("<style>div."+this.id+" span:before{width:100%;}</style>");
+    }).blur(function() {
+        $(".style").html("<style>div."+this.id+" span:before{width:0%;}</style>");
+        if($(this).val() == ""){
+            $(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:15px;top:38px;font-size: 14px;");
+            $(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(249, 52, 52, 1);}</style>");
+        }else{
+            $(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(40, 226, 19, 1);}</style>");
+        }
+    });
+
+</script>
+
 <?php get_footer(); ?>
