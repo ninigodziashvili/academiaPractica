@@ -492,7 +492,16 @@ Template Name: Cursos
 }
 .iletisim_form button:hover{
 	opacity: .7;
+     background-color: rgba(0,0,0,0.1);
 }
+
+.iletisim_form input,
+.iletisim_form textarea,
+.iletisim_form button {
+    border-radius: 8px; /* აქ დაამატე მომრგვალება */
+}
+
+
 .iletisim_form textarea{
 	float: left;
 	width: 100%;
@@ -501,7 +510,6 @@ Template Name: Cursos
 	border:none;
 	border-bottom: 1px solid rgba(0,0,0,0.3);
 	transition:300ms;
-  font-family: 'Roboto', sans-serif;
 	background:rgba(0,0,0,0.05);
 }
 .iletisim_form input:focus{
@@ -514,7 +522,7 @@ Template Name: Cursos
   left:0;
 	position: absolute;
 	height: 100%;
-	border-bottom: 2px solid #1a5888;
+	border-bottom: 2px solid #d4a628d5;
 	transition:700ms;
 }
 .iletisim_form div span{
@@ -546,15 +554,16 @@ Template Name: Cursos
 }
 
 .contact-section {
-    margin-top: 3em;
-    background-color: #d7d5d1;;
-    height: 40em;
-    margin: 5em;
+    padding: 1em 2em; /* height ფიქსირებულად აღარ გამოიყენო */
     border-radius: 15px;
 }
 
+
 .contact-section .cursos-apuntarse-p {
-    margin-top: 1em;
+    margin-top: 3em; /* ადრე იყო 1em */
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
 </style>
