@@ -56,8 +56,8 @@ Template Name: Cursos
 .cursos-primera-section a {
     display: inline-block;
     padding: 17px 20px;
-    background-color: #ffffff;
-    color: #333333;
+    background-color: #d4a528;
+    color: white;
     text-decoration: none;
     font-size: 1.1em;
     border-radius: 15px;
@@ -65,7 +65,7 @@ Template Name: Cursos
 }
 
 .cursos-primera-section a:hover {
-    background-color: #eeeeee;
+    background-color: #3b3b38;
 }
 
 /* === MOVING TEXT SECTION === */
@@ -190,9 +190,6 @@ Template Name: Cursos
     }
 }
 .about {
-   $cubic: cubic-bezier(0.64, 0.01, 0.07, 1.65);
-   $transition: 0.6s $cubic;
-   $size: 40px;
    position: fixed;
    z-index: 10;
    bottom: 10px;
@@ -305,7 +302,7 @@ Template Name: Cursos
 .content {
    width: 100%;
    padding: 0 4%;
-   padding-top: 100px;
+   padding-top: 50px;
    margin: 0 auto;
    display: flex;
    justify-content: center;
@@ -416,147 +413,244 @@ Template Name: Cursos
     height: 30em;
 }
 
+.contact-section {
+  background-color:rgb(220, 219, 219);
+  padding: 60px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
 .cursos-apuntarse-p {
-    margin-top: 2em;
-    text-align:center;
-    font-size: 40px;
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
     font-weight: bold;
+    margin-top: 1.5em;
 }
 
-.iletisim_form{
-	width: 100%;
-	float: left;
-
-}
-.sol50{
-	float: left;
-	width: 50%;
-	padding-right: 15px;
-}
-.sag50{
-	float: right;
-	width: 50%;
-	padding-left: 15px;
-}
-.full100{
-	float: left;
-	width: 100%;
-}
-.iletisim_form .sag50, .iletisim_form .sol50, .iletisim_form .full100{
-	margin:5px 0;
-	position: relative;
-
-}
-.iletisim_form label{
-	float: left;
-	width: 100%;
-	margin-bottom: 5px;
-	font-size: 14px;
-	cursor: pointer;
-	position: relative;
-	top: 38px;
-	transition:300ms;
-  font-family: 'Roboto', sans-serif;
-    padding-left:15px;
-    font-size: 14px;
-  height:17px;
-}
-.iletisim_form input{
-	float: left;
-	width: 100%;
-	height: 50px;
-	padding:0 15px;
-	border:none;
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-	transition:300ms;
-	background:rgba(0,0,0,0.05);
-  font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-
-}
-.iletisim_form button{
-	float: left;
-	width: 100%;
-	height: 50px;
-	padding:0 10px;
-	border:none;
-	background:rgba(0,0,0,0.05);
-	color:rgba(0,0,0,0.9);
-	transition:300ms;
-  font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-    margin-top: 15px;
-    cursor: pointer;
-
-}
-.iletisim_form button:hover{
-	opacity: .7;
-}
-.iletisim_form textarea{
-	float: left;
-	width: 100%;
-	height:140px;
-	padding:10px;
-	border:none;
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-	transition:300ms;
-  font-family: 'Roboto', sans-serif;
-	background:rgba(0,0,0,0.05);
-}
-.iletisim_form input:focus{
-	border-bottom: 1px solid rgba(0,0,0,0);
-
-}
-.iletisim_form div span:before{
-	content: "";
-	width: 0%;
-  left:0;
-	position: absolute;
-	height: 100%;
-	border-bottom: 2px solid #1a5888;
-	transition:700ms;
-}
-.iletisim_form div span{
-	width: 100%;
-	float: left;
-	height: 100%;
-	position: relative;
-}
-@media  (max-width:768px){
-  .sag50,.sol50{
-		width: 100%;
-		padding:0;
-	}
+.contacto-titulo {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
 }
 
-.container{
-  width: 100%;
-  max-width:800px;
-  margin:0 auto;
-     text-decoration: none;
-    list-style-type: none;
+.iletisim_form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sol50,
+.sag50 {
+    flex: 1 1 45%;
+    min-width: 250px;
+}
+
+.full100 {
+    flex: 1 1 100%;
+}
+
+.iletisim_form span {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.iletisim_form label {
+    font-size: 0.95em;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.iletisim_form input,
+.iletisim_form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.iletisim_form input:focus,
+.iletisim_form textarea:focus {
+    border-color: #d4a528;
     outline: none;
 }
 
-.contact-section .title {
-    content: "";
-   text-align: center;
-    height: 5px;
+.iletisim_form textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
-.contact-section {
-    margin-top: 3em;
-    background-color: #d7d5d1;;
-    height: 40em;
-    margin: 5em;
+.iletisim_form button:hover {
+    background-color: #3b3b38;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 767px) {
+    .iletisim_form {
+        flex-direction: column;
+    }
+    .sol50,
+    .sag50,
+    .full100 {
+        flex: 1 1 100%;
+    }
+}
+
+.iletisim_form button {
+    display: inline-block;
+    padding: 17px 20px;
+    background-color: #d4a528;
+    color: white;
+    font-size: 1.1em;
+    border: none;
     border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    align-items: center; 
 }
 
-.contact-section .cursos-apuntarse-p {
-    margin-top: 1em;
+/* Preguntas სექციისთვის ფონის ფოტო */
+.acordeon-cuerpo {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
+.acordeon-cuerpo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/portada/6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7; /* შეცვალე opacity აქ */
+    z-index: 1;
+    height: 60em;
+}
+
+.acordeon {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    margin: 90px auto;
+    color: black;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.9); /* ღია თეთრი ფონი */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.acordeon h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.acordeon .contenedor {
+    position: relative;
+    margin: 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.acordeon .etiqueta {
+    position: relative;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.acordeon .etiqueta:hover {
+    background-color: rgba(212, 165, 40, 0.1);
+    color: #d4a528;
+}
+
+.acordeon .etiqueta::before {
+    content: '+';
+    color: #d4a528;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.acordeon .contenido {
+    position: relative;
+    max-height: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0 20px;
+}
+
+.acordeon .contenedor.activa .contenido {
+    max-height: 300px;
+    padding: 20px;
+}
+
+.acordeon .contenedor.activa .etiqueta {
+    background-color: #d4a528;
+    color: white;
+}
+
+.acordeon .contenedor.activa .etiqueta::before {
+    content: '−';
+    color: white;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .acordeon {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .acordeon h1 {
+        font-size: 2em;
+    }
+    
+    .acordeon .etiqueta {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .acordeon .contenido {
+        font-size: 14px;
+    }
+}
 </style>
 
 <section class="cursos-primera-section">
@@ -630,93 +724,89 @@ Template Name: Cursos
 </section>
 <section class="contact-section">
     <div class="container">
-  <h1 class="cursos-apuntarse-p">Déjanos tus datos y nos pondremos en contacto contigo para ampliarte información.</h1>
-  <form class="iletisim_form" action="">
-    <div class="style"></div>
-  <div class="sol50">
-    <span>
-      <label for="namesurmane">Name Surname</label>
-      <input type="text" name="namesurmane" id="namesurmane">
-    </span>
-  </div>
-  <div class="sag50">
-    <span>
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email">
-    </span>
-  </div>
-  <div class="sol50">
-    <span>
-      <label for="subject">Subject</label>
-      <input type="text" name="subject" id="subject">
-    </span>
-  </div>
-  <div class="sag50">
-    <span>
-      <label for="denetleme">text</label>
-      <input type="text" name="denetleme" id="denetleme">
-    </span>
-  </div>
-  <div class="full100">
-    <span>
-      <label for="messenger">Messenger</label>
-      <textarea name="messenger" id="messenger"></textarea>
-    </span>
-  </div>
-  <div class="full100">
-    <span>
-      <button>Send</button>
-    </span>
-  </div>
-  </form>
+        <p class="contacto-titulo">Déjanos tus datos y nos comunicaremos contigo</p>
+        <form class="iletisim_form" action="" method="post">
+            <div class="sol50">
+                <span>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </span>
+            </div>
+            <div class="sag50">
+                <span>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </span>
+            </div>
+            <div class="sol50">
+                <span>
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </span>
+            </div>
+            <div class="sag50">
+                <span>
+                    <label for="course">Curso</label>
+                    <input type="text" id="course" name="course" required>
+                </span>
+            </div>
+            <div class="full100">
+                <span>
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message"></textarea>
+                </span>
+            </div>
+            <div class="full100">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</section>
+<section class="acordeon-cuerpo">
+ <div class="acordeon">
+        <h1>Preguntas Frecuentes</h1>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Necesito experiencia previa para apuntarme?</div>
+            <div class="contenido">
+        No hace falta que seas experto, pero sí que tengas unas nociones básicas de patronaje y costura. Si sabes manejar una máquina de coser y entiendes los fundamentos del patrón, vas a poder seguir el taller sin problema.    
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Tengo que ser patronista profesional?</div>
+            <div class="contenido">
+        Para nada. No es un taller exclusivo para profesionales. Eso sí, si ya sabes hacer patrones, lo vas a disfrutar todavía más.     
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Y si no sé coser muy bien?</div>
+            <div class="contenido">
+        Con que sepas utilizar una máquina de coser, es suficiente. El enfoque es técnico, pero práctico.      
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Hace falta experiencia para hacer el taller?</div>
+            <div class="contenido">
+        No necesitas ser experto, pero sí tener una base mínima de costura. Es importante que reconozcas las líneas principales de construcción (pecho, cintura, cadera, sisa...) y vengas con ganas de experimentar.     
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Tengo que ser patronista profesional?</div>
+            <div class="contenido">
+        No. Aunque tener conocimientos de patronaje te será útil, el taller está pensado para todos los niveles.       
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">Soy estudiante, ¿puedo apuntarme?</div>
+            <div class="contenido">
+        Por supuesto. Este taller te aportará una visión muy práctica y complementaria a lo que ya estás aprendiendo.      
+        </div>
+        </div>
 </div>
 </section>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".ticker-item");
-
-  function animateHighlight() {
-    const centerX = window.innerWidth / 2;
-    const maxDistance = 160;
-
-    items.forEach(item => {
-      const rect = item.getBoundingClientRect();
-      const itemCenter = rect.left + rect.width / 2;
-      const distance = Math.abs(centerX - itemCenter);
-
-      if (distance < maxDistance) {
-        const intensity = 1 - (distance / maxDistance);
-        const scale = 1 + intensity * 0.2;
-        item.style.color = "#d4a528";
-        item.style.transform = `scale(${scale})`;
-      } else {
-        item.style.color = "#f0eee9";
-        item.style.transform = "scale(1)";
-      }
-    });
-
-    requestAnimationFrame(animateHighlight);
-  }
-
-  requestAnimationFrame(animateHighlight);
-});
-
-
-$(".iletisim_form input,.iletisim_form textarea").focus(function() {
-		$(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:0px;top:0px;font-size: 11px;");
-		$(this).parent().parent().addClass(this.id);
-		$(".style").html("<style>div."+this.id+" span:before{width:100%;}</style>");
-	}).blur(function() {
-		$(".style").html("<style>div."+this.id+" span:before{width:0%;}</style>");
-		if($(this).val() == ""){
-			$(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:15px;top:38px;font-size: 14px;");
-			$(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(249, 52, 52, 1);}</style>");
-		}else{
-			$(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(40, 226, 19, 1);}</style>");
-		}
-	});
-
-</script>
-
 <?php get_footer(); ?>
