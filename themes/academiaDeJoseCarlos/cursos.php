@@ -430,84 +430,97 @@ Template Name: Cursos
 }
 
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .cursos-apuntarse-p {
-  font-size: 1.6em;
-  margin-bottom: 30px;
-  text-align: center;
-  color: #333;
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
 }
 
 .iletisim_form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .sol50,
 .sag50 {
-  flex: 1 1 45%;
-  min-width: 250px;
+    flex: 1 1 45%;
+    min-width: 250px;
 }
 
 .full100 {
-  flex: 1 1 100%;
+    flex: 1 1 100%;
 }
 
 .iletisim_form span {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .iletisim_form label {
-  font-size: 0.95em;
-  margin-bottom: 6px;
-  color: #555;
+    font-size: 0.95em;
+    margin-bottom: 6px;
+    color: #555;
 }
 
 .iletisim_form input,
 .iletisim_form textarea {
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1em;
-  transition: border-color 0.3s ease;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
 }
 
 .iletisim_form input:focus,
 .iletisim_form textarea:focus {
-  border-color: #d4a528;
-  outline: none;
+    border-color: #d4a528;
+    outline: none;
 }
 
 .iletisim_form textarea {
-  resize: vertical;
-  min-height: 120px;
+    resize: vertical;
+    min-height: 120px;
 }
 
 .iletisim_form button {
-  background-color: #d4a528;
-  color: #fff;
-  padding: 14px 24px;
-  font-size: 1em;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  align-self: flex-start;
+    background-color: #d4a528;
+    color: #fff;
+    padding: 14px 24px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
 }
 
 .iletisim_form button:hover {
-  background-color: #3b3b38;
+    background-color: #3b3b38;
 }
 
+/* Responsive for smaller screens */
+@media screen and (max-width: 767px) {
+    .iletisim_form {
+        flex-direction: column;
+    }
+    .sol50,
+    .sag50,
+    .full100 {
+        flex: 1 1 100%;
+    }
+}
 </style>
 
 <section class="cursos-primera-section">
@@ -581,93 +594,42 @@ Template Name: Cursos
 </section>
 <section class="contact-section">
     <div class="container">
-  <h1 class="cursos-apuntarse-p">Déjanos tus datos y nos pondremos en contacto contigo para ampliarte información.</h1>
-  <form class="iletisim_form" action="">
-    <div class="style"></div>
-  <div class="sol50">
-    <span>
-      <label for="namesurmane">Name Surname</label>
-      <input type="text" name="namesurmane" id="namesurmane">
-    </span>
-  </div>
-  <div class="sag50">
-    <span>
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email">
-    </span>
-  </div>
-  <div class="sol50">
-    <span>
-      <label for="subject">Subject</label>
-      <input type="text" name="subject" id="subject">
-    </span>
-  </div>
-  <div class="sag50">
-    <span>
-      <label for="denetleme">text</label>
-      <input type="text" name="denetleme" id="denetleme">
-    </span>
-  </div>
-  <div class="full100">
-    <span>
-      <label for="messenger">Messenger</label>
-      <textarea name="messenger" id="messenger"></textarea>
-    </span>
-  </div>
-  <div class="full100">
-    <span>
-      <button>Send</button>
-    </span>
-  </div>
-  </form>
-</div>
+        <p class="cursos-apuntarse-p">Déjanos tus datos y nos pondremos en contacto contigo para darte más información.</p>
+        <form class="iletisim_form" action="" method="post">
+            <div class="sol50">
+                <span>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </span>
+            </div>
+            <div class="sag50">
+                <span>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </span>
+            </div>
+            <div class="sol50">
+                <span>
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </span>
+            </div>
+            <div class="sag50">
+                <span>
+                    <label for="course">Curso</label>
+                    <input type="text" id="course" name="course" required>
+                </span>
+            </div>
+            <div class="full100">
+                <span>
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message"></textarea>
+                </span>
+            </div>
+            <div class="full100">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
 </section>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".ticker-item");
-
-  function animateHighlight() {
-    const centerX = window.innerWidth / 2;
-    const maxDistance = 160;
-
-    items.forEach(item => {
-      const rect = item.getBoundingClientRect();
-      const itemCenter = rect.left + rect.width / 2;
-      const distance = Math.abs(centerX - itemCenter);
-
-      if (distance < maxDistance) {
-        const intensity = 1 - (distance / maxDistance);
-        const scale = 1 + intensity * 0.2;
-        item.style.color = "#d4a528";
-        item.style.transform = `scale(${scale})`;
-      } else {
-        item.style.color = "#f0eee9";
-        item.style.transform = "scale(1)";
-      }
-    });
-
-    requestAnimationFrame(animateHighlight);
-  }
-
-  requestAnimationFrame(animateHighlight);
-});
-
-
-$(".iletisim_form input,.iletisim_form textarea").focus(function() {
-		$(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:0px;top:0px;font-size: 11px;");
-		$(this).parent().parent().addClass(this.id);
-		$(".style").html("<style>div."+this.id+" span:before{width:100%;}</style>");
-	}).blur(function() {
-		$(".style").html("<style>div."+this.id+" span:before{width:0%;}</style>");
-		if($(this).val() == ""){
-			$(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:15px;top:38px;font-size: 14px;");
-			$(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(249, 52, 52, 1);}</style>");
-		}else{
-			$(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(40, 226, 19, 1);}</style>");
-		}
-	});
-
-</script>
-
 <?php get_footer(); ?>
