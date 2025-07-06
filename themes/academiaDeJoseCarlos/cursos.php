@@ -302,7 +302,7 @@ Template Name: Cursos
 .content {
    width: 100%;
    padding: 0 4%;
-   padding-top: 100px;
+   padding-top: 50px;
    margin: 0 auto;
    display: flex;
    justify-content: center;
@@ -413,17 +413,9 @@ Template Name: Cursos
     height: 30em;
 }
 
-.cursos-apuntarse-p {
-    margin-top: 1em;
-    text-align:center;
-    font-size: 40px;
-    font-weight: bold;
-}
-
 .contact-section {
   background-color:rgb(220, 219, 219);
   padding: 60px 20px;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .container {
@@ -436,6 +428,15 @@ Template Name: Cursos
 }
 
 .cursos-apuntarse-p {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 1.5em;
+}
+
+.contacto-titulo {
     font-size: 1.6em;
     margin-bottom: 30px;
     text-align: center;
@@ -521,6 +522,135 @@ Template Name: Cursos
     align-items: center; 
 }
 
+/* Preguntas სექციისთვის ფონის ფოტო */
+.acordeon-cuerpo {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.acordeon-cuerpo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/portada/6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7; /* შეცვალე opacity აქ */
+    z-index: 1;
+    height: 60em;
+}
+
+.acordeon {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    margin: 90px auto;
+    color: black;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.9); /* ღია თეთრი ფონი */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.acordeon h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.acordeon .contenedor {
+    position: relative;
+    margin: 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.acordeon .etiqueta {
+    position: relative;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.acordeon .etiqueta:hover {
+    background-color: rgba(212, 165, 40, 0.1);
+    color: #d4a528;
+}
+
+.acordeon .etiqueta::before {
+    content: '+';
+    color: #d4a528;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.acordeon .contenido {
+    position: relative;
+    max-height: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0 20px;
+}
+
+.acordeon .contenedor.activa .contenido {
+    max-height: 300px;
+    padding: 20px;
+}
+
+.acordeon .contenedor.activa .etiqueta {
+    background-color: #d4a528;
+    color: white;
+}
+
+.acordeon .contenedor.activa .etiqueta::before {
+    content: '−';
+    color: white;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .acordeon {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .acordeon h1 {
+        font-size: 2em;
+    }
+    
+    .acordeon .etiqueta {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .acordeon .contenido {
+        font-size: 14px;
+    }
+}
 </style>
 
 <section class="cursos-primera-section">
@@ -594,7 +724,7 @@ Template Name: Cursos
 </section>
 <section class="contact-section">
     <div class="container">
-        <p class="cursos-apuntarse-p">Déjanos tus datos y nos pondremos en contacto contigo para darte más información.</p>
+        <p class="contacto-titulo">Déjanos tus datos y nos comunicaremos contigo</p>
         <form class="iletisim_form" action="" method="post">
             <div class="sol50">
                 <span>
@@ -632,51 +762,51 @@ Template Name: Cursos
         </form>
     </div>
 </section>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".ticker-item");
-
-  function animateHighlight() {
-    const centerX = window.innerWidth / 2;
-    const maxDistance = 160;
-
-    items.forEach(item => {
-      const rect = item.getBoundingClientRect();
-      const itemCenter = rect.left + rect.width / 2;
-      const distance = Math.abs(centerX - itemCenter);
-
-      if (distance < maxDistance) {
-        const intensity = 1 - (distance / maxDistance);
-        const scale = 1 + intensity * 0.2;
-        item.style.color = "#d4a528";
-        item.style.transform = `scale(${scale})`;
-      } else {
-        item.style.color = "#f0eee9";
-        item.style.transform = "scale(1)";
-      }
-    });
-
-    requestAnimationFrame(animateHighlight);
-  }
-
-  requestAnimationFrame(animateHighlight);
-});
-
-
-$(".iletisim_form input,.iletisim_form textarea").focus(function() {
-        $(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:0px;top:0px;font-size: 11px;");
-        $(this).parent().parent().addClass(this.id);
-        $(".style").html("<style>div."+this.id+" span:before{width:100%;}</style>");
-    }).blur(function() {
-        $(".style").html("<style>div."+this.id+" span:before{width:0%;}</style>");
-        if($(this).val() == ""){
-            $(".iletisim_form label[for='" + this.id + "']").attr("style","padding-left:15px;top:38px;font-size: 14px;");
-            $(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(249, 52, 52, 1);}</style>");
-        }else{
-            $(".style").html("<style>div."+this.id+" span:before{width:100%;border-bottom: 2px solid rgba(40, 226, 19, 1);}</style>");
-        }
-    });
-
-</script>
-
+<section class="acordeon-cuerpo">
+ <div class="acordeon">
+        <h1>Preguntas Frecuentes</h1>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Necesito experiencia previa para apuntarme?</div>
+            <div class="contenido">
+        No hace falta que seas experto, pero sí que tengas unas nociones básicas de patronaje y costura. Si sabes manejar una máquina de coser y entiendes los fundamentos del patrón, vas a poder seguir el taller sin problema.    
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Tengo que ser patronista profesional?</div>
+            <div class="contenido">
+        Para nada. No es un taller exclusivo para profesionales. Eso sí, si ya sabes hacer patrones, lo vas a disfrutar todavía más.     
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Y si no sé coser muy bien?</div>
+            <div class="contenido">
+        Con que sepas utilizar una máquina de coser, es suficiente. El enfoque es técnico, pero práctico.      
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Hace falta experiencia para hacer el taller?</div>
+            <div class="contenido">
+        No necesitas ser experto, pero sí tener una base mínima de costura. Es importante que reconozcas las líneas principales de construcción (pecho, cintura, cadera, sisa...) y vengas con ganas de experimentar.     
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">¿Tengo que ser patronista profesional?</div>
+            <div class="contenido">
+        No. Aunque tener conocimientos de patronaje te será útil, el taller está pensado para todos los niveles.       
+        </div>
+        </div>
+        
+        <div class="contenedor">
+            <div class="etiqueta">Soy estudiante, ¿puedo apuntarme?</div>
+            <div class="contenido">
+        Por supuesto. Este taller te aportará una visión muy práctica y complementaria a lo que ya estás aprendiendo.      
+        </div>
+        </div>
+</div>
+</section>
 <?php get_footer(); ?>
