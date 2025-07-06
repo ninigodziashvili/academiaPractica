@@ -417,153 +417,95 @@ Template Name: Cursos
 }
 
 .cursos-apuntarse-p {
-    margin-top: 2em;
+    margin-top: 1em;
     text-align:center;
     font-size: 40px;
     font-weight: bold;
 }
 
-.iletisim_form{
-	width: 100%;
-	float: left;
+.contact-section {
+  background-color:rgb(220, 219, 219);
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
 
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
-.sol50{
-	float: left;
-	width: 50%;
-	padding-right: 15px;
-}
-.sag50{
-	float: right;
-	width: 50%;
-	padding-left: 15px;
-}
-.full100{
-	float: left;
-	width: 100%;
-}
-.iletisim_form .sag50, .iletisim_form .sol50, .iletisim_form .full100{
-	margin:5px 0;
-	position: relative;
 
+.cursos-apuntarse-p {
+  font-size: 1.6em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
 }
-.iletisim_form label{
-	float: left;
-	width: 100%;
-	margin-bottom: 5px;
-	font-size: 14px;
-	cursor: pointer;
-	position: relative;
-	top: 38px;
-	transition:300ms;
-  font-family: 'Roboto', sans-serif;
-    padding-left:15px;
-    font-size: 14px;
-  height:17px;
-}
-.iletisim_form input{
-	float: left;
-	width: 100%;
-	height: 50px;
-	padding:0 15px;
-	border:none;
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-	transition:300ms;
-	background:rgba(0,0,0,0.05);
-  font-family: 'Roboto', sans-serif;
-    font-size: 16px;
 
+.iletisim_form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.iletisim_form button{
-	float: left;
-	width: 100%;
-	height: 50px;
-	padding:0 10px;
-	border:none;
-	background:rgba(0,0,0,0.05);
-	color:rgba(0,0,0,0.9);
-	transition:300ms;
-  font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-    margin-top: 15px;
-    cursor: pointer;
 
+.sol50,
+.sag50 {
+  flex: 1 1 45%;
+  min-width: 250px;
 }
-.iletisim_form button:hover{
-	opacity: .7;
-     background-color: rgba(0,0,0,0.1);
+
+.full100 {
+  flex: 1 1 100%;
+}
+
+.iletisim_form span {
+  display: flex;
+  flex-direction: column;
+}
+
+.iletisim_form label {
+  font-size: 0.95em;
+  margin-bottom: 6px;
+  color: #555;
 }
 
 .iletisim_form input,
-.iletisim_form textarea,
+.iletisim_form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.iletisim_form input:focus,
+.iletisim_form textarea:focus {
+  border-color: #d4a528;
+  outline: none;
+}
+
+.iletisim_form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
 .iletisim_form button {
-    border-radius: 8px; /* აქ დაამატე მომრგვალება */
+  background-color: #d4a528;
+  color: #fff;
+  padding: 14px 24px;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
 }
 
-
-.iletisim_form textarea{
-	float: left;
-	width: 100%;
-	height:140px;
-	padding:10px;
-	border:none;
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-	transition:300ms;
-	background:rgba(0,0,0,0.05);
-}
-.iletisim_form input:focus{
-	border-bottom: 1px solid rgba(0,0,0,0);
-
-}
-.iletisim_form div span:before{
-	content: "";
-	width: 0%;
-  left:0;
-	position: absolute;
-	height: 100%;
-	border-bottom: 2px solid #d4a628d5;
-	transition:700ms;
-}
-.iletisim_form div span{
-	width: 100%;
-	float: left;
-	height: 100%;
-	position: relative;
-}
-@media  (max-width:768px){
-  .sag50,.sol50{
-		width: 100%;
-		padding:0;
-	}
-}
-
-.container{
-  width: 100%;
-  max-width:800px;
-  margin:0 auto;
-     text-decoration: none;
-    list-style-type: none;
-    outline: none;
-}
-
-.contact-section .title {
-    content: "";
-   text-align: center;
-    height: 5px;
-}
-
-.contact-section {
-    padding: 1em 2em; /* height ფიქსირებულად აღარ გამოიყენო */
-    border-radius: 15px;
-}
-
-
-.contact-section .cursos-apuntarse-p {
-    margin-top: 3em; /* ადრე იყო 1em */
-    text-align: center;
-    font-size: 20px;
-    line-height: 1.5;
+.iletisim_form button:hover {
+  background-color: #3b3b38;
 }
 
 </style>
