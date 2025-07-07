@@ -127,7 +127,8 @@ body {
   transition: all 0.3s ease;
 }
 
-/* responsive მენიუ */
+/* Add this CSS to fix the mobile dropdown positioning */
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -146,7 +147,7 @@ body {
   }
 
   .nav-list.open {
-    max-height: 400px; /* ან იმდენი რამდენიც გინდა */
+    max-height: 400px;
   }
 
   .nav-list li {
@@ -155,21 +156,31 @@ body {
   }
 
   .dropdown-menu {
-    display: none;
     position: static;
-    background-color: transparent;
+    display: none;
+    background-color: var(--color-fondo2);
+    min-width: auto;
+    box-shadow: none;
+    border-radius: 0;
+    z-index: 1001;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .dropdown-menu li {
+    margin: 5px 0;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-@media (max-width: 768px) {
+  
   .nav.scrolled {
     margin: 0;
     width: 100%;
@@ -178,7 +189,6 @@ body {
     box-shadow: none;
   }
 }
-
 
 /* Dropdown Menu */
 .dropdown {
