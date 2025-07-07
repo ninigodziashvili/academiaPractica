@@ -360,6 +360,40 @@ Template Name: Cursos
    transition: all 0.3s ease;
 }
 
+@media screen and (max-width: 1024px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cursos-apuntarse {
+    margin-bottom: 35em;
+  }
+
+  .card {
+    flex: 1 1 calc(45% - 20px);
+    max-width: calc(45% - 20px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
+    .cursos-apuntarse {
+    margin-bottom: 40em;
+  }
+
+}
+
+
 .cursos-apuntarse {
     height: 30em;
 }
