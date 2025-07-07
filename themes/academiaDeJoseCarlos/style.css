@@ -10,6 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Academia de Jose Carlos
 */
 /* Aquí puedes comenzar a escribir tus estilos CSS */
+
 :root {
   /* Colores base */
   --color-fondo: #f0eee9;
@@ -33,22 +34,6 @@ Text Domain: Academia de Jose Carlos
 @font-face {
   font-family: lato-contenido;
   src: url(assets/font/Lato/Lato-Regular.ttf);
-}
-
-
-
-:root {
-  /* Colores base */
-  --color-fondo: #d4a528;
-  --color-fondo-buttom: #d4a628d5;
-  --color-fondo2: #2B2B28; /* Menu de navegacion */
-  --color-fondo2-hover: #3b3b38;
-  --nav-texto: #f0eee9; /* Background */
-  --nav-hover: var(--color-primario);
-
-  /* Sombra y blur */
-  --blur: blur(10px);
-  --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -175,8 +160,6 @@ body {
 
 
 /*Axel Sanchez Front-page inicio*/
-
-
 .botones {
   display: flex;
   justify-content: center;
@@ -695,18 +678,7 @@ galeria de imagenes
      --blur: blur(10px);
      --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
  }
-
- @font-face {
-     font-family: lato;
-     src: url(assets/fonts/Lato/Lato-Regular.ttf);
- }
-
- body {
-     font-family: lato;
-     background: var(--color-fondo);
-
- }
-
+ 
  /* loader */
 
  .pespunte-loader {
