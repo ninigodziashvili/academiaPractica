@@ -5,8 +5,6 @@ Template Name: Cursos
 ?>
 
 <?php get_header(); ?>
-<?php $image_url = get_stylesheet_directory_uri() . '/assets/img/portada/3.png'; ?>
-
 <style>
 .video-section {
     margin-top: 60px;
