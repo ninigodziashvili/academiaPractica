@@ -8,64 +8,18 @@ Template Name: Cursos
 <?php $image_url = get_stylesheet_directory_uri() . '/assets/img/portada/3.png'; ?>
 
 <style>
-/* === HERO SECTION === */
-.cursos-primera-section {
-    position: relative;
+.video-section {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #000;
+    text-align: center;
     width: 100%;
-    min-height: 75vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
-    box-sizing: border-box;
-    padding: 50px 10%;
-    overflow: hidden;
-    color: #fff;
 }
 
-.cursos-primera-section-contenido {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    width: 100%;
-    color: black;
-}
-
-.cursos-primera-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('<?php echo $image_url; ?>');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.4;
-    z-index: 1;
-}
-
-.cursos-primera-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.cursos-primera-section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.cursos-primera-section a {
-    display: inline-block;
-    padding: 17px 20px;
-    background-color: #d4a528;
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 15px;
-    transition: background-color 0.3s ease;
-}
-
-.cursos-primera-section a:hover {
-    background-color: #3b3b38;
+.responsive-video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 /* === MOVING TEXT SECTION === */
@@ -404,7 +358,7 @@ Template Name: Cursos
 }
 
 .container {
-    max-width: 900px;
+    width: 80%;
     margin: 0 auto;
     background-color: #fff;
     padding: 40px;
@@ -533,7 +487,7 @@ Template Name: Cursos
 .acordeon {
     position: relative;
     z-index: 2;
-    width: 80%;
+    width: 900px;
     margin: 90px auto;
     color: black;
     padding: 45px;
@@ -638,13 +592,11 @@ Template Name: Cursos
     }
 }
 </style>
-
-<section class="cursos-primera-section">
-    <div class="cursos-primera-section-contenido">
-        <h2>Upgrade, tu Hub de Especialización en Talento Tech</h2>
-        <p>Formación en remoto 100% en directo. Especialízate en IA, Ciberseguridad, Data&IA, Desarrollo, UX/UI y más.</p>
-        <a href="#">¡Despierta tu instinto!</a>
-    </div>
+<section class="video-section">
+    <video controls muted loop class="responsive-video" preload="metadata">
+        <source src="/wp-content/themes/academiaDeJoseCarlos/assets/videos/myvideo.mp4" type="video/mp4">
+        Tu navegador no soporta el video HTML5.
+    </video>
 </section>
 
 <section class="moving-texts">
