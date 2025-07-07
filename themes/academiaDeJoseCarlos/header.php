@@ -13,9 +13,15 @@
                 <li>
                     <a href="<?php echo home_url(); ?>">Blog</a>
                 </li>
-                <li>
-                    <a href="/cursos/">Cursos</a>
-                </li>
+<li class="dropdown">
+      <a href="/cursos/">
+    Cursos <i class="fa fa-caret-down"></i>
+  </a>
+    <ul class="dropdown-menu">
+        <li><a href="/moulage/">Moulage Técnico</a></li>
+        <li><a href="/corset/">Corset a Medida</a></li>
+    </ul>
+</li>
                 <li>
                     <a href="/agenda/">Agenda</a>
                 </li>
