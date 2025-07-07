@@ -428,15 +428,6 @@ Template Name: Cursos
 }
 
 .cursos-apuntarse-p {
-    font-size: 3em;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #333;
-    font-weight: bold;
-    margin-top: 1.5em;
-}
-
-.contacto-titulo {
     font-size: 1.6em;
     margin-bottom: 30px;
     text-align: center;
@@ -807,6 +798,37 @@ Template Name: Cursos
         Por supuesto. Este taller te aportará una visión muy práctica y complementaria a lo que ya estás aprendiendo.      
         </div>
         </div>
-</div>
-</section>
+    </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".ticker-item");
+
+  function animateHighlight() {
+    const centerX = window.innerWidth / 2;
+    const maxDistance = 160;
+
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      const itemCenter = rect.left + rect.width / 2;
+      const distance = Math.abs(centerX - itemCenter);
+
+      if (distance < maxDistance) {
+        const intensity = 1 - (distance / maxDistance);
+        const scale = 1 + intensity * 0.2;
+        item.style.color = "#d4a528";
+        item.style.transform = `scale(${scale})`;
+      } else {
+        item.style.color = "#f0eee9";
+        item.style.transform = "scale(1)";
+      }
+    });
+
+    requestAnimationFrame(animateHighlight);
+  }
+
+  requestAnimationFrame(animateHighlight);
+});
+
+</script>
+
 <?php get_footer(); ?>
