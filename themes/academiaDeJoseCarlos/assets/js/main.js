@@ -42,14 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
 //nav 
 //barra de navegacion 
 
-window.addEventListener('scroll', function () {
+document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.nav');
-  if (window.scrollY > 100) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
+  
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 });
+
 
 // Agenda
 
@@ -147,25 +151,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.addEventListener('DOMContentLoaded', function() {
             const acordeonItems = document.querySelectorAll('.acordeon .contenedor');
-            
+  
             acordeonItems.forEach(function(item) {
                 const etiqueta = item.querySelector('.etiqueta');
-                
                 etiqueta.addEventListener('click', function() {
-                    // Close all other accordion items
                     acordeonItems.forEach(function(otherItem) {
                         if (otherItem !== item) {
                             otherItem.classList.remove('activa');
                         }
                     });
-                    
-                    // Toggle current item
                     item.classList.toggle('activa');
                 });
             });
         });
 
-        // Burger Menu
+ // Burger Menu
 
   const hamburger = document.getElementById('hamburger');
   const navList = document.getElementById('nav-list');
