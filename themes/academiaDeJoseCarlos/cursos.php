@@ -428,10 +428,20 @@ Template Name: Cursos
 }
 
 .cursos-apuntarse-p {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.contacto-titulo {
     font-size: 1.6em;
     margin-bottom: 30px;
     text-align: center;
     color: #333;
+    font-weight: bold;
 }
 
 .iletisim_form {
