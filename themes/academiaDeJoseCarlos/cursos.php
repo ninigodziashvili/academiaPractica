@@ -532,7 +532,7 @@ Template Name: Cursos
     background-repeat: no-repeat;
     opacity: 0.7; /* შეცვალე opacity აქ */
     z-index: 1;
-    height: 60em;
+    height: 110em;
 }
 
 .acordeon {
@@ -755,12 +755,13 @@ Template Name: Cursos
 </section>
 <section class="acordeon-cuerpo">
  <div class="acordeon">
-        <h1>Preguntas Frecuentes</h1>
+        <h1>Preguntas frecuentes</h1>
+            <h1>Patrón Técnico de Corset a Medida</h1>
         
         <div class="contenedor">
             <div class="etiqueta">¿Necesito experiencia previa para apuntarme?</div>
             <div class="contenido">
-        No hace falta que seas experto, pero sí que tengas unas nociones básicas de patronaje y costura. Si sabes manejar una máquina de coser y entiendes los fundamentos del patrón, vas a poder seguir el taller sin problema.    
+       No hace falta que seas experto, pero sí que tengas unas nociones básicas de patronaje y costura. Si sabes manejar una máquina de coser y entiendes los fundamentos del patrón, vas a poder seguir el taller sin problema.   
         </div>
         </div>
         
@@ -779,23 +780,100 @@ Template Name: Cursos
         </div>
         
         <div class="contenedor">
-            <div class="etiqueta">¿Hace falta experiencia para hacer el taller?</div>
+            <div class="etiqueta">Soy estudiante, ¿este curso me sirve?</div>
             <div class="contenido">
-        No necesitas ser experto, pero sí tener una base mínima de costura. Es importante que reconozcas las líneas principales de construcción (pecho, cintura, cadera, sisa...) y vengas con ganas de experimentar.     
+      ¡Claro que sí! Es un complemento excelente para tu formación. Aprenderás una técnica que te va a abrir muchas puertas.
         </div>
         </div>
         
         <div class="contenedor">
-            <div class="etiqueta">¿Tengo que ser patronista profesional?</div>
+            <div class="etiqueta">¿Seré capaz de repetir el proceso después?</div>
             <div class="contenido">
         No. Aunque tener conocimientos de patronaje te será útil, el taller está pensado para todos los niveles.       
         </div>
         </div>
         
         <div class="contenedor">
+            <div class="etiqueta">Trabajo en moda industrial, no a medida. ¿También me sirve?</div>
+            <div class="contenido">
+       Sí. Saber adaptar copas a cualquier cuerpo es una habilidad valiosa incluso en el desarrollo de patrones para producción en serie.      
+        </div>
+        
+        </div>
+                <div class="contenedor">
+            <div class="etiqueta">¿Qué necesito llevar al taller?</div>
+            <div class="contenido">
+       Tu kit básico de costura (tijeras de papel y tela, alfileres, agujas, hilo de hilvanar, dedal...), un cuaderno para apuntes. Todo lo demás te lo proporciono yo.      
+        </div>
+        
+        </div>
+                <div class="contenedor">
+            <div class="etiqueta">¿Y si tengo otra duda?</div>
+            <div class="contenido">
+       Puedes escribirme sin problema. Estoy aquí para ayudarte.     
+        </div>
+        
+        </div>
+   <h1>Moulage Técnico</h1>
+                <div class="contenedor">
+            <div class="etiqueta">¿Hace falta experiencia para hacer el taller?</div>
+            <div class="contenido">
+      No necesitas ser experto, pero sí tener una base mínima de costura. Es importante que reconozcas las líneas principales de construcción (pecho, cintura, cadera, sisa...) y vengas con ganas de experimentar.   
+        </div>
+        
+        </div>
+                        <div class="contenedor">
+            <div class="etiqueta">¿Tengo que ser patronista profesional?</div>
+            <div class="contenido">
+      No. Aunque tener conocimientos de patronaje te será útil, el taller está pensado para todos los niveles.     
+        </div>
+        
+        </div>
+                        <div class="contenedor">
+            <div class="etiqueta">¿Tengo que saber coser?</div>
+            <div class="contenido">
+      Solo un poco. Lo único que coseremos es el brazo del maniquí, y para eso basta con que sepas usar una máquina de coser.
+        </div>
+        
+        </div>
+                        <div class="contenedor">
             <div class="etiqueta">Soy estudiante, ¿puedo apuntarme?</div>
             <div class="contenido">
         Por supuesto. Este taller te aportará una visión muy práctica y complementaria a lo que ya estás aprendiendo.      
+        </div>
+        
+        </div>
+                                <div class="contenedor">
+            <div class="etiqueta">¿Necesito llevar un maniquí?</div>
+            <div class="contenido">
+        Si tienes uno (de costura, no de los ajustables por tallas), puedes traerlo y así te lo llevas listo para seguir trabajando en casa. Si no, no te preocupes: en el centro dispondrás de uno para trabajar durante el curso.      
+        </div>
+        
+        </div>
+                                <div class="contenedor">
+            <div class="etiqueta">¿Sabré colocar las cintas yo solo después?</div>
+            <div class="contenido">
+      Sí. Te entregaré una carpeta con el proceso completo para que puedas repetirlo sin dificultad.    
+        </div>
+        </div>
+                                        <div class="contenedor">
+            <div class="etiqueta">Estoy pensando en comprar un maniquí, ¿me orientas?</div>
+            <div class="contenido">
+    Claro. En el taller hablaremos sobre los distintos tipos de maniquíes que hay en el mercado, con sus pros y contras, para que tomes una buena decisión.   
+        </div>
+        
+        </div>
+                                        <div class="contenedor">
+            <div class="etiqueta">Trabajo en moda industrial, ¿este taller me puede aportar algo?</div>
+            <div class="contenido">
+    Muchísimo. El moulage te permite descubrir nuevas formas y volúmenes que, sobre plano, serían muy difíciles de construir.   
+        </div>
+        
+        </div>
+                                                <div class="contenedor">
+            <div class="etiqueta">¿Qué tengo que llevar al taller?</div>
+            <div class="contenido">
+   Solo unas buenas tijeras y muchas ganas de aprender. Lo demás, corre de mi cuenta.  
         </div>
         </div>
     </div>
