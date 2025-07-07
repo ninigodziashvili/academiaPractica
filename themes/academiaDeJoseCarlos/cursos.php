@@ -591,10 +591,16 @@ Template Name: Cursos
 }
 </style>
 <section class="video-section">
-    <video controls muted loop class="responsive-video" preload="metadata">
-        <source src="/wp-content/themes/academiaDeJoseCarlos/assets/videos/myvideo.mp4" type="video/mp4">
-        Tu navegador no soporta el video HTML5.
-    </video>
+  <video
+    controls
+    muted
+    class="responsive-video"
+    preload="auto"
+    poster="/wp-content/themes/academiaDeJoseCarlos/assets/videos/thumbnail.jpg"
+  >
+    <source src="/wp-content/themes/academiaDeJoseCarlos/assets/videos/myvideo.mp4" type="video/mp4">
+    Tu navegador no soporta el video HTML5.
+  </video>
 </section>
 
 <section class="moving-texts">
