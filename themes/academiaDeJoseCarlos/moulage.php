@@ -54,14 +54,14 @@ Template Name: Moulage
  }
 
  .button-moulage {
-     padding: 12px 24px;
+     padding: 20px 24px;
      border: none;
      background: var(--nav-texto);
      color: #fff;
      border-radius: 20px;
      cursor: pointer;
      font-weight: bold;
-     font-size: 1em;
+     font-size: 2em;
      transition: all 0.3s ease;
  }
 
