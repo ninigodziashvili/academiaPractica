@@ -2,6 +2,7 @@
 <main>
     <section class="inicio">
         <div class="fondo-video">
+
             <video autoplay loop muted playsinline src="/wp-content/themes/academiaDeJoseCarlos/assets/videos/1.Presentacion curso moulage.mp4"></video>
             <!-- <iframe src="https://www.youtube.com/embed/v3hvmNIQ_hI?&autoplay=1&mute=1&loop=1&playlist=v3hvmNIQ_hI&controls=0&showinfo=0&modestbranding=1"
                 frameborder="0"
@@ -9,6 +10,7 @@
                 allowfullscreen
                 loading="lazy">
             </iframe> -->
+
         </div>
         <div class="inicio_contenido">
             <h1>"nada es imposible solo hay que encontrar la manera"</h1>
@@ -37,8 +39,7 @@
 
         <!-- Curso 1 -->
         <div class="curso" data-aos="fade-right">
-            <img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3665.png"
-                alt="Curso de Diseño de Moda Básico" />
+           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico"/>
             <div>
                 <h3>taller de patrón técnico de corset a medida (20h)</h3>
                 <strong>resuelve el volumen del seno con presición y adapta cualquier copa a la morfología de la persona.</strong>
@@ -804,8 +805,6 @@
         <div class="foto "><img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3880.png" alt="Foto 5"></div>
 
     </section>
-
-
 </main>
 <script>
     //nav 
