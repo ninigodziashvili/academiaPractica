@@ -10,6 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: Academia de Jose Carlos
 */
 /* Aquí puedes comenzar a escribir tus estilos CSS */
+
 :root {
   /* Colores base */
   --color-fondo: #f0eee9;
@@ -34,8 +35,6 @@ Text Domain: Academia de Jose Carlos
   font-family: lato-contenido;
   src: url(assets/font/Lato/Lato-Regular.ttf);
 }
-
-
 
 * {
   margin: 0;
@@ -108,10 +107,142 @@ body {
   border: 1px solid var(--color-fondo);
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+  border: none;
+  z-index: 1100;
+  margin-right: 20px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--nav-texto);
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Add this CSS to fix the mobile dropdown positioning */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--color-fondo2);
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-list.open {
+    max-height: 400px;
+  }
+
+  .nav-list li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background-color: var(--color-fondo2);
+    min-width: auto;
+    box-shadow: none;
+    border-radius: 0;
+    z-index: 1001;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .dropdown-menu li {
+    margin: 5px 0;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .nav.scrolled {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-fondo2);
+  min-width: 160px;
+  box-shadow: var(--sombra-suave);
+  border-radius: 8px;
+  z-index: 1001;
+  padding: 10px 0;
+  list-style: none;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  margin: 0;
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--nav-texto);
+  transition: background-color 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Rotate the down arrow on hover */
+.dropdown > a .fa {
+  margin-left: 5px;
+  font-size: 12px;  /* Increase size if needed */
+  color: var(--nav-texto);  /* Make sure it’s visible */
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover > a .fa {
+  transform: rotate(180deg);
+   color: #D4A528;
+}
+
 
 /*Axel Sanchez Front-page inicio*/
-
-
 .botones {
   display: flex;
   justify-content: center;
@@ -811,18 +942,7 @@ galeria de imagenes
      --blur: blur(10px);
      --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
  }
-
- @font-face {
-     font-family: lato;
-     src: url(assets/fonts/Lato/Lato-Regular.ttf);
- }
-
- body {
-     font-family: lato;
-     background: var(--color-fondo);
-
- }
-
+ 
  /* loader */
 
  .pespunte-loader {

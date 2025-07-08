@@ -1,8 +1,6 @@
 
-// Front-page
-
-
 //mensajes de texto carrusel
+
 document.addEventListener('DOMContentLoaded', () => {
   const carrusel = document.getElementById('carrusel');
   const cartas = document.querySelectorAll('.carta');
@@ -43,35 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //nav 
 //barra de navegacion 
-window.addEventListener('scroll', function () {
+
+document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.nav');
-  if (window.scrollY > 100) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-
-// Navegador
-const navSlide = () => {
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav-link");
-  const navLinks = document.querySelectorAll(".nav-link li");
-
-  burger.addEventListener("click", () => {
-    nav.classList.toggle("nav-link-activated");
-    burger.classList.toggle("toggle")
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`
-      }
-    })
+  
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
   });
-}
-
-console.log("main.js loaded!");
+});
 
 
 // Agenda
@@ -104,6 +85,7 @@ document.querySelectorAll('.escuelas-lista li').forEach(item => {
 });
 
 //mensajes de texto carrusel
+
 document.addEventListener('DOMContentLoaded', () => {
   const carrusel = document.getElementById('carrusel');
   const cartas = document.querySelectorAll('.carta');
@@ -142,9 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-<<<<<<< HEAD
-
  //nav 
 //Axel Sanchez
 //barra de navegacion 
@@ -155,7 +134,6 @@ window.addEventListener('scroll', function () {
     } else {
         navbar.classList.remove('scrolled');
     }
-=======
 document.addEventListener("DOMContentLoaded", function () {
   const botones = document.querySelectorAll(".boton-leermas");
 
@@ -178,20 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-window.addEventListener('scroll', function () {
-  const navbar = document.querySelector('.nav');
-  if (window.scrollY > 100) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
->>>>>>> d16b03461ebfcf6f0cd0ca3cf22473681aec6c70
-});
-
-// Navegador
-const navSlide = () => {
-<<<<<<< HEAD
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-link");
     const navLinks = document.querySelectorAll(".nav-link li");
@@ -235,7 +199,6 @@ const navSlide = () => {
     }
   });
 
-=======
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-link");
   const navLinks = document.querySelectorAll(".nav-link li");
@@ -253,4 +216,30 @@ const navSlide = () => {
     })
   });
 }
->>>>>>> d16b03461ebfcf6f0cd0ca3cf22473681aec6c70
+// Preguntas frequentas
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const acordeonItems = document.querySelectorAll('.acordeon .contenedor');
+  
+            acordeonItems.forEach(function(item) {
+                const etiqueta = item.querySelector('.etiqueta');
+                etiqueta.addEventListener('click', function() {
+                    acordeonItems.forEach(function(otherItem) {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('activa');
+                        }
+                    });
+                    item.classList.toggle('activa');
+                });
+            });
+        });
+
+ // Burger Menu
+
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.getElementById('nav-list');
+
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
