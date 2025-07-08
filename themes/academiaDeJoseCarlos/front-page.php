@@ -798,10 +798,16 @@
             <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen ampliada">
         </div>
 
-        <div class="foto "><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/SAM3610.png" alt="Foto 1"></div>
+        <div class="foto ">
+           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/1.png" alt="" />
+        </div>
         <div class="foto "><img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3876.png" alt="Foto 2"></div>
-        <div class="foto "><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/06/SAM3665.png" alt="Foto 3"></div>
-        <div class="foto "><img src="http://jose-carlos-herrera.local/wp-content/uploads/2025/07/curso-de-moulage-tecnico-de-Jose-Carlos-Herrera-en-Cose-Madrid-8.webp" alt="Foto 4"></div>
+        <div class="foto ">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/3.png" alt="" />
+        </div>
+        <div class="foto ">
+               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/4.webp" alt="" />
+        </div>
         <div class="foto "><img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3880.png" alt="Foto 5"></div>
 
     </section>
