@@ -759,27 +759,6 @@ Template Name: Cursos
             color: var(--color-fondo2);
         }
 
-        .gallery-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--color-fondo2);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .indicator.active {
-            background: var(--nav-texto);
-            transform: scale(1.2);
-        }
-
         @media (max-width: 768px) {
             .gallery-item {
                 flex: 0 0 250px;
@@ -973,8 +952,7 @@ Template Name: Cursos
             <button class="gallery-nav prev" id="prevBtn">‹</button>
             <button class="gallery-nav next" id="nextBtn">›</button>
         </div>
-                <div class="gallery-indicators" id="indicators"></div>
-
+        <div class="gallery-indicators" id="indicators"></div>
          </section>
 <section class="cursos-apuntarse">
     <p class="cursos-apuntarse-p">¿Por qué apuntarte?</p>
@@ -1240,7 +1218,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             
             init() {
-                this.createIndicators();
                 this.updateGallery();
                 this.bindEvents();
                 
@@ -1253,16 +1230,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }
             
-            createIndicators() {
-                this.indicators.innerHTML = '';
-                for (let i = 0; i <= this.maxIndex; i++) {
-                    const indicator = document.createElement('div');
-                    indicator.className = 'indicator';
-                    indicator.addEventListener('click', () => this.goToSlide(i));
-                    this.indicators.appendChild(indicator);
-                }
-            }
-            
             updateGallery() {
                 const translateX = -this.currentIndex * this.itemWidth;
                 this.wrapper.style.transform = `translateX(${translateX}px)`;
@@ -1270,11 +1237,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Update navigation buttons
                 this.prevBtn.disabled = this.currentIndex === 0;
                 this.nextBtn.disabled = this.currentIndex === this.maxIndex;
-                
-                // Update indicators
-                this.indicators.querySelectorAll('.indicator').forEach((indicator, index) => {
-                    indicator.classList.toggle('active', index === this.currentIndex);
-                });
             }
             
             goToSlide(index) {
