@@ -536,6 +536,49 @@
             text-decoration: underline !important;
         }
     }
+
+    /* Extra small screens (up to 480px) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem 0 1rem;
+        height: auto;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .footer-section p {
+        text-align: center;
+    }
+
+    .team-list {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .whatsapp-btn {
+        bottom: 1.5rem;
+        right: 1rem;
+    }
+
+    .footer-legal {
+        font-size: 0.75rem;
+        padding-top: 1.5rem;
+    }
+}
+
 </style>
 
 <footer class="footer">
