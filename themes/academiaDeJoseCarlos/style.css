@@ -107,6 +107,8 @@ body {
   border: 1px solid var(--color-fondo);
 }
 
+
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -129,7 +131,7 @@ body {
 
 /* Add this CSS to fix the mobile dropdown positioning */
 
-@media (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 1080px) {
   .hamburger {
     display: flex;
   }
@@ -162,7 +164,7 @@ body {
     min-width: auto;
     box-shadow: none;
     border-radius: 0;
-    z-index: 1001;
+    z-index: 10001;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -180,7 +182,7 @@ body {
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-  
+
   .nav.scrolled {
     margin: 0;
     width: 100%;
@@ -189,6 +191,18 @@ body {
     box-shadow: none;
   }
 }
+
+@media (min-width: 1080px) and (max-width: 1280px) {
+  .nav.scrolled {
+    margin: 10px 10em;
+    width: 70%;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-fondo);
+  }
+}
+
+
 
 /* Dropdown Menu */
 .dropdown {
@@ -229,16 +243,18 @@ body {
 }
 
 /* Rotate the down arrow on hover */
-.dropdown > a .fa {
+.dropdown>a .fa {
   margin-left: 5px;
-  font-size: 12px;  /* Increase size if needed */
-  color: var(--nav-texto);  /* Make sure it’s visible */
+  font-size: 12px;
+  /* Increase size if needed */
+  color: var(--nav-texto);
+  /* Make sure it’s visible */
   transition: transform 0.3s ease;
 }
 
-.dropdown:hover > a .fa {
+.dropdown:hover>a .fa {
   transform: rotate(180deg);
-   color: #D4A528;
+  color: #D4A528;
 }
 
 
@@ -338,30 +354,32 @@ body {
   filter: brightness(60%);
 }
 
-
+/* 
 iframe {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  /* Para que no se pueda hacer clic */
-}
-
-/* En pantallas más anchas que altas */
+  /* Para que no se pueda hacer clic 
+} 
+ */
+/* 
+/* En pantallas más anchas que altas 
 @media (min-aspect-ratio: 16/9) {
   .video-fondo iframe {
     width: 100vw;
     height: 56.25vw;
-    /* 100vw * (9 / 16) = 56.25vw */
+    /* 100vw * (9 / 16) = 56.25vw 
   }
 }
 
-/* En pantallas más altas que anchas */
+/* En pantallas más altas que anchas 
 @media (max-aspect-ratio: 16/9) {
   .video-fondo iframe {
     width: 177.78vh;
     height: 100vh;
   }
 }
+ */
 
 .inicio_contenido h1 {
   color: var(--color-fondo);
@@ -379,6 +397,40 @@ iframe {
   font-family: lato-contenido;
 
 }
+
+
+.video-fondo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.video-fondo video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.boton-sonido {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-fondo-buttom);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+.boton-sonido:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
 
 /*
 ============================================
@@ -410,7 +462,7 @@ testimonios
 */
 .testimonios {
   height: 100vh;
-  background-image: url(https://audaces.com/wp-content/uploads/2023/09/desfile-de-moda-o-dia-1024x574.webp);
+  background-image: url(assets/img-comentarios/pasarelademoda1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   /* Esto hace que la imagen ocupe todo el ancho y alto posible */
@@ -425,14 +477,11 @@ testimonios
   background-attachment: fixed;
   /* la imagen aparesca fija y haga scroll sin usar position */
   z-index: 1;
-
 }
 
 
 
-.testimonios_container2:hover {
-  animation-play-state: paused;
-}
+
 
 
 .testimonios_container {
@@ -468,9 +517,18 @@ testimonios
   scroll-snap-type: x mandatory;
   gap: 0.5em;
   will-change: transform;
-  animation: scrollX 30s linear infinite;
+  animation-play-state: running;
+  animation: scrollX 80s linear infinite;
 }
 
+.testimonios_container2.pausado {
+  animation-play-state: paused;
+}
+
+.testimonios_container2.pausado,
+.testimonios_container2.hover-activo {
+  animation-play-state: paused;
+}
 
 .testimonios_container::before {
   content: "";
@@ -506,10 +564,11 @@ testimonios
   transform-origin: center center;
   overflow: hidden;
   box-sizing: border-box;
-  transition: 0.5s all;
+  transition: 1s all;
   cursor: pointer;
   border: 1px solid var(--color-fondo-buttom);
 }
+
 
 
 
@@ -522,6 +581,7 @@ testimonios
   opacity: 0;
   transition: all 0.4s ease;
 }
+
 
 
 /* Comilla superior */
@@ -558,6 +618,19 @@ testimonios
   /* Se mantiene siempre para evitar movimiento */
   transform-origin: top;
 }
+
+.carta.activa {
+  transform: scale(1.1);
+}
+
+.carta.activa .completo {
+  transform: scaleY(1);
+  max-height: 900px;
+  opacity: 1;
+  padding: 50px 10px;
+  transform-origin: top;
+}
+
 
 .carta:hover {
   transform: scale(1.1);
@@ -650,51 +723,46 @@ testimonios
   }
 }
 
-@media (max-width: 768px) {
- 
-
-
+@media (max-width: 480px) {
 
   .carta {
-    min-width: 300px;
-    max-width: 300px;
-    margin: 0 5px;
-
+    min-width: 90vw;
+    max-width: 90vw;
+    padding: 16px;
+    font-size: 12px;
   }
 
-  .carta:hover {
-    transform: none;
+  .usuario {
+    font-size: 16px;
   }
 
-  .carta:hover .completo {
-    transform: none;
-    padding: 20px 10px;
-    max-height: auto;
+  .mensaje {
+    font-size: 11px;
   }
-  .completo::before {
-  content: "“";
+
+  .completo {
+    padding: 40px 8px;
+  }
+
+
+}
+
+.btn-pausa {
   position: absolute;
-  top: 20px;
-  left: 5px;
-  font-size: 60px;
-  color: var(--color-fondo2);
-  /* primera más clara */
-  font-family: serif;
-}
-
-/* Comilla inferior */
-.completo::after {
-  content: "”";
-  position: absolute;
-  bottom: 0;
-  right: 5px;
-  font-size: 60px;
-  color: var(--color-fondo2-hover);
-  /* segunda más oscura */
-  font-family: serif;
-}
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-fondo-buttom);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.3s ease;
 
 }
+
 
 
 
@@ -772,6 +840,52 @@ cursos
     font-size: 15px;
   }
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .curso {
+    margin-left: 20px;
+  }
+
+  .inicio_contenido h1 {
+    margin-top: 10em;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .botones {
+    padding: 2em;
+    gap: 15px;
+  }
+
+  .boton1 {
+    padding: 6px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .curso {
+    margin-left: 30px;
+  }
+
+  .inicio_contenido h1 {
+    margin-top: 10em;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .botones {
+    padding: 2em;
+    gap: 15px;
+  }
+
+  .boton1 {
+    padding: 6px 20px;
+    font-size: 15px;
+  }
+}
+
+
 
 .curso::before {
   content: "";
@@ -921,422 +1035,422 @@ galeria de imagenes
   transform: scale(1.2);
 }
 
-.footer{
+.footer {
   height: 30vh;
   background-color: var(--color-fondo2);
 }
 
 /* Agenda */
 
- :root {
-     /* Colores base */
-     --color-fondo: #f0eee9;
-     ;
-     --color-fondo-buttom: #d4a628d5;
-     --color-fondo2: #2B2B28;
-     --color-fondo2-hover: #3b3b38;
-     --nav-texto: #d4a528;
-     --nav-hover: var(--color-primario);
-
-     /* Sombra y blur */
-     --blur: blur(10px);
-     --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
- }
- 
- /* loader */
-
- .pespunte-loader {
-     display: flex;
-     gap: 8px;
-     justify-content: center;
-     align-items: center;
-     height: 20px;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     z-index: 1;
- }
-
-
- .pespunte-loader span {
-     display: block;
-     width: 30px;
-     height: 8px;
-     background: var(--color-fondo-buttom);
-     /* Cambia el color aquí si quieres */
-     animation: pespunte 1s linear infinite;
- }
-
- .pespunte-loader span:nth-child(1) {
-     animation-delay: 0s;
- }
-
- .pespunte-loader span:nth-child(2) {
-     animation-delay: 0.2s;
- }
-
- .pespunte-loader span:nth-child(3) {
-     animation-delay: 0.4s;
- }
-
- .pespunte-loader span:nth-child(4) {
-     animation-delay: 0.6s;
- }
-
- .pespunte-loader span:nth-child(5) {
-     animation-delay: 0.8s;
- }
-
- @keyframes pespunte {
-     0% {
-         opacity: 0.2;
-         transform: scaleX(0.5);
-     }
-
-     50% {
-         opacity: 1;
-         transform: scaleX(1);
-     }
-
-     100% {
-         opacity: 0.2;
-         transform: scaleX(0.5);
-     }
- }
-
-
- /* calendario */
-
- #calendario {
-     padding: 2rem;
-     color: var(--nav-texto);
-     text-align: center;
-     margin-top: 3em;
- }
-
- #calendario h2 {
-     margin-bottom: 1rem;
-     font-size: 2rem;
- }
-
- .calendario-container {
-     background: var(--color-fondo2);
-     position: relative;
-     padding: 1rem;
-     border-radius: 12px;
-     box-shadow: var(--sombra-suave);
-     overflow: hidden;
-     max-width: 850px;
-     margin: 0 auto;
- }
-
- .calendario-container iframe {
-     width: 100%;
-     height: 600px;
-     border: none;
-     border-radius: 8px;
-     z-index: 2;
- }
-
- /* mapa */
-
- .mapa {
-     display: flex;
-     justify-content: center;
-     color: var(--nav-texto);
-     align-items: center;
-
- }
-
- .mapa h2 {
-     margin-bottom: 1rem;
-     font-size: 2rem;
- }
-
- .mapa-contenedor-flex {
-     display: flex;
-     justify-content: center;
-     gap: 2rem;
-     flex-wrap: wrap;
- }
-
- .escuelas-lista {
-     background: var(--color-fondo2);
-     padding: 1rem;
-     border-radius: 12px;
-     box-shadow: var(--sombra-suave);
-     color: var(--nav-texto);
-     flex: 0 0 220px;
-     max-height: 80vh;
-     overflow-y: auto;
- }
-
- .escuelas-lista ul {
-     list-style: none;
-     padding: 0;
-     margin: 0;
- }
-
- .escuelas-lista li {
-     padding: 0.75rem 1rem;
-     margin-bottom: 0.5rem;
-     background: rgba(255, 255, 255, 0.05);
-     border-radius: 8px;
-     transition: background 0.2s ease, box-shadow 0.2s ease;
-     position: relative;
- }
-
- .escuelas-lista li::after {
-     content: "";
-     position: absolute;
-     bottom: 0;
-     left: 1rem;
-     right: 1rem;
-     height: 1px;
-     background: rgba(255, 255, 255, 0.1);
- }
-
- .escuelas-lista li:last-child::after {
-     display: none;
- }
-
- .escuelas-lista li:hover {
-     background: var(--color-fondo2-hover);
-     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-     cursor: pointer;
- }
-
-
- .mapa-wrapper {
-     background: var(--color-fondo2);
-     padding: 1rem;
-     border-radius: 12px;
-     box-shadow: var(--sombra-suave);
-     max-width: 800px;
-     position: relative;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
-
- .mapa-container {
-     position: relative;
-     width: 100%;
- }
-
- .mapa-container img {
-     width: 100%;
-     height: auto;
-     display: block;
- }
-
- .pin-wrapper {
-     position: absolute;
-     transform: translate(-50%, -50%);
-     width: 16px;
-     height: 16px;
- }
-
- .pin {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     font-size: 24px;
-     transform: translate(-50%, -50%);
-     cursor: pointer;
-     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
- }
-
- .globo {
-     position: absolute;
-     width: 80px;
-     height: 80px;
-     background: white;
-     border-radius: 8px;
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-     opacity: 0;
-     transform: translate(-50%, -50%) scale(0.2);
-     transition: all 0.5s ease;
-     padding: 4px;
-     z-index: 1;
- }
-
- .globo img {
-     width: 100%;
-     height: 100%;
-     object-fit: contain;
- }
-
- /* Hover o activo */
- .pin-wrapper:hover .globo,
- .pin-wrapper.activo .globo {
-     opacity: 1;
-     transform: translate(-50%, -50%) scale(1);
- }
-
- /* Posiciones */
- .madrid {
-     top: 38%;
-     left: 42%;
- }
-
- .madrid .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .madrid:hover .globo,
- .madrid.activo .globo {
-     top: calc(50% - 70px);
- }
-
- .zaragoza {
-     top: 25%;
-     left: 62%;
- }
-
- .zaragoza .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .zaragoza:hover .globo,
- .zaragoza.activo .globo {
-     top: calc(50% - 60px);
- }
-
- .getafe {
-     top: 41%;
-     left: 39%;
- }
-
- .getafe .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .getafe:hover .globo,
- .getafe.activo .globo {
-     top: calc(50% - 70px);
- }
-
- .gijon {
-     top: 2%;
-     left: 26%;
- }
-
- .gijon .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .gijon:hover .globo,
- .gijon.activo .globo {
-     top: 5em;
- }
-
- .merida {
-     top: 64%;
-     left: 23%;
- }
-
- .merida .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .merida:hover .globo,
- .merida.activo .globo {
-     top: calc(50% - 70px);
- }
-
- .huelva {
-     top: 73%;
-     left: 17%;
- }
-
- .huelva .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .huelva:hover .globo,
- .huelva.activo .globo {
-     top: calc(50% - 70px);
- }
-
- .sevilla {
-     top: 73%;
-     left: 24%;
- }
-
- .sevilla .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .sevilla:hover .globo,
- .sevilla.activo .globo {
-     top: calc(50% - 70px);
- }
-
- .tarragona {
-     top: 30%;
-     left: 78%;
- }
-
- .tarragona .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .tarragona:hover .globo,
- .tarragona.activo .globo {
-     top: calc(50% - 60px);
- }
-
- .valencia {
-     top: 52%;
-     left: 65%;
- }
-
- .valencia .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .valencia:hover .globo,
- .valencia.activo .globo {
-     top: calc(50% - 60px);
- }
-
- .gandia {
-     top: 58%;
-     left: 68%;
- }
-
- .gandia .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .gandia:hover .globo,
- .gandia.activo .globo {
-     top: calc(50% - 60px);
- }
-
- .vitoria {
-     top: 10%;
-     left: 48%;
- }
-
- .vitoria .globo {
-     top: 50%;
-     left: 50%;
- }
-
- .vitoria:hover .globo,
- .vitoria.activo .globo {
-     top: 5em;
- }
+:root {
+  /* Colores base */
+  --color-fondo: #f0eee9;
+  ;
+  --color-fondo-buttom: #d4a628d5;
+  --color-fondo2: #2B2B28;
+  --color-fondo2-hover: #3b3b38;
+  --nav-texto: #d4a528;
+  --nav-hover: var(--color-primario);
+
+  /* Sombra y blur */
+  --blur: blur(10px);
+  --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* loader */
+
+.pespunte-loader {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+
+.pespunte-loader span {
+  display: block;
+  width: 30px;
+  height: 8px;
+  background: var(--color-fondo-buttom);
+  /* Cambia el color aquí si quieres */
+  animation: pespunte 1s linear infinite;
+}
+
+.pespunte-loader span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.pespunte-loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.pespunte-loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.pespunte-loader span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.pespunte-loader span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes pespunte {
+  0% {
+    opacity: 0.2;
+    transform: scaleX(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: 0.2;
+    transform: scaleX(0.5);
+  }
+}
+
+
+/* calendario */
+
+#calendario {
+  padding: 2rem;
+  color: var(--nav-texto);
+  text-align: center;
+  margin-top: 3em;
+}
+
+#calendario h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.calendario-container {
+  background: var(--color-fondo2);
+  position: relative;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--sombra-suave);
+  overflow: hidden;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.calendario-container iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* mapa */
+
+.mapa {
+  display: flex;
+  justify-content: center;
+  color: var(--nav-texto);
+  align-items: center;
+
+}
+
+.mapa h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.mapa-contenedor-flex {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.escuelas-lista {
+  background: var(--color-fondo2);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--sombra-suave);
+  color: var(--nav-texto);
+  flex: 0 0 220px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.escuelas-lista ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.escuelas-lista li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.escuelas-lista li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.escuelas-lista li:last-child::after {
+  display: none;
+}
+
+.escuelas-lista li:hover {
+  background: var(--color-fondo2-hover);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+.mapa-wrapper {
+  background: var(--color-fondo2);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--sombra-suave);
+  max-width: 800px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapa-container {
+  position: relative;
+  width: 100%;
+}
+
+.mapa-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pin-wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+}
+
+.pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 24px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.globo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.2);
+  transition: all 0.5s ease;
+  padding: 4px;
+  z-index: 1;
+}
+
+.globo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Hover o activo */
+.pin-wrapper:hover .globo,
+.pin-wrapper.activo .globo {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Posiciones */
+.madrid {
+  top: 38%;
+  left: 42%;
+}
+
+.madrid .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.madrid:hover .globo,
+.madrid.activo .globo {
+  top: calc(50% - 70px);
+}
+
+.zaragoza {
+  top: 25%;
+  left: 62%;
+}
+
+.zaragoza .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.zaragoza:hover .globo,
+.zaragoza.activo .globo {
+  top: calc(50% - 60px);
+}
+
+.getafe {
+  top: 41%;
+  left: 39%;
+}
+
+.getafe .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.getafe:hover .globo,
+.getafe.activo .globo {
+  top: calc(50% - 70px);
+}
+
+.gijon {
+  top: 2%;
+  left: 26%;
+}
+
+.gijon .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.gijon:hover .globo,
+.gijon.activo .globo {
+  top: 5em;
+}
+
+.merida {
+  top: 64%;
+  left: 23%;
+}
+
+.merida .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.merida:hover .globo,
+.merida.activo .globo {
+  top: calc(50% - 70px);
+}
+
+.huelva {
+  top: 73%;
+  left: 17%;
+}
+
+.huelva .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.huelva:hover .globo,
+.huelva.activo .globo {
+  top: calc(50% - 70px);
+}
+
+.sevilla {
+  top: 73%;
+  left: 24%;
+}
+
+.sevilla .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.sevilla:hover .globo,
+.sevilla.activo .globo {
+  top: calc(50% - 70px);
+}
+
+.tarragona {
+  top: 30%;
+  left: 78%;
+}
+
+.tarragona .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.tarragona:hover .globo,
+.tarragona.activo .globo {
+  top: calc(50% - 60px);
+}
+
+.valencia {
+  top: 52%;
+  left: 65%;
+}
+
+.valencia .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.valencia:hover .globo,
+.valencia.activo .globo {
+  top: calc(50% - 60px);
+}
+
+.gandia {
+  top: 58%;
+  left: 68%;
+}
+
+.gandia .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.gandia:hover .globo,
+.gandia.activo .globo {
+  top: calc(50% - 60px);
+}
+
+.vitoria {
+  top: 10%;
+  left: 48%;
+}
+
+.vitoria .globo {
+  top: 50%;
+  left: 50%;
+}
+
+.vitoria:hover .globo,
+.vitoria.activo .globo {
+  top: 5em;
+}
