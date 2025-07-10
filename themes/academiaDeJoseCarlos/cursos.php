@@ -19,18 +19,64 @@ Template Name: Cursos
             --blur: blur(10px);
             --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
-.video-section {
-    margin-top: 60px;
-    padding: 20px;
-    background-color: #000;
-    text-align: center;
-    width: 100%;
+
+        .video-section {
+  margin-top: 60px;
+  padding: 20px;
+  background-color: #000;
+  text-align: center;
+  width: 100%;
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
 }
 
 .responsive-video {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.boton-sonido {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background: var(--color-fondo-buttom);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .boton-sonido {
+    font-size: 20px;
+    padding: 8px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .boton-sonido {
+    font-size: 18px;
+    padding: 6px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.boton-sonido:hover {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* === MOVING TEXT SECTION === */
@@ -759,27 +805,6 @@ Template Name: Cursos
             color: var(--color-fondo2);
         }
 
-        .gallery-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--color-fondo2);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .indicator.active {
-            background: var(--nav-texto);
-            transform: scale(1.2);
-        }
-
         @media (max-width: 768px) {
             .gallery-item {
                 flex: 0 0 250px;
@@ -792,16 +817,18 @@ Template Name: Cursos
         }
 </style>
 <section class="video-section">
-  <video
-    controls
-    muted
-    class="responsive-video"
-    preload="auto"
-    poster="/wp-content/themes/academiaDeJoseCarlos/assets/videos/thumbnail.jpg"
-  >
-    <source src="/wp-content/themes/academiaDeJoseCarlos/assets/videos/myvideo.mp4" type="video/mp4">
-    Tu navegador no soporta el video HTML5.
-  </video>
+  <div class="video-wrapper">
+    <video
+      muted
+      autoplay
+      class="responsive-video"
+      preload="auto"
+    >
+      <source src="/wp-content/themes/academiaDeJoseCarlos/assets/videos/myvideo.mp4" type="video/mp4">
+      Tu navegador no soporta el video HTML5.
+    </video>
+    <button id="toggleSound" class="boton-sonido">🔇</button>
+  </div>
 </section>
 
     <section class="gallery-section">
@@ -973,8 +1000,7 @@ Template Name: Cursos
             <button class="gallery-nav prev" id="prevBtn">‹</button>
             <button class="gallery-nav next" id="nextBtn">›</button>
         </div>
-                <div class="gallery-indicators" id="indicators"></div>
-
+        <div class="gallery-indicators" id="indicators"></div>
          </section>
 <section class="cursos-apuntarse">
     <p class="cursos-apuntarse-p">¿Por qué apuntarte?</p>
@@ -1240,7 +1266,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             
             init() {
-                this.createIndicators();
                 this.updateGallery();
                 this.bindEvents();
                 
@@ -1253,16 +1278,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             }
             
-            createIndicators() {
-                this.indicators.innerHTML = '';
-                for (let i = 0; i <= this.maxIndex; i++) {
-                    const indicator = document.createElement('div');
-                    indicator.className = 'indicator';
-                    indicator.addEventListener('click', () => this.goToSlide(i));
-                    this.indicators.appendChild(indicator);
-                }
-            }
-            
             updateGallery() {
                 const translateX = -this.currentIndex * this.itemWidth;
                 this.wrapper.style.transform = `translateX(${translateX}px)`;
@@ -1270,11 +1285,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Update navigation buttons
                 this.prevBtn.disabled = this.currentIndex === 0;
                 this.nextBtn.disabled = this.currentIndex === this.maxIndex;
-                
-                // Update indicators
-                this.indicators.querySelectorAll('.indicator').forEach((indicator, index) => {
-                    indicator.classList.toggle('active', index === this.currentIndex);
-                });
             }
             
             goToSlide(index) {
@@ -1343,6 +1353,26 @@ document.addEventListener("DOMContentLoaded", () => {
         document.addEventListener('DOMContentLoaded', () => {
             new HorizontalGallery();
         });
+
+         document.addEventListener('DOMContentLoaded', function() {
+            // Corrected selector - use class selector with dot
+            const video = document.querySelector(".responsive-video");
+            const button = document.getElementById("toggleSound");
+
+            // Check if elements exist
+            if (video && button) {
+                button.addEventListener("click", () => {
+                    // Toggle mute/unmute only
+                    video.muted = !video.muted;
+                    
+                    // Update button icon based on mute state
+                    button.textContent = video.muted ? "🔇" : "🔊";
+                });
+            } else {
+                console.error("Video or button not found");
+            }
+        });
+
 </script>
 
 <?php get_footer(); ?>

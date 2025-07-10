@@ -6,7 +6,7 @@ get_header();
 <style>
   .contacto-container {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 5em auto;
     padding: 2rem 1rem;
     font-family: 'Segoe UI', sans-serif;
     color: #082C38;
