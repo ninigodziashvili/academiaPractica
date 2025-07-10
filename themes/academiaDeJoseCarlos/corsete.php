@@ -285,23 +285,62 @@ Template Name: Corsete
     }
 
     @media (max-width: 480px) {
-        .carousel-corset img {
-            width: 100%;
-            height: auto;
-
+        .inicio_contenido-corset h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
         }
 
-        .inicio_contenido-corset h1 {
-            font-size: 2em;
+        .inicio_contenido-corset p {
+            font-size: 1em;
+        }
+
+        .button-corset {
+            font-size: 1em;
+            padding: 12px 18px;
         }
 
         .corset-taller-h1 {
-            margin-top: 1em;
-            font-size: 2rem;
+            font-size: 1.6rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
         .corset-taller-h2 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
+        }
+
+        .corset-taller-h3 {
+            font-size: 1.1rem;
+        }
+
+        .corset-taller-p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .corset-taller-ul li {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .frase-final-corset {
+            font-size: 1.5rem;
+            padding: 0.8rem;
+        }
+
+        .boton-toggle-corset {
+            font-size: 1rem;
+            gap: 0.3rem;
+            padding: 0.4rem 0.8rem;
+        }
+
+        .carousel-corset img {
+            width: 100%;
+            height: auto;
+        }
+
+        .bloque-corset-taller {
+            padding: 1.2rem;
         }
     }
 </style>
@@ -315,7 +354,9 @@ Template Name: Corsete
         <h1>Domina el patrón técnico del corset de copas… sin misterios, sin frustraciones</h1>
         <p>Una técnica precisa que te permitirá adaptar cualquier copa a cualquier cuerpo.</p>
         <div class="botones-corset">
-            <button class="button-corset">Quiero apuntarme</button>
+            <a href="/agenda/">
+                <button class="button-corset">Quiero apuntarme</button>
+            </a>
         </div>
     </div>
 </section>

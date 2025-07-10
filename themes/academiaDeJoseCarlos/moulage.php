@@ -284,23 +284,62 @@ Template Name: Moulage
     }
 
     @media (max-width: 480px) {
-        .carousel-moulage img {
-            width: 100%;
-            height: auto;
-
+        .inicio_contenido-moulage h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
         }
 
-        .inicio_contenido-moulage h1 {
-            font-size: 2em;
+        .inicio_contenido-moulage p {
+            font-size: 1em;
+        }
+
+        .button-moulage {
+            font-size: 1em;
+            padding: 12px 18px;
         }
 
         .moulage-taller-h1 {
-            margin-top: 1em;
-            font-size: 2rem;
+            font-size: 1.6rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
         .moulage-taller-h2 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
+        }
+
+        .moulage-taller-h3 {
+            font-size: 1.1rem;
+        }
+
+        .moulage-taller-p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .moulage-taller-ul li {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .frase-final-moulage {
+            font-size: 1.5rem;
+            padding: 0.8rem;
+        }
+
+        .boton-toggle-moulage {
+            font-size: 1rem;
+            gap: 0.3rem;
+            padding: 0.4rem 0.8rem;
+        }
+
+        .carousel-moulage img {
+            width: 100%;
+            height: auto;
+        }
+
+        .bloque-moulage-taller {
+            padding: 1.2rem;
         }
     }
 </style>
@@ -314,7 +353,9 @@ Template Name: Moulage
         <h1>Aprende a hacer el patrón directamente sobre el maniquí.</h1>
         <p>Una técnica visual y precisa que transforma tu forma de patronar para siempre</p>
         <div class="botones-moulage">
-            <button class="button-moulage">Quiero apuntarme</button>
+            <a href="/agenda/">
+                <button class="button-moulage">Quiero apuntarme</button>
+            </a>
         </div>
     </div>
 </section>
