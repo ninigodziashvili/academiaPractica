@@ -928,6 +928,68 @@
         carrusels.classList.remove('hover-activo');
     });
 
+
+    // para cartas 
+    // Solo activar en móviles
+    document.addEventListener("DOMContentLoaded", () => {
+        const cartas = document.querySelectorAll(".carta");
+        let observer = null;
+
+        function activarModoEscritorio() {
+            // Limpia cualquier clase previa
+            cartas.forEach((carta) => carta.classList.remove("activa"));
+
+            // Desactiva el observer si estaba activo
+            if (observer) {
+                observer.disconnect();
+                observer = null;
+            }
+
+            // Habilita el efecto hover con CSS solamente (ya está en tu código)
+            // No necesitas JS aquí
+        }
+
+        function activarModoMovil() {
+            // Desactiva hover con clase si quieres
+            // (opcional: puedes cambiar estilos desde CSS con media query también)
+
+            // Crear observer para activar cartas en el centro de pantalla
+            observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("activa");
+                        } else {
+                            entry.target.classList.remove("activa");
+                        }
+                    });
+                }, {
+                    root: null,
+                    threshold: 0.6, // ajusta cuánto de la carta debe estar visible (60% recomendado)
+                }
+            );
+
+            cartas.forEach((carta) => observer.observe(carta));
+        }
+
+        function checkModo() {
+            const esMovil = window.innerWidth <= 768;
+
+            if (esMovil) {
+                activarModoMovil();
+            } else {
+                activarModoEscritorio();
+            }
+        }
+
+        // Ejecutar al cargar
+        checkModo();
+
+        // Re-ejecutar si se cambia el tamaño de ventana
+        window.addEventListener("resize", () => {
+            checkModo();
+        });
+    });
 </script>
 
 <?php get_footer(); ?>
