@@ -928,41 +928,6 @@
         carrusels.classList.remove('hover-activo');
     });
 
-    const carrusel = document.getElementById("carrusel");
-
-    function getCartaCentral() {
-        const cartas = carrusel.querySelectorAll(".carta");
-        const carruselRect = carrusel.getBoundingClientRect();
-        const centroCarrusel = carruselRect.left + carruselRect.width / 2;
-
-        let cartaCentral = null;
-        let menorDistancia = Infinity;
-
-        cartas.forEach(carta => {
-            const cartaRect = carta.getBoundingClientRect();
-            const centroCarta = cartaRect.left + cartaRect.width / 2;
-            const distancia = Math.abs(centroCarrusel - centroCarta);
-
-            if (distancia < menorDistancia) {
-                menorDistancia = distancia;
-                cartaCentral = carta;
-            }
-        });
-
-        cartas.forEach(carta => carta.classList.remove("activa"));
-        if (cartaCentral) {
-            cartaCentral.classList.add("activa");
-        }
-    }
-
-    // Al hacer scroll lateral
-    carrusel.addEventListener("scroll", () => {
-        requestAnimationFrame(getCartaCentral);
-    });
-
-    // Al cargar y redimensionar ventana
-    window.addEventListener("load", getCartaCentral);
-    window.addEventListener("resize", getCartaCentral);
 </script>
 
 <?php get_footer(); ?>
