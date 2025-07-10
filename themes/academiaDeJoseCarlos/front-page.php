@@ -3,7 +3,7 @@
     <section class="inicio">
         <div class="fondo-video">
 
-            <video autoplay loop muted playsinline src="/wp-content/themes/academiaDeJoseCarlos/assets/videos/1.Presentacion curso moulage.mp4"></video>
+            <video class="" autoplay loop muted playsinline src="/wp-content/themes/academiaDeJoseCarlos/assets/videos/1.Presentacion curso moulage.mp4"></video>
             <!-- <iframe src="https://www.youtube.com/embed/v3hvmNIQ_hI?&autoplay=1&mute=1&loop=1&playlist=v3hvmNIQ_hI&controls=0&showinfo=0&modestbranding=1"
                 frameborder="0"
                 allow="autoplay; encrypted-media"
@@ -12,6 +12,7 @@
             </iframe> -->
 
         </div>
+
         <div class="inicio_contenido">
             <h1>"nada es imposible solo hay que encontrar la manera"</h1>
             <p>jose carlos herrera</p>
@@ -29,8 +30,12 @@
                     </svg>
                     <span class="lable">calendarios</span>
                 </button>
-                <a href="" class="boton1">mas informacion</a>
+                <a href="" class="boton1">más información</a>
+                <button class="boton-sonido" id="toggleSound">🔇</button>
             </div>
+
+
+
         </div>
 
     </section>
@@ -39,7 +44,8 @@
 
         <!-- Curso 1 -->
         <div class="curso" data-aos="fade-right">
-           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico"/>
+            <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3888.png"
+                alt="Curso de Patronaje Avanzado" />
             <div>
                 <h3>taller de patrón técnico de corset a medida (20h)</h3>
                 <strong>resuelve el volumen del seno con presición y adapta cualquier copa a la morfología de la persona.</strong>
@@ -63,8 +69,8 @@
                 </p>
                 <a href="/moulage" class="btn-acento">Más información</a>
             </div>
-            <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3888.png"
-                alt="Curso de Patronaje Avanzado" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico" />
+
         </div>
     </section>
     <section class="testimonios">
@@ -79,8 +85,8 @@
                     <strong>director creativo de abraham sebastian atelier</strong>
 
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/dombyabraham?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://abrahamsebastianatelier.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         conocí la trayectoria de jose carlos herrera y me facinó, a en sus viajes a valencia
@@ -102,6 +108,10 @@
                 <div class="usuario">arantxa pérez</div>
                 <div class="mensaje">
                     <strong>fundadora y directora en cose madrid</strong>
+                    <div class="testimonios_redes">
+                        <a href="  https://www.instagram.com/cose.madrid/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://cosemadrid.com/ " target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                    </div>
 
                     <p class="completo oculto">
                         si tuviera que definir a jose carlos herrera en una palabra sería inspiración.
@@ -119,8 +129,8 @@
                 <div class="mensaje">
                     <strong>CEO de lapaio santander</strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/lapaio_santander/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://lapaiosantander.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         Los cursos de costura de josé carlos son, sin duda, una joya para quienes buscan aprender y perfeccionar sus
@@ -139,10 +149,10 @@
                     <strong>licenciada en BBAA</strong>
                     <strong>graduada en diseño de moda</strong>
                     <strong>actualmente profesora de diseño de moda en EASD mestre mateo, santiago de compostela</strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         la experiencia con josé carlos, es desde el primer momento fructífera. es un guía excelente para el aprendizaje técnico en el campo del patronaje, ya que no sólo se limita a realizar el ejercicio
                         propuesto, sino que también argumenta y verifica el porqué, haciendo entender claramente a los que instruye.
@@ -158,10 +168,10 @@
                 <div class="usuario">Elvira</div>
                 <div class="mensaje">
                     <strong>tecnico de patronaje y confecciones del IES número 1</strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         hola!! soy elvira, siempre es un placer asistir a tus cursos, se hacen amenos, divertidos y sobretodo lo que más me gusta
                         es todo lo que aprendemos contigo. no dejes de hacerlos, ya que estoy esperando el siguiente!!🤗
@@ -176,10 +186,10 @@
                     <strong>profesor técnico de formación profecional perteneciente a la familia de textil,
                         confección y piel
                     </strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         tuve la oportunidad de realizar el curso moulage tecnico hace ya 6 años y este año he repetido la experiencia
                         con el de patrón técnico de corset a medida y no puedo más que destacar la experiencia como profundamente enriquecedora.
@@ -194,6 +204,7 @@
                 </div>
             </div>
             <div class="carta">
+
                 <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-comentarios/ASUN DOMINGUEZ.jpg" alt="Usuario">
                 <div class="usuario">asun domínguez</div>
                 <div class="mensaje">
@@ -201,8 +212,8 @@
                         directora y profesora de la escuela de moda asun domínguez en donostia
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/asun_dominguez_academia/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://asundominguez.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         tuvimos la suerte de contar con jose carlos herrera en nuestra escuela de donostia para impartir un curso de moulage
@@ -225,8 +236,8 @@
                         patronista
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/atenea_castillo_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://portfolio-ateneacastillo.my.canva.site/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         como patronista, el curso de moulage técnico y corsetería han sido fundamentales en mi desarrollo profesional. la calidad de la enseñanza es excepcional;
@@ -247,8 +258,8 @@
                         profesora de patronaje corte y confección del sistema marti
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/sistemamarti/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://sistemamarti.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         tengo una academia en almería y en ella jose carlos herrera impartió un curso de moulange a mis alumnas y a mi que resultó muy satisfactorio, aprendimos
@@ -267,8 +278,8 @@
                         profesora de patronaje y desañadora de canotier costura propietaria de E+E estudio de diseño y creación.
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/emase_estudio/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://linktr.ee/emase" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         los cursos de jose carlos son imprescindibles para los entusiastas de la moda. 20 horas llenas de conceptos prácticos y visualmente didácticos. como profesora de patronaje los recomiendo al 100%
@@ -287,8 +298,8 @@
                         diseñadora especializada en ceremonia y primera comunión
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/marita_rial/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://marsegovia.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         trabajar con josé carlos herrera ha sido una de las experiencias más enriquecedoras que he vivido como diseñadora. su dominio técnico, su capacidad
@@ -308,10 +319,10 @@
                     <strong>
                         diseñadora de modas con una boutique de ropa femenina en colombia
                     </strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         tuve la oportunidad de realizar el curso de corset a medida en madrid con josé carlos y la verdad fue maravilloso, es muy personalizado siempre tienes a josé carlos a
                         tu lado explicando a detalle cada paso. fui muy feliz con el resultado pues a mí y a todas mis compañeras el corset nos quedó perfecto justo a la medida de cada una. gracias
@@ -328,10 +339,10 @@
                     <strong>
                         director en jesús núñez atelier
                     </strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         Participar en los cursos impartidos por José Carlos Herrera ha representado un avance significativo en mi desarrollo profesional. Su metodología de enseñanza en moulage y patronaje de corsé destaca por su claridad, precisión técnica y enfoque estructurado. Cada contenido está cuidadosamente diseñado
                         para profundizar en los fundamentos y perfeccionar habilidades avanzadas, todo dentro de un entorno de aprendizaje riguroso y estimulante. Recomiendo ampliamente su formación a profesionales de diseño y confección que busquen elevar la calidad de su trabajo y consolidar sus conocimientos.
@@ -349,8 +360,8 @@
                         directora de la academia de corte y confección mila garcía
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/academiacorteyconfeccionmila/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://corteyconfeccionmila.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         Como directora de la Academia de Corte y Confección Mila García, he tenido la oportunidad de conocer a muchos profesionales del sector, y
@@ -373,8 +384,8 @@
                         gerente de luismi galianno
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/luismi_galianno/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+
                     </div>
                     <p class="completo oculto">
                         Mi experiencia en el curso de Corset con Jose Carlos es 100% recomendable, tiene una forma de enseñar tan sencilla que lo entiendes todo desde el inicio, muy
@@ -393,8 +404,8 @@
                         director creativo de faus atelier
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/antoniofaus?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://www.antoniofaus.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         Como profesional y director creativo de Faus Atelier, decidí ampliar mis conocimientos técnicos participando en los workshops de José Carlos Herrera sobre corsetería a medida y moulage técnico. Pese a la experiencia, me sorprendió la profundidad,
@@ -416,8 +427,8 @@
                         Directora creativa y docente de Fashionworkshop
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/fwsaralopez/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://fashionworkshop.org/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         Los cursos de José Carlos son súper recomendables, el de corsetería, moulage..todo un profesional a la hora de explicar. Paciente, motivador,
@@ -432,6 +443,13 @@
 
             <!-- Agrega más cartas si lo necesitas -->
 
+
+            <!--
+            =========================================================================================================================================================
+             Se agregan las cartas repetidas 
+            =========================================================================================================================================================
+             -->
+
             <div class="carta">
                 <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-comentarios/Imagen de WhatsApp 2025-07-02 a las 10.52.05_7dba9cb2.jpg" alt="Usuario">
                 <div class="usuario">abraham climent</div>
@@ -439,8 +457,8 @@
                     <strong>director creativo de abraham sebastian atelier</strong>
 
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/dombyabraham?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://abrahamsebastianatelier.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         conocí la trayectoria de jose carlos herrera y me facinó, a en sus viajes a valencia
@@ -462,7 +480,10 @@
                 <div class="usuario">arantxa pérez</div>
                 <div class="mensaje">
                     <strong>fundadora y directora en cose madrid</strong>
-
+                    <div class="testimonios_redes">
+                        <a href="  https://www.instagram.com/cose.madrid/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://cosemadrid.com/ " target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                    </div>
                     <p class="completo oculto">
                         si tuviera que definir a jose carlos herrera en una palabra sería inspiración.
                         sus cursos y su manera de enseñar te permiten comprender desde la base los conceptos de la creación de prendas a medida.
@@ -479,8 +500,8 @@
                 <div class="mensaje">
                     <strong>CEO de lapaio santander</strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/lapaio_santander/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://lapaiosantander.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         Los cursos de costura de josé carlos son, sin duda, una joya para quienes buscan aprender y perfeccionar sus
@@ -499,10 +520,10 @@
                     <strong>licenciada en BBAA</strong>
                     <strong>graduada en diseño de moda</strong>
                     <strong>actualmente profesora de diseño de moda en EASD mestre mateo, santiago de compostela</strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         la experiencia con josé carlos, es desde el primer momento fructífera. es un guía excelente para el aprendizaje técnico en el campo del patronaje, ya que no sólo se limita a realizar el ejercicio
                         propuesto, sino que también argumenta y verifica el porqué, haciendo entender claramente a los que instruye.
@@ -518,10 +539,10 @@
                 <div class="usuario">Elvira</div>
                 <div class="mensaje">
                     <strong>tecnico de patronaje y confecciones del IES número 1</strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         hola!! soy elvira, siempre es un placer asistir a tus cursos, se hacen amenos, divertidos y sobretodo lo que más me gusta
                         es todo lo que aprendemos contigo. no dejes de hacerlos, ya que estoy esperando el siguiente!!🤗
@@ -536,10 +557,10 @@
                     <strong>profesor técnico de formación profecional perteneciente a la familia de textil,
                         confección y piel
                     </strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         tuve la oportunidad de realizar el curso moulage tecnico hace ya 6 años y este año he repetido la experiencia
                         con el de patrón técnico de corset a medida y no puedo más que destacar la experiencia como profundamente enriquecedora.
@@ -561,8 +582,8 @@
                         directora y profesora de la escuela de moda asun domínguez en donostia
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/asun_dominguez_academia/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://asundominguez.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         tuvimos la suerte de contar con jose carlos herrera en nuestra escuela de donostia para impartir un curso de moulage
@@ -585,8 +606,8 @@
                         patronista
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/atenea_castillo_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://portfolio-ateneacastillo.my.canva.site/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         como patronista, el curso de moulage técnico y corsetería han sido fundamentales en mi desarrollo profesional. la calidad de la enseñanza es excepcional;
@@ -607,8 +628,8 @@
                         profesora de patronaje corte y confección del sistema marti
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/sistemamarti/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://sistemamarti.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         tengo una academia en almería y en ella jose carlos herrera impartió un curso de moulange a mis alumnas y a mi que resultó muy satisfactorio, aprendimos
@@ -627,8 +648,8 @@
                         profesora de patronaje y desañadora de canotier costura propietaria de E+E estudio de diseño y creación.
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/emase_estudio/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://linktr.ee/emase" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         los cursos de jose carlos son imprescindibles para los entusiastas de la moda. 20 horas llenas de conceptos prácticos y visualmente didácticos. como profesora de patronaje los recomiendo al 100%
@@ -647,8 +668,8 @@
                         diseñadora especializada en ceremonia y primera comunión
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/marita_rial/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://marsegovia.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         trabajar con josé carlos herrera ha sido una de las experiencias más enriquecedoras que he vivido como diseñadora. su dominio técnico, su capacidad
@@ -668,10 +689,10 @@
                     <strong>
                         diseñadora de modas con una boutique de ropa femenina en colombia
                     </strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         tuve la oportunidad de realizar el curso de corset a medida en madrid con josé carlos y la verdad fue maravilloso, es muy personalizado siempre tienes a josé carlos a
                         tu lado explicando a detalle cada paso. fui muy feliz con el resultado pues a mí y a todas mis compañeras el corset nos quedó perfecto justo a la medida de cada una. gracias
@@ -688,10 +709,10 @@
                     <strong>
                         director en jesús núñez atelier
                     </strong>
-                    <div class="testimonios_redes">
+                    <!-- <div class="testimonios_redes">
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
                         <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
-                    </div>
+                    </div> -->
                     <p class="completo oculto">
                         Participar en los cursos impartidos por José Carlos Herrera ha representado un avance significativo en mi desarrollo profesional. Su metodología de enseñanza en moulage y patronaje de corsé destaca por su claridad, precisión técnica y enfoque estructurado. Cada contenido está cuidadosamente diseñado
                         para profundizar en los fundamentos y perfeccionar habilidades avanzadas, todo dentro de un entorno de aprendizaje riguroso y estimulante. Recomiendo ampliamente su formación a profesionales de diseño y confección que busquen elevar la calidad de su trabajo y consolidar sus conocimientos.
@@ -709,8 +730,8 @@
                         directora de la academia de corte y confección mila garcía
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/academiacorteyconfeccionmila/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://corteyconfeccionmila.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         Como directora de la Academia de Corte y Confección Mila García, he tenido la oportunidad de conocer a muchos profesionales del sector, y
@@ -733,8 +754,8 @@
                         gerente de luismi galianno
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/luismi_galianno/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+
                     </div>
                     <p class="completo oculto">
                         Mi experiencia en el curso de Corset con Jose Carlos es 100% recomendable, tiene una forma de enseñar tan sencilla que lo entiendes todo desde el inicio, muy
@@ -753,8 +774,8 @@
                         director creativo de faus atelier
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/antoniofaus?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://www.antoniofaus.com/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         Como profesional y director creativo de Faus Atelier, decidí ampliar mis conocimientos técnicos participando en los workshops de José Carlos Herrera sobre corsetería a medida y moulage técnico. Pese a la experiencia, me sorprendió la profundidad,
@@ -776,8 +797,8 @@
                         Directora creativa y docente de Fashionworkshop
                     </strong>
                     <div class="testimonios_redes">
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
-                        <a href="https://www.instagram.com/ateneac_atelier/?utm_source=ig_web_button_share_sheet" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
+                        <a href="https://www.instagram.com/fwsaralopez/?utm_source=ig_web_button_share_sheet" target="_blank" class="instagrambtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-instagram-24.png" alt=""></a>
+                        <a href="https://fashionworkshop.org/" target="_blank" class="webbtn"><img src="/wp-content/themes/academiaDeJoseCarlos/assets/btn/icons8-web-24.png" alt=""></a>
                     </div>
                     <p class="completo oculto">
                         Los cursos de José Carlos son súper recomendables, el de corsetería, moulage..todo un profesional a la hora de explicar. Paciente, motivador,
@@ -790,7 +811,7 @@
             </div>
         </div>
 
-
+        <button id="togglePause" class="btn-pausa">⏸️</button>
     </section>
     <section class="galeria2">
         <div class="lightbox" id="lightbox">
@@ -799,76 +820,149 @@
         </div>
 
         <div class="foto ">
-           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/1.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/1.png" alt="" />
         </div>
         <div class="foto "><img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3876.png" alt="Foto 2"></div>
         <div class="foto ">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/3.png" alt="" />
         </div>
         <div class="foto ">
-               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/4.webp" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/4.webp" alt="" />
         </div>
         <div class="foto "><img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3880.png" alt="Foto 5"></div>
 
     </section>
 </main>
 <script>
-    //nav 
-//Axel Sanchez
-//barra de navegacion 
-window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('.nav');
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+    //btn sonido
+    const video = document.querySelector("video");
+    const button = document.getElementById("toggleSound");
 
-// Navegador
-const navSlide = () => {
-    const burger = document.querySelector(".burger");
-    const nav = document.querySelector(".nav-link");
-    const navLinks = document.querySelectorAll(".nav-link li");
-
-    burger.addEventListener("click", () => {
-        nav.classList.toggle("nav-link-activated");
-        burger.classList.toggle("toggle")
-        navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = "";
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`
-            }
-        })
+    button.addEventListener("click", () => {
+        video.muted = !video.muted;
+        button.textContent = video.muted ? "🔇" : "🔊";
     });
-}
+    //nav 
+    //Axel Sanchez
+    //barra de navegacion 
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.nav');
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Navegador
+    const navSlide = () => {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-link");
+        const navLinks = document.querySelectorAll(".nav-link li");
+
+        burger.addEventListener("click", () => {
+            nav.classList.toggle("nav-link-activated");
+            burger.classList.toggle("toggle")
+            navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = "";
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`
+                }
+            })
+        });
+    }
 
 
-//galeria de imagenes
+    //galeria de imagenes
 
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const cerrarBtn = document.getElementById('cerrar');
 
-  document.querySelectorAll('.galeria2 img').forEach(img => {
+    document.querySelectorAll('.galeria2 img').forEach(img => {
         img.addEventListener('click', () => {
             lightbox.style.display = 'flex';
             lightboxImg.src = img.src;
         });
-  });
+    });
 
-  cerrarBtn.addEventListener('click', () => {
+    cerrarBtn.addEventListener('click', () => {
         lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  });
+        lightboxImg.src = '';
+    });
 
-  lightbox.addEventListener('click', (e) => {
-    if (e.target !== lightboxImg && e.target !== cerrarBtn) {
-        lightbox.style.display = 'none';
-    lightboxImg.src = '';
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg && e.target !== cerrarBtn) {
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+        }
+    });
+
+    //pausar el carrusel
+    const carrusels = document.getElementById('carrusel');
+    const toggle = document.getElementById('togglePause');
+    let pausado = false;
+
+    // Pausar o reanudar con botón
+    toggle.addEventListener('click', () => {
+        pausado = !pausado;
+
+        if (pausado) {
+            carrusels.classList.add('pausado');
+            toggle.textContent = '▶️';
+        } else {
+            carrusels.classList.remove('pausado');
+            toggle.textContent = '⏸️';
+        }
+    });
+
+    // Agregar pausa al pasar el ratón (si no está pausado manualmente)
+    carrusels.addEventListener('mouseenter', () => {
+        if (!pausado) {
+            carrusels.classList.add('hover-activo');
+        }
+    });
+
+    carrusels.addEventListener('mouseleave', () => {
+        carrusels.classList.remove('hover-activo');
+    });
+
+    const carrusel = document.getElementById("carrusel");
+
+    function getCartaCentral() {
+        const cartas = carrusel.querySelectorAll(".carta");
+        const carruselRect = carrusel.getBoundingClientRect();
+        const centroCarrusel = carruselRect.left + carruselRect.width / 2;
+
+        let cartaCentral = null;
+        let menorDistancia = Infinity;
+
+        cartas.forEach(carta => {
+            const cartaRect = carta.getBoundingClientRect();
+            const centroCarta = cartaRect.left + cartaRect.width / 2;
+            const distancia = Math.abs(centroCarrusel - centroCarta);
+
+            if (distancia < menorDistancia) {
+                menorDistancia = distancia;
+                cartaCentral = carta;
+            }
+        });
+
+        cartas.forEach(carta => carta.classList.remove("activa"));
+        if (cartaCentral) {
+            cartaCentral.classList.add("activa");
+        }
     }
-  });
-  </script>
+
+    // Al hacer scroll lateral
+    carrusel.addEventListener("scroll", () => {
+        requestAnimationFrame(getCartaCentral);
+    });
+
+    // Al cargar y redimensionar ventana
+    window.addEventListener("load", getCartaCentral);
+    window.addEventListener("resize", getCartaCentral);
+</script>
 
 <?php get_footer(); ?>
