@@ -644,7 +644,10 @@
         </div>
 
         <div class="footer-legal">
-            <p>&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>. Todos los derechos reservados.</p>
+        <div class="footer-section">
+      <a href="politica.php">🔒 Política de Privacidad</a>
+        </div>
+<p>&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
