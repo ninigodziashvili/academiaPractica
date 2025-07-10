@@ -653,7 +653,11 @@ testimonios
 
   }
 
-
+/* Estilo mejorado para line-break */
+.line-break {
+  display: block !important;
+  margin: 1em 0 !important; /* 1em arriba y abajo (reemplaza <br>) */
+}
 
 .carta img {
   width: 80px;
