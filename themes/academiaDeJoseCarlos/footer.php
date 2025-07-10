@@ -211,7 +211,7 @@
     /* WhatsApp Button */
     .whatsapp-btn {
         position: fixed;
-        bottom: clamp(1rem, 3vw, 2rem);
+        bottom: clamp(3rem, 7vw, 5rem);
         right: clamp(1rem, 3vw, 2rem);
         width: clamp(50px, 12vw, 60px);
         height: clamp(50px, 12vw, 60px);
@@ -228,9 +228,14 @@
         cursor: pointer;
     }
 
-    .whatsapp-btn:hover {
-        transform: scale(1.1) translateY(-5px);
-    }
+    .hidden {
+    display: none !important;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
 
     .whatsapp-btn svg {
         width: clamp(24px, 6vw, 30px);
@@ -607,7 +612,7 @@ $whatsapp_number = get_theme_mod('whatsapp_number', '34636974576');
 $whatsapp_message = get_theme_mod('whatsapp_message', 'Hola, me interesa vuestro servicio');
 ?>
 <a href="https://wa.me/<?php echo esc_attr($whatsapp_number); ?>?text=<?php echo urlencode($whatsapp_message); ?>" 
-   class="whatsapp-btn" 
+   class="whatsapp-btn hidden" 
    target="_blank" 
    rel="noopener noreferrer" 
    aria-label="Contactar por WhatsApp">
@@ -616,6 +621,25 @@ $whatsapp_message = get_theme_mod('whatsapp_message', 'Hola, me interesa vuestro
     </svg>
 </a>
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const footer = document.querySelector(".footer");
+    const whatsappBtn = document.querySelector(".whatsapp-btn");
+
+    if (footer && whatsappBtn) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            whatsappBtn.classList.remove("hidden");
+          } else {
+            whatsappBtn.classList.add("hidden");
+          }
+        });
+      }, { threshold: 0.1 });
+
+      observer.observe(footer);
+    }
+  });
+
 document.addEventListener('DOMContentLoaded', function() {
     // Add smooth scroll behavior
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
