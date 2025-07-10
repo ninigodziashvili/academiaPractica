@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.nav');
-  
+
   window.addEventListener('scroll', function () {
     if (window.scrollY > 100) {
       navbar.classList.add('scrolled');
@@ -83,6 +83,45 @@ document.querySelectorAll('.escuelas-lista li').forEach(item => {
     }
   });
 });
+
+/* pestañas moulage */
+
+  document.querySelectorAll('.bloque-plegable-moulage').forEach(boton => {
+    boton.addEventListener('click', () => {
+      const bloqueActual = boton.closest('.bloque-plegable-moulage');
+      const estaAbierto = bloqueActual.classList.contains('abierto');
+
+      // Cerrar todos los bloques
+      document.querySelectorAll('.bloque-plegable-moulage').forEach(bloque => {
+        bloque.classList.remove('abierto');
+      });
+
+      // Si no estaba abierto antes, abrirlo ahora
+      if (!estaAbierto) {
+        bloqueActual.classList.add('abierto');
+      }
+    });
+  });
+
+/* pestañas corset */
+
+  document.querySelectorAll('.bloque-plegable-corset').forEach(boton => {
+    boton.addEventListener('click', () => {
+      const bloqueActual = boton.closest('.bloque-plegable-corset');
+      const estaAbierto = bloqueActual.classList.contains('abierto');
+
+      // Cerrar todos los bloques
+      document.querySelectorAll('.bloque-plegable-corset').forEach(bloque => {
+        bloque.classList.remove('abierto');
+      });
+
+      // Si no estaba abierto antes, abrirlo ahora
+      if (!estaAbierto) {
+        bloqueActual.classList.add('abierto');
+      }
+    });
+  });
+
 
 //mensajes de texto carrusel
 
@@ -174,6 +213,3 @@ document.addEventListener("DOMContentLoaded", function () {
     navList.classList.toggle('open');
     hamburger.classList.toggle('active');
   });
-
-
-  

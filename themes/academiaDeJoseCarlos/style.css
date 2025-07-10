@@ -290,33 +290,6 @@ body {
   filter: brightness(60%);
 }
 
-/* 
-iframe {
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  /* Para que no se pueda hacer clic 
-} 
- */
-/* 
-/* En pantallas más anchas que altas 
-@media (min-aspect-ratio: 16/9) {
-  .video-fondo iframe {
-    width: 100vw;
-    height: 56.25vw;
-    /* 100vw * (9 / 16) = 56.25vw 
-  }
-}
-
-/* En pantallas más altas que anchas 
-@media (max-aspect-ratio: 16/9) {
-  .video-fondo iframe {
-    width: 177.78vh;
-    height: 100vh;
-  }
-}
- */
-
 .inicio_contenido h1 {
   color: var(--color-fondo);
   font-size: 2em;
