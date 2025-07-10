@@ -53,7 +53,7 @@
                 <p>Este taller te enseña a crear en plano un corset técnico a medida, resolviendo el volumen del busto y adaptándolo a cualquier cuerpo.
                     Ya seas principiante o profesional, dominarás una técnica que muchos aún no conocen.
                     Este curso no trata de lencería, sino de <strong>corsetería como soporte de vestidos</strong> o como pieza exterior con el que dominarás la creación de vestido de alta costura</p>
-                <a href="/curso1" class="btn-acento">Más información</a>
+                <a href="/corset" class="btn-acento">Más información</a>
             </div>
         </div>
 
@@ -67,7 +67,7 @@
                 <p>Técnicas prácticas de moulage: desde el brazo, americana, corset y drapeados
                     Con este taller se te hará muy fácil drapear o ajustar volúmenes sin ninguna limitación técnica, serás capaz crear prendas directamente sobre maniquí para luego poder trasladarlos al plano
                 </p>
-                <a href="/curso2" class="btn-acento">Más información</a>
+                <a href="/moulage" class="btn-acento">Más información</a>
             </div>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico" />
 
