@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.nav');
-  
+
   window.addEventListener('scroll', function () {
     if (window.scrollY > 100) {
       navbar.classList.add('scrolled');
@@ -83,6 +83,70 @@ document.querySelectorAll('.escuelas-lista li').forEach(item => {
     }
   });
 });
+
+/* pestañas moulage */
+
+
+
+ document.querySelectorAll('.bloque-plegable-moulage').forEach(boton => {
+        boton.addEventListener('click', () => {
+            const bloqueActual = boton.closest('.bloque-plegable-moulage');
+            const estabaAbierto = bloqueActual.classList.contains('abierto');
+
+            // Cerrar todos los bloques
+            document.querySelectorAll('.bloque-plegable-moulage').forEach(bloque => {
+                bloque.classList.remove('abierto');
+            });
+
+            if (!estabaAbierto) {
+                bloqueActual.classList.add('abierto');
+
+                // Esperar un poco para dejar que la animación comience
+                setTimeout(() => {
+                    const offset = -200; // Ajustá esto si querés más separación del borde
+                    const topPos = bloqueActual.getBoundingClientRect().top + window.pageYOffset + offset;
+
+                    window.scrollTo({
+                        top: topPos,
+                        behavior: 'smooth'
+                    });
+                }, 350); // Esto debe coincidir con el tiempo de transición en CSS
+            }
+        });
+    });
+
+
+
+/* pestañas corset */
+
+
+ document.querySelectorAll('.bloque-plegable-corset').forEach(boton => {
+        boton.addEventListener('click', () => {
+            const bloqueActual = boton.closest('.bloque-plegable-corset');
+            const estabaAbierto = bloqueActual.classList.contains('abierto');
+
+            // Cerrar todos los bloques
+            document.querySelectorAll('.bloque-plegable-corset').forEach(bloque => {
+                bloque.classList.remove('abierto');
+            });
+
+            if (!estabaAbierto) {
+                bloqueActual.classList.add('abierto');
+
+                // Esperar un poco para dejar que la animación comience
+                setTimeout(() => {
+                    const offset = -200; // Ajustá esto si querés más separación del borde
+                    const topPos = bloqueActual.getBoundingClientRect().top + window.pageYOffset + offset;
+
+                    window.scrollTo({
+                        top: topPos,
+                        behavior: 'smooth'
+                    });
+                }, 350); // Esto debe coincidir con el tiempo de transición en CSS
+            }
+        });
+    });
+
 
 //mensajes de texto carrusel
 
