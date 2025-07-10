@@ -188,28 +188,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Preguntas frequentas
 
-document.addEventListener('DOMContentLoaded', function () {
-  const acordeonItems = document.querySelectorAll('.acordeon .contenedor');
+        document.addEventListener('DOMContentLoaded', function() {
+            const acordeonItems = document.querySelectorAll('.acordeon .contenedor');
+  
+            acordeonItems.forEach(function(item) {
+                const etiqueta = item.querySelector('.etiqueta');
+                etiqueta.addEventListener('click', function() {
+                    acordeonItems.forEach(function(otherItem) {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('activa');
+                        }
+                    });
+                    item.classList.toggle('activa');
+                });
+            });
+        });
 
-  acordeonItems.forEach(function (item) {
-    const etiqueta = item.querySelector('.etiqueta');
-    etiqueta.addEventListener('click', function () {
-      acordeonItems.forEach(function (otherItem) {
-        if (otherItem !== item) {
-          otherItem.classList.remove('activa');
-        }
-      });
-      item.classList.toggle('activa');
-    });
+ // Burger Menu
+
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.getElementById('nav-list');
+
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('open');
+    hamburger.classList.toggle('active');
   });
-});
-
-// Burger Menu
-
-const hamburger = document.getElementById('hamburger');
-const navList = document.getElementById('nav-list');
-
-hamburger.addEventListener('click', () => {
-  navList.classList.toggle('open');
-  hamburger.classList.toggle('active');
-});
