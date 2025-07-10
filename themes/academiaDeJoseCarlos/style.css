@@ -338,14 +338,6 @@ body {
   filter: brightness(60%);
 }
 
-
-iframe {
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  /* Para que no se pueda hacer clic */
-}
-
 /* En pantallas más anchas que altas */
 @media (min-aspect-ratio: 16/9) {
   .video-fondo iframe {
