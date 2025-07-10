@@ -6,6 +6,19 @@ Template Name: Cursos
 
 <?php get_header(); ?>
 <style>
+            :root {
+            /* Colores base */
+            --color-fondo: #f0eee9;
+            --color-fondo-buttom: #d4a628d5;
+            --color-fondo2: #2B2B28;
+            --color-fondo2-hover: #3b3b38;
+            --nav-texto: #d4a528;
+            --nav-hover: var(--color-primario);
+
+            /* Sombra y blur */
+            --blur: blur(10px);
+            --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
 .video-section {
     margin-top: 60px;
     padding: 20px;
@@ -355,7 +368,7 @@ Template Name: Cursos
   padding: 60px 20px;
 }
 
-.container {
+.container-contacto {
     width: 80%;
     margin: 0 auto;
     background-color: #fff;
@@ -424,6 +437,28 @@ Template Name: Cursos
     border-color: #d4a528;
     outline: none;
 }
+
+.iletisim_form select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.iletisim_form select:focus,
+ {
+    border-color: #d4a528;
+    outline: none;
+}
+
+.iletisim_form input:focus,
+.iletisim_form textarea:focus,
+.iletisim_form select:focus {
+    border-color: #d4a528;
+    outline: none;
+}
+
 
 .iletisim_form textarea {
     resize: vertical;
@@ -589,6 +624,172 @@ Template Name: Cursos
         font-size: 14px;
     }
 }
+
+/* Foto Galeria */
+
+ .gallery-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 2em;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--nav-texto) 0%, var(--color-fondo-buttom) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gallery-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: var(--sombra-suave);
+            background: var(--color-fondo2);
+        }
+
+        .gallery-wrapper {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            flex: 0 0 300px;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, var(--color-fondo2));
+            color: var(--nav-texto);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .overlay-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .overlay-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--color-fondo-buttom);
+            backdrop-filter: var(--blur);
+            border: none;
+            color: var(--color-fondo2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .gallery-nav:hover {
+            background: var(--color-fondo2-hover);
+            color: var(--nav-texto);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .gallery-nav.prev {
+            left: 10px;
+        }
+
+        .gallery-nav.next {
+            right: 10px;
+        }
+
+        .gallery-nav:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .gallery-nav:disabled:hover {
+            transform: translateY(-50%) scale(1);
+            background: var(--color-fondo-buttom);
+            color: var(--color-fondo2);
+        }
+
+        .gallery-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-fondo2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: var(--nav-texto);
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 0 0 250px;
+                height: 350px;
+            }
+            
+            .gallery-title {
+                font-size: 2rem;
+            }
+        }
 </style>
 <section class="video-section">
   <video
@@ -603,60 +804,78 @@ Template Name: Cursos
   </video>
 </section>
 
-<section class="moving-texts">
-    <div class="text-expertos">
-        <h1>Especialista en</h1>
-        <div id="highlight-zone"></div>
-    </div>
-    <div class="ticker-container">
-        <div class="ticker-track">
-            <span class="ticker-item">Patronaje</span>
-            <span class="ticker-item">Desarrollo</span>
-            <span class="ticker-item">Técnicas</span>
-            <span class="ticker-item">Formación</span>
-            <span class="ticker-item">Soluciones</span>
-            <span class="ticker-item">Análisis</span>
-            <span class="ticker-item">Drapeados</span>
-            <span class="ticker-item">Estructuras</span>
-            <span class="ticker-item">Sastrería</span>
+    <section class="gallery-section">
+        <h2 class="gallery-title">Photo Gallery</h2>
+        
+        <div class="gallery-container">
+            <div class="gallery-wrapper" id="galleryWrapper">
+                <div class="gallery-item">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso claseSAM3631.png" alt="Curso de Diseño de Moda Básico"/>
+                </div>
+                
+                <div class="gallery-item">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/2.webp" alt="Curso de Diseño de Moda Básico"/>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/1.png" alt="Curso de Diseño de Moda Básico"/>
+                </div>
+                
+                <div class="gallery-item">
+                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico"/>
+                </div>
+                
+                <div class="gallery-item">
+                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/4.webp" alt="Curso de Diseño de Moda Básico"/>
+                </div>
+                
+                <div class="gallery-item">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/5.png" alt="Curso de Diseño de Moda Básico"/>
+                </div>
+                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/6.png" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+            </div>
+            <button class="gallery-nav prev" id="prevBtn">‹</button>
+            <button class="gallery-nav next" id="nextBtn">›</button>
         </div>
-    </div>
-</section>
+        
+        <div class="gallery-indicators" id="indicators"></div>
+         </section>
 <section class="cursos-apuntarse">
     <p class="cursos-apuntarse-p">¿Por qué apuntarte?</p>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <div class="content">
       <div class="card">
          
-            <div class="icon"><i class="material-icons md-36">face</i></div>
+            <div class="icon"><i class="material-icons md-36">💡</i></div>
             <p class="title">Domina técnicas que pocos conocen</p>
             <p class="text">Mis talleres</p>
          
       </div>
       <div class="card">
-         
-            <div class="icon"><i class="material-icons md-36">favorite_border</i></div>
-            <p class="title">Aprende haciendo</p>
+          <div class="icon"><i class="material-icons md-36">✂️</i></div>
+            <p class="title">Experiencia práctica inmediata en cada clase</p>
             <p class="text">Tanto en el taller</p>
          
       </div>
       <div class="card">
          
-            <div class="icon"><i class="material-icons md-36">alternate_email</i></div>
+            <div class="icon"><i class="material-icons md-36">⭐</i></div>
             <p class="title">Mejora tu técnica, seas principiante o profesional</p>
             <p class="text">No importa si estás</p>
          
       </div>
             <div class="card">
          
-            <div class="icon"><i class="material-icons md-36">alternate_email</i></div>
+            <div class="icon"><i class="material-icons md-36">✨</i></div>
             <p class="title">Amplía tus posibilidades creativas</p>
             <p class="text">Con el corset técnico podrás</p>
          
       </div>
             <div class="card">
          
-            <div class="icon"><i class="material-icons md-36">alternate_email</i></div>
+          <div class="icon"><i class="material-icons md-36">🎨</i></div>
             <p class="title">Lleva tu diseño al siguiente nivel</p>
             <p class="text">Estos cursos te darán herramientas</p>
          
@@ -665,37 +884,42 @@ Template Name: Cursos
 </div>
 </section>
 <section class="contact-section">
-    <div class="container">
+    <div class="container-contacto">
         <p class="contacto-titulo">Déjanos tus datos y nos comunicaremos contigo</p>
         <form class="iletisim_form" action="" method="post">
             <div class="sol50">
                 <span>
                     <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required placeholder="Nombre">
                 </span>
             </div>
             <div class="sag50">
                 <span>
                     <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required placeholder="Correo electrónico">
                 </span>
             </div>
             <div class="sol50">
                 <span>
                     <label for="phone">Teléfono</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" placeholder="Teléfono">
                 </span>
             </div>
             <div class="sag50">
                 <span>
                     <label for="course">Curso</label>
-                    <input type="text" id="course" name="course" required>
+                    <select type="text" id="course" name="course" required placeholder="Elige el Curso">
+        <option value="" disabled selected>Elige el Curso</option>
+        <option value="math">Corset a Medida</option>
+        <option value="science">Moulage Técnico</option>
+                       </select>
+
                 </span>
             </div>
             <div class="full100">
                 <span>
                     <label for="message">Mensaje</label>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea id="message" name="message" placeholder="Tus Mensaje"></textarea>
                 </span>
             </div>
             <div class="full100">
@@ -828,6 +1052,7 @@ Template Name: Cursos
         </div>
         </div>
     </div>
+    </section>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".ticker-item");
@@ -858,6 +1083,132 @@ document.addEventListener("DOMContentLoaded", () => {
   requestAnimationFrame(animateHighlight);
 });
 
+// Galeria
+
+  class HorizontalGallery {
+            constructor() {
+                this.wrapper = document.getElementById('galleryWrapper');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.indicators = document.getElementById('indicators');
+                this.items = this.wrapper.querySelectorAll('.gallery-item');
+                this.currentIndex = 0;
+                this.itemWidth = 320; // 300px + 20px gap
+                this.visibleItems = this.getVisibleItems();
+                this.maxIndex = Math.max(0, this.items.length - this.visibleItems);
+                
+                this.init();
+            }
+            
+            getVisibleItems() {
+                const containerWidth = this.wrapper.parentElement.offsetWidth;
+                return Math.floor(containerWidth / this.itemWidth);
+            }
+            
+            init() {
+                this.createIndicators();
+                this.updateGallery();
+                this.bindEvents();
+                
+                // Handle resize
+                window.addEventListener('resize', () => {
+                    this.visibleItems = this.getVisibleItems();
+                    this.maxIndex = Math.max(0, this.items.length - this.visibleItems);
+                    this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
+                    this.updateGallery();
+                });
+            }
+            
+            createIndicators() {
+                this.indicators.innerHTML = '';
+                for (let i = 0; i <= this.maxIndex; i++) {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'indicator';
+                    indicator.addEventListener('click', () => this.goToSlide(i));
+                    this.indicators.appendChild(indicator);
+                }
+            }
+            
+            updateGallery() {
+                const translateX = -this.currentIndex * this.itemWidth;
+                this.wrapper.style.transform = `translateX(${translateX}px)`;
+                
+                // Update navigation buttons
+                this.prevBtn.disabled = this.currentIndex === 0;
+                this.nextBtn.disabled = this.currentIndex === this.maxIndex;
+                
+                // Update indicators
+                this.indicators.querySelectorAll('.indicator').forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentIndex);
+                });
+            }
+            
+            goToSlide(index) {
+                this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
+                this.updateGallery();
+            }
+            
+            next() {
+                if (this.currentIndex < this.maxIndex) {
+                    this.currentIndex++;
+                    this.updateGallery();
+                }
+            }
+            
+            prev() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                    this.updateGallery();
+                }
+            }
+            
+            bindEvents() {
+                this.nextBtn.addEventListener('click', () => this.next());
+                this.prevBtn.addEventListener('click', () => this.prev());
+                
+                // Touch/swipe support
+                let startX = 0;
+                let isDragging = false;
+                
+                this.wrapper.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                });
+                
+                this.wrapper.addEventListener('touchmove', (e) => {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                });
+                
+                this.wrapper.addEventListener('touchend', (e) => {
+                    if (!isDragging) return;
+                    
+                    const endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            this.next();
+                        } else {
+                            this.prev();
+                        }
+                    }
+                    
+                    isDragging = false;
+                });
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prev();
+                    if (e.key === 'ArrowRight') this.next();
+                });
+            }
+        }
+        
+        // Initialize gallery when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new HorizontalGallery();
+        });
 </script>
 
 <?php get_footer(); ?>
