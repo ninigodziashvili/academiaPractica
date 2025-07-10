@@ -810,37 +810,171 @@ Template Name: Cursos
         <div class="gallery-container">
             <div class="gallery-wrapper" id="galleryWrapper">
                 <div class="gallery-item">
-                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso claseSAM3631.png" alt="Curso de Diseño de Moda Básico"/>
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/1.jpeg" alt="Curso de Diseño de Moda Básico"/>
+                </div>
+                <div class="gallery-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/2.jpeg" alt="Curso de Diseño de Moda Básico"/>
                 </div>
                 
                 <div class="gallery-item">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/2.webp" alt="Curso de Diseño de Moda Básico"/>
+                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/3.jpeg" alt="Curso de Diseño de Moda Básico"/>
                 </div>
                 
                 <div class="gallery-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/1.png" alt="Curso de Diseño de Moda Básico"/>
+                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/4.jpeg" alt="Curso de Diseño de Moda Básico"/>
                 </div>
                 
                 <div class="gallery-item">
-                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico"/>
-                </div>
-                
-                <div class="gallery-item">
-                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/4.webp" alt="Curso de Diseño de Moda Básico"/>
-                </div>
-                
-                <div class="gallery-item">
-                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/5.png" alt="Curso de Diseño de Moda Básico"/>
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/5.jpeg" alt="Curso de Diseño de Moda Básico"/>
                 </div>
                 <div class="gallery-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/6.png" alt="Curso de Diseño de Moda Básico"/>   
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/6.jpeg" alt="Curso de Diseño de Moda Básico"/>   
                 </div>
+                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/7.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/8.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/9.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/10.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/11.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/12.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/13.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/14.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/15.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/16.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/17.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/18.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/19.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/20.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/21.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/22.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/23.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/13.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/24.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/25.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/26.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/27.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/28.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/29.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/30.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/31.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/32.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/33.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/34.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/35.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/36.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/37.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/38.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/39.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/40.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/41.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/42.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/43.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/44.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/45.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/46.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/47.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/48.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/49.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/50.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+                                                                <div class="gallery-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fotogaleria/51.jpeg" alt="Curso de Diseño de Moda Básico"/>   
+                </div>
+
             </div>
             <button class="gallery-nav prev" id="prevBtn">‹</button>
             <button class="gallery-nav next" id="nextBtn">›</button>
         </div>
-        
-        <div class="gallery-indicators" id="indicators"></div>
+                <div class="gallery-indicators" id="indicators"></div>
+
          </section>
 <section class="cursos-apuntarse">
     <p class="cursos-apuntarse-p">¿Por qué apuntarte?</p>
