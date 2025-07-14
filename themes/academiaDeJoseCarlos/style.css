@@ -1204,7 +1204,7 @@ galeria de imagenes
 .foto {
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px var(--color-fondo2);
   border: 3px dashed #D4A528;
   ;
   transition: transform 0.3s ease;
