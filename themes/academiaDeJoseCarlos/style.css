@@ -274,6 +274,7 @@ body {
   border-radius: 20px;
   text-decoration: none;
   font-family: lato-contenido;
+  background-color: rgba(0, 0, 0, 0.11);
   transition: all 0.3s ease;
 }
 
@@ -315,6 +316,7 @@ body {
   margin-top: 20em;
 }
 
+
 .inicio_contenido p {
   color: var(--nav-texto);
   text-transform: capitalize;
@@ -324,6 +326,9 @@ body {
 
 }
 
+.inicio_contenido a {
+  text-decoration: none;
+}
 
 .video-fondo {
   position: relative;
@@ -339,20 +344,181 @@ body {
   object-fit: cover;
 }
 
+/* pantallas plegables */
+@media (max-width: 400px) {
+  .inicio_contenido {
+    font-size: 1em;
+  }
 
-/* Tablets (pantallas medianas, como iPads en vertical) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .video-fondo video {
+  .inicio_contenido h1 {
+    width: 99%;
+    margin-top: 4em;
+    text-align: center;
+  }
+
+  .fondo-video video {
     object-fit: cover;
     width: 100%;
     height: 100%;
   }
 
+}
+
+@media (max-width: 740px) {
+  .inicio_contenido {
+    font-size: 1em;
+  }
+
+  .inicio_contenido h1 {
+    width: 99%;
+    margin-top: 4em;
+    text-align: center;
+  }
+
+  .fondo-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+}
+
+@media (max-width: 344px) {
+  .inicio_contenido {
+    font-size: 0.80em;
+  }
+
+  .inicio_contenido h1 {
+    margin-top: 3.5em;
+  }
+
+  .fondo-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+
+}
+
+
+
+/* Tablets (pantallas medianas, como iPads en vertical) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
   .inicio {
-    height: 80vh;
-    /* O la altura que necesites */
+    height: 90vh;
+  }
+
+  .fondo-video {
+    height: 100%;
+  }
+
+  .fondo-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+  .inicio_contenido h1 {
+    margin-top: 3em;
+    font-size: 1.5em;
+  }
+
+}
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .inicio {
+    height: 90vh;
+  }
+
+  .fondo-video {
+    height: 100%;
+  }
+
+  .fondo-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .inicio_contenido {
+    font-size: 1.1em;
+  }
+
+  .inicio_contenido h1 {
+    margin-top: 8em;
+  }
+
+
+}
+
+@media (min-width: 1441px) and (max-width: 1919px) {
+  .inicio {
+    height: 90vh;
+  }
+
+  .fondo-video {
+    height: 100%;
+  }
+
+  .fondo-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .inicio_contenido {
+    font-size: 1.4em;
+  }
+
+  .inicio_contenido h1 {
+    margin-top: 9em;
+  }
+
+  .nav.scrolled {
+    margin: 10px 250px;
+    justify-content: center;
   }
 }
+
+/* Media query para pantallas muy grandes (por si necesitas ajustes) */
+@media (min-width: 1920px)and (max-width: 2560px) {
+
+  .inicio {
+    height: 90vh;
+  }
+
+  .fondo-video {
+    height: auto;
+  }
+
+  .fondo-video video {
+    /* Esto forzará el video a estirarse más, si no cubre completamente */
+    width: 100%;
+    height: 100%;
+  }
+
+  .inicio_contenido {
+    font-size: 1.5em;
+  }
+
+  .inicio_contenido h1 {
+    margin-top: 10em;
+  }
+
+  .nav.scrolled {
+    margin: 10px 320px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 
 
@@ -424,6 +590,14 @@ testimonios
 }
 
 
+@media screen and (max-width: 820px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .testimonios {
+    background-attachment: scroll !important; /* o simplemente elimina */
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
 
 
 
@@ -469,6 +643,8 @@ testimonios
   animation-play-state: paused;
 }
 
+
+
 .testimonios_container2.pausado,
 .testimonios_container2.hover-activo {
   animation-play-state: paused;
@@ -511,6 +687,70 @@ testimonios
   transition: 1s all;
   cursor: pointer;
   border: 1px solid var(--color-fondo-buttom);
+}
+
+
+
+
+@media (hover: none) and (pointer: coarse) {
+  .carta {
+    transform: scale(0.85);
+    transition: all 0.4s ease;
+    min-height: 200px;
+  }
+
+  .carta.activa {
+    transform: scale(1.1);
+    z-index: 10;
+  }
+
+  .carta .completo {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    transition: all 0.4s ease;
+  }
+
+  .carta.activa .completo {
+    max-height: 900px;
+    opacity: 1;
+    padding: 40px 10px;
+    transform-origin: top;
+  }
+
+  .completo.oculto {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+
+  .carta.activa .completo.oculto {
+    max-height: 900px;
+    /* o el tamaño que necesites */
+    opacity: 1;
+    overflow: visible;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+  }
+
+}
+
+
+.carta.activa {
+  transform: scale(1.1);
+}
+
+.carta.activa .completo {
+  transform: scaleY(1);
+  max-height: 900px;
+  opacity: 1;
+  padding: 50px 10px;
+  transform-origin: top;
+}
+
+
+.carta:hover {
+  transform: scale(1.1);
 }
 
 
@@ -579,79 +819,6 @@ testimonios
 .carta:hover {
   transform: scale(1.1);
 }
-
-@media (max-width: 768px) {
-
-  .carta:hover,
-  .carta:hover .completo {
-    transform: none;
-    max-height: none;
-    opacity: 1;
-    padding: 50px 10px;
-  }
-
-  .carta.activa .completo {
-    transform: scaleY(1);
-    max-height: 300px;
-    opacity: 1;
-    padding: 24px 10px;
-    transform-origin: top;
- }
-    .carta img{
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-      overflow: hidden;
-    }
-
-    .usuario {
-      font-weight: bold;
-      margin-bottom: 8px;
-      font-size: 15px;
-      text-transform: capitalize;
-    }
-
-    .mensaje {
-      text-align: start;
-      font-size: 9px;
-      color: var(--color-fondo2);
-      position: relative;
-      text-transform: capitalize;
-    }
-
-
-    .completo{
-      line-height: 1.1;
-    }
-
-  }
-
-  @media (max-width: 480px) {
-
-    .carta {
-      min-width: 90vw;
-      max-width: 90vw;
-      padding: 16px;
-      font-size: 12px;
-    }
-
-    .usuario {
-      font-size: 12px;
-    }
-
-    .mensaje {
-      font-size: 11px;
-    }
-
-    .completo {
-      padding: 40px 8px;
-      font-size: 12px;
-    }
-
-
-  }
 
 
 
@@ -820,11 +987,7 @@ cursos
     margin-left: 20px;
   }
 
-  .inicio_contenido h1 {
-    margin-top: 10em;
-    text-align: center;
-    font-size: 1.5em;
-  }
+
 
   .botones {
     padding: 2em;
@@ -842,11 +1005,7 @@ cursos
     margin-left: 20px;
   }
 
-  .inicio_contenido h1 {
-    margin-top: 10em;
-    text-align: center;
-    font-size: 1.5em;
-  }
+
 
   .botones {
     padding: 2em;
@@ -864,11 +1023,6 @@ cursos
     margin-left: 30px;
   }
 
-  .inicio_contenido h1 {
-    margin-top: 10em;
-    text-align: center;
-    font-size: 1.5em;
-  }
 
   .botones {
     padding: 2em;
@@ -919,6 +1073,7 @@ cursos
 }
 
 .curso p {
+  margin-top: 15px;
   margin-bottom: 1rem;
   line-height: 24px
 }

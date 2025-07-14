@@ -28,9 +28,9 @@
                             <path d="m4 11h16"></path>
                         </g>
                     </svg>
-                    <span class="lable">calendarios</span>
+                    <a href="/agenda/"> <span class="lable">calendarios</span></a>
                 </button>
-                <a href="" class="boton1">más información</a>
+                <a href="/contacto/" class="boton1">más información</a>
                 <button class="boton-sonido" id="toggleSound">🔇</button>
             </div>
 
@@ -898,98 +898,101 @@
             lightboxImg.src = '';
         }
     });
-
     //pausar el carrusel
-    const carrusels = document.getElementById('carrusel');
+    const carrusel = document.querySelector('.testimonios_container2');
     const toggle = document.getElementById('togglePause');
-    let pausado = false;
 
-    // Pausar o reanudar con botón
+    let pausado = false;
+    let cartaActiva = null;
+    let observerActivo = true; // si usas IntersectionObserver o similar para cambiar cartas
+
+    // Función que cambia carta activa (llámala donde corresponda)
+    function cambiarCartaActiva(nuevaCarta) {
+        if (pausado) return; // NO cambiar carta si está pausado
+
+        if (cartaActiva) cartaActiva.classList.remove('activa');
+
+        nuevaCarta.classList.add('activa');
+        cartaActiva = nuevaCarta;
+    }
+
+    // Botón pausa
     toggle.addEventListener('click', () => {
         pausado = !pausado;
 
         if (pausado) {
-            carrusels.classList.add('pausado');
+            carrusel.classList.add('pausado');
             toggle.textContent = '▶️';
+
+            // Cuando pausas: bloquea cambios y fija la carta activa
+            if (cartaActiva) {
+                cartaActiva.style.transition = 'none';
+                cartaActiva.classList.add('activa');
+            }
+
         } else {
-            carrusels.classList.remove('pausado');
+            carrusel.classList.remove('pausado');
             toggle.textContent = '⏸️';
+
+            // Cuando reanudas: desbloquea cambios y permite transiciones
+            if (cartaActiva) {
+                cartaActiva.style.transition = ''; // vuelve a su estilo normal
+            }
         }
     });
 
-    // Agregar pausa al pasar el ratón (si no está pausado manualmente)
-    carrusels.addEventListener('mouseenter', () => {
-        if (!pausado) {
-            carrusels.classList.add('hover-activo');
-        }
-    });
-
-    carrusels.addEventListener('mouseleave', () => {
-        carrusels.classList.remove('hover-activo');
-    });
 
 
     // para cartas 
     // Solo activar en móviles
+    // JS para comportamiento adaptativo de cartas (móvil/tablet vs PC)
+    // Seleccionamos el contenedor del carrusel (donde están las cartas)
     document.addEventListener("DOMContentLoaded", () => {
         const cartas = document.querySelectorAll(".carta");
-        let observer = null;
+        const contenedor = document.querySelector(".testimonios_container");
 
-        function activarModoEscritorio() {
-            // Limpia cualquier clase previa
-            cartas.forEach((carta) => carta.classList.remove("activa"));
+        function isInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            const contRect = contenedor.getBoundingClientRect();
+            const centerX = contRect.left + contRect.width / 2;
 
-            // Desactiva el observer si estaba activo
-            if (observer) {
-                observer.disconnect();
-                observer = null;
-            }
+            const elCenterX = rect.left + rect.width / 2;
 
-            // Habilita el efecto hover con CSS solamente (ya está en tu código)
-            // No necesitas JS aquí
+            // Detectamos si el centro del elemento está cerca del centro del contenedor
+            const distance = Math.abs(centerX - elCenterX);
+            return distance < rect.width / 2; // puedes ajustar este valor
         }
 
-        function activarModoMovil() {
-            // Desactiva hover con clase si quieres
-            // (opcional: puedes cambiar estilos desde CSS con media query también)
+        let activeTimeout = null;
 
-            // Crear observer para activar cartas en el centro de pantalla
-            observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("activa");
-                        } else {
-                            entry.target.classList.remove("activa");
-                        }
-                    });
-                }, {
-                    root: null,
-                    threshold: 0.6, // ajusta cuánto de la carta debe estar visible (60% recomendado)
+        function revisarCartas() {
+            cartas.forEach(carta => {
+                if (isInViewport(carta)) {
+                    // Si ya está activa no hacemos nada
+                    if (!carta.classList.contains("activa")) {
+                        carta.classList.add("activa");
+
+                        // Remover la clase después de unos segundos
+                        // clearTimeout(activeTimeout);
+                        // activeTimeout = setTimeout(() => {
+                        //     carta.classList.remove("activa");
+                        // }, 4000); // duración en milisegundos (4s)
+                    }
+                } else {
+                    carta.classList.remove("activa");
                 }
-            );
-
-            cartas.forEach((carta) => observer.observe(carta));
+            });
         }
 
-        function checkModo() {
-            const esMovil = window.innerWidth <= 768;
-
-            if (esMovil) {
-                activarModoMovil();
-            } else {
-                activarModoEscritorio();
-            }
-        }
-
-        // Ejecutar al cargar
-        checkModo();
-
-        // Re-ejecutar si se cambia el tamaño de ventana
-        window.addEventListener("resize", () => {
-            checkModo();
+        // Escuchar scroll y revisar
+        contenedor.addEventListener("scroll", () => {
+            revisarCartas();
         });
+
+        // También revisar automáticamente cada cierto tiempo (por auto-scroll)
+        setInterval(() => {
+            revisarCartas();
+        }, 1000);
     });
 </script>
-
 <?php get_footer(); ?>
