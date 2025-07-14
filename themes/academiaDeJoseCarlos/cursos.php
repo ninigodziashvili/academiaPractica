@@ -288,7 +288,6 @@ Template Name: Cursos
    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
    border: 2px solid rgba(7, 7, 7, 0.12);
    font-size: 16px;   
-   transition: all 0.3s ease;
    position: relative;
    display: flex;
    justify-content: center;
@@ -296,6 +295,12 @@ Template Name: Cursos
    flex-direction: column;
    cursor: pointer;
    transition: all 0.3s ease;
+   opacity: 0;
+   transform: translateY(30px);
+   animation: fadeInUp 0.6s ease forwards;
+   animation-play-state: paused;
+   pointer-events: none;
+   cursor: default;
 }
 
 .icon {
@@ -371,6 +376,15 @@ Template Name: Cursos
    transition: all 0.3s ease;
 }
 
+/* Staggered animation delays for each card */
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+
 @media screen and (max-width: 1024px) {
   .content {
     flex-wrap: wrap;
@@ -404,10 +418,19 @@ Template Name: Cursos
 
 }
 
+/* The animation keyframes */
 
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .cursos-apuntarse {
     height: 30em;
 }
+
+/* Contact Section */
 
 .contact-section {
   background-color:rgb(220, 219, 219);
@@ -415,7 +438,7 @@ Template Name: Cursos
 }
 
 .container-contacto {
-    width: 80%;
+    width: 900px;
     margin: 0 auto;
     background-color: #fff;
     padding: 40px;
@@ -1010,34 +1033,27 @@ Template Name: Cursos
          
             <div class="icon"><i class="material-icons md-36">💡</i></div>
             <p class="title">Domina técnicas que pocos conocen</p>
-            <p class="text">Mis talleres</p>
-         
       </div>
       <div class="card">
           <div class="icon"><i class="material-icons md-36">✂️</i></div>
             <p class="title">Experiencia práctica inmediata en cada clase</p>
-            <p class="text">Tanto en el taller</p>
-         
       </div>
       <div class="card">
          
             <div class="icon"><i class="material-icons md-36">⭐</i></div>
             <p class="title">Mejora tu técnica, seas principiante o profesional</p>
-            <p class="text">No importa si estás</p>
          
       </div>
             <div class="card">
          
             <div class="icon"><i class="material-icons md-36">✨</i></div>
             <p class="title">Amplía tus posibilidades creativas</p>
-            <p class="text">Con el corset técnico podrás</p>
          
       </div>
             <div class="card">
          
           <div class="icon"><i class="material-icons md-36">🎨</i></div>
             <p class="title">Lleva tu diseño al siguiente nivel</p>
-            <p class="text">Estos cursos te darán herramientas</p>
          
       </div>
    </div>
@@ -1372,6 +1388,35 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Video or button not found");
             }
         });
+
+        const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${(index + 1) * 0.1}s`;
+                card.style.animationPlayState = 'running';
+            });
+            observer.unobserve(entry.target); // Animation only happens once
+        }
+    });
+}, {
+    threshold: 0.3 // Animation starts when 30% of section is visible
+});
+
+// Start observing when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.cursos-apuntarse');
+    if (section) {
+        // Pause animation initially
+        const cards = section.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.style.animationPlayState = 'paused';
+        });
+        
+        observer.observe(section);
+    }
+});
 
 </script>
 

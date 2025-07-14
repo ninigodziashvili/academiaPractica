@@ -530,4 +530,5 @@ Template Name: Agenda
             ?>
         </div>
     </div>
+    </div>
     <?php get_footer(); ?>
