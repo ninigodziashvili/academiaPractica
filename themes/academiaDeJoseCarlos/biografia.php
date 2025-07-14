@@ -84,11 +84,11 @@
 
 .profile-section .image img {
   width: 100%;
-  height: 450px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
-  transition: var(--transition);
-  filter: grayscale(20%);
+  object-position: top;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .profile-section .image img:hover {
@@ -388,52 +388,6 @@ ul li:before {
 .profile-section:nth-child(4) { animation-delay: 0.3s; }
 .profile-section:nth-child(5) { animation-delay: 0.4s; }
 
-@media (max-width: 768px) {
-  .profile-section .image,
-  .section-4-special .image-large {
-    max-width: 100%;
-    min-width: auto;
-    width: 100%;
-  }
-
-  .profile-section .image img,
-  .section-4-special .image-large img {
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-  }
-
-  .section-4-special {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .section-4-special .text-content {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-section .image img,
-  .section-4-special .image-large img {
-    height: auto;
-    max-height: 300px;
-  }
-
-  .profile-section {
-    padding: 1rem;
-    gap: 1.5rem;
-  }
-
-  .hero-section h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-section .subtitle {
-    font-size: 1rem;
-  }
-}
 
 </style>
 
