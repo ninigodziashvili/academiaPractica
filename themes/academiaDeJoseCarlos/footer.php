@@ -560,7 +560,6 @@
 
     .team-list {
         grid-template-columns: 1fr;
-        justify-items: center;
     }
 
     .social-links {
@@ -645,7 +644,7 @@
 
         <div class="footer-legal">
         <div class="footer-section">
-      <a href="politica.php">🔒 Política de Privacidad</a>
+      <a href="/politica">🔒 Política de Privacidad</a>
         </div>
 <p>&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>. Todos los derechos reservados.</p>
         </div>
