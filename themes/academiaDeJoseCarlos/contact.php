@@ -44,29 +44,138 @@ get_header();
     margin-bottom: 2rem;
   }
 
-  .contacto-formulario form input,
-  .contacto-formulario form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
+  .contact-section {
+  background-color:rgb(220, 219, 219);
+  padding: 60px 20px;
+  border-radius: 16px;
+}
 
-  .contacto-formulario form button {
-    background-color: #d4a628d5;
-    color: #fff;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+.container-contacto {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cursos-apuntarse-p {
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
     font-weight: bold;
-  }
+    margin-top: 1em;
+}
 
-  .contacto-formulario form button:hover {
+.contacto-titulo {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.iletisim_form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sol50,
+.sag50 {
+    flex: 1 1 45%;
+    min-width: 250px;
+}
+
+.full100 {
+    flex: 1 1 100%;
+}
+
+.iletisim_form span {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.iletisim_form label {
+    font-size: 0.95em;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.iletisim_form input,
+.iletisim_form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.iletisim_form input:focus,
+.iletisim_form textarea:focus {
+    border-color: #d4a528;
+    outline: none;
+}
+
+.iletisim_form select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.iletisim_form select:focus,
+ {
+    border-color: #d4a528;
+    outline: none;
+}
+
+.iletisim_form input:focus,
+.iletisim_form textarea:focus,
+.iletisim_form select:focus {
+    border-color: #d4a528;
+    outline: none;
+}
+
+
+.iletisim_form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.iletisim_form button:hover {
     background-color: #3b3b38;
-  }
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 767px) {
+    .iletisim_form {
+        flex-direction: column;
+    }
+    .sol50,
+    .sag50,
+    .full100 {
+        flex: 1 1 100%;
+    }
+}
+
+.iletisim_form button {
+    display: inline-block;
+    padding: 17px 20px;
+    background-color: #d4a528;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    align-items: center; 
+}
 
   @media screen and (max-width: 768px) {
     .contacto-hero h1 {
@@ -108,15 +217,51 @@ get_header();
     <p><strong>Email:</strong> mclasscostura@gmail.com</p>
   </section>
 
-  <section class="contacto-formulario">
-    <h2>Formulario de contacto</h2>
-    <form action="#" method="post">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo electrónico" required>
-      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </section>
+<section class="contact-section">
+    <div class="container-contacto">
+        <p class="contacto-titulo">Déjanos tus datos y nos comunicaremos contigo</p>
+        <form class="iletisim_form" action="" method="post">
+            <div class="sol50">
+                <span>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required placeholder="Nombre">
+                </span>
+            </div>
+            <div class="sag50">
+                <span>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="Correo electrónico">
+                </span>
+            </div>
+            <div class="sol50">
+                <span>
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Teléfono">
+                </span>
+            </div>
+            <div class="sag50">
+                <span>
+                    <label for="course">Curso</label>
+                    <select type="text" id="course" name="course" required placeholder="Elige el Curso">
+        <option value="" disabled selected>Elige el Curso</option>
+        <option value="math">Corset a Medida</option>
+        <option value="science">Moulage Técnico</option>
+                       </select>
+
+                </span>
+            </div>
+            <div class="full100">
+                <span>
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Tus Mensaje"></textarea>
+                </span>
+            </div>
+            <div class="full100">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</section>
 
 </div>
 

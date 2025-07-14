@@ -438,7 +438,7 @@ Template Name: Cursos
 }
 
 .container-contacto {
-    width: 80%;
+    width: 900px;
     margin: 0 auto;
     background-color: #fff;
     padding: 40px;
