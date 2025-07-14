@@ -5,67 +5,442 @@ Template Name: Agenda
 ?>
 
 <?php get_header(); ?>
+
 <style>
-/* === MOVING TEXT SECTION === */
+    /* Agenda */
 
-/* === MOVING TEXT SECTION === */
-.moving-texts {
-    background-color: #3b3b38;
-    width: 100%;
-    height: 25em;
-    margin-top: 2em;
-}
+    :root {
+        /* Colores base */
+        --color-fondo: #f0eee9;
+        ;
+        --color-fondo-buttom: #d4a628d5;
+        --color-fondo2: #2B2B28;
+        --color-fondo2-hover: #3b3b38;
+        --nav-texto: #d4a528;
+        --nav-hover: var(--color-primario);
 
-.text-expertos {
-    color: #d4a628d5;
-    text-align: center;
-    font-size: 35px;
-    font-weight: 700;
-    margin-bottom: 2em;
-    padding-top: 2em;
-}
+        /* Sombra y blur */
+        --blur: blur(10px);
+        --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
 
-.ticker-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    height: 60px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-}
+    /* loader */
 
-.ticker-track {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scrollLeft 35s linear infinite;
-    will-change: transform;
-}
+    .pespunte-loader {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
 
-@keyframes scrollLeft {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
 
-.ticker-item {
-    display: inline-block;
-    padding: 0 2em;
-    font-size: 2em;
-    font-weight: bold;
-    color: #f0eee9;
-    transition: color 0.3s ease, transform 0.3s ease;
-    will-change: transform, color;
-}
+    .pespunte-loader span {
+        display: block;
+        width: 30px;
+        height: 8px;
+        background: var(--color-fondo-buttom);
+        /* Cambia el color aquí si quieres */
+        animation: pespunte 1s linear infinite;
+    }
 
-#highlight-zone {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1px;
-    height: 100vh;
-    pointer-events: none;
-}
-    </style>
+    .pespunte-loader span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .pespunte-loader span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .pespunte-loader span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .pespunte-loader span:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+
+    .pespunte-loader span:nth-child(5) {
+        animation-delay: 0.8s;
+    }
+
+    @keyframes pespunte {
+        0% {
+            opacity: 0.2;
+            transform: scaleX(0.5);
+        }
+
+        50% {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        100% {
+            opacity: 0.2;
+            transform: scaleX(0.5);
+        }
+    }
+
+
+    /* calendario */
+
+    #calendario {
+        padding: 2rem;
+        color: var(--nav-texto);
+        text-align: center;
+        margin-top: 3em;
+    }
+
+    #calendario h2 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .calendario-container {
+        background: var(--color-fondo2);
+        position: relative;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: var(--sombra-suave);
+        overflow: hidden;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .calendario-container iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 8px;
+        z-index: 2;
+    }
+
+    /* mapa */
+
+    .mapa {
+        display: flex;
+        justify-content: center;
+        color: var(--nav-texto);
+        align-items: center;
+
+    }
+
+    .mapa h2 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .mapa-contenedor-flex {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .escuelas-lista {
+        background: var(--color-fondo2);
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: var(--sombra-suave);
+        color: var(--nav-texto);
+        flex: 0 0 220px;
+        overflow-y: auto;
+    }
+
+    .escuelas-lista ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .escuelas-lista li {
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        transition: background 0.2s ease, box-shadow 0.2s ease;
+        position: relative;
+    }
+
+    .escuelas-lista li::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 1rem;
+        right: 1rem;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .escuelas-lista li:last-child::after {
+        display: none;
+    }
+
+    .escuelas-lista li:hover {
+        background: var(--color-fondo2-hover);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+
+
+    .mapa-wrapper {
+        background: var(--color-fondo2);
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: var(--sombra-suave);
+        max-width: 800px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mapa-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .mapa-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .pin-wrapper {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+    }
+
+    .pin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 24px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .globo {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2);
+        transition: all 0.5s ease;
+        padding: 4px;
+        z-index: 1;
+    }
+
+    .globo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* Hover o activo */
+    .pin-wrapper:hover .globo,
+    .pin-wrapper.activo .globo {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Posiciones */
+    .madrid {
+        top: 38%;
+        left: 42%;
+    }
+
+    .madrid .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .madrid:hover .globo,
+    .madrid.activo .globo {
+        top: calc(50% - 70px);
+    }
+
+    .zaragoza {
+        top: 25%;
+        left: 62%;
+    }
+
+    .zaragoza .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .zaragoza:hover .globo,
+    .zaragoza.activo .globo {
+        top: calc(50% - 60px);
+    }
+
+    .getafe {
+        top: 41%;
+        left: 39%;
+    }
+
+    .getafe .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .getafe:hover .globo,
+    .getafe.activo .globo {
+        top: calc(50% - 70px);
+    }
+
+    .gijon {
+        top: 2%;
+        left: 26%;
+    }
+
+    .gijon .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .gijon:hover .globo,
+    .gijon.activo .globo {
+        top: 5em;
+    }
+
+    .merida {
+        top: 64%;
+        left: 23%;
+    }
+
+    .merida .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .merida:hover .globo,
+    .merida.activo .globo {
+        top: calc(50% - 70px);
+    }
+
+    .huelva {
+        top: 73%;
+        left: 17%;
+    }
+
+    .huelva .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .huelva:hover .globo,
+    .huelva.activo .globo {
+        top: calc(50% - 70px);
+    }
+
+    .sevilla {
+        top: 73%;
+        left: 24%;
+    }
+
+    .sevilla .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .sevilla:hover .globo,
+    .sevilla.activo .globo {
+        top: calc(50% - 70px);
+    }
+
+    .tarragona {
+        top: 31%;
+        left: 75%;
+    }
+
+    .tarragona .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .tarragona:hover .globo,
+    .tarragona.activo .globo {
+        top: calc(50% - 60px);
+    }
+
+    .barcelona {
+        top: 27%;
+        left: 80%;
+    }
+
+    .barcelona .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .barcelona:hover .globo,
+    .barcelona.activo .globo {
+        top: calc(50% - 60px);
+    }
+
+    .valencia {
+        top: 52%;
+        left: 65%;
+    }
+
+    .valencia .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .valencia:hover .globo,
+    .valencia.activo .globo {
+        top: calc(50% - 60px);
+    }
+
+    .gandia {
+        top: 58%;
+        left: 68%;
+    }
+
+    .gandia .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .gandia:hover .globo,
+    .gandia.activo .globo {
+        top: calc(50% - 60px);
+    }
+
+    .vitoria {
+        top: 10%;
+        left: 48%;
+    }
+
+    .vitoria .globo {
+        top: 50%;
+        left: 50%;
+    }
+
+    .vitoria:hover .globo,
+    .vitoria.activo .globo {
+        top: 5em;
+    }
+
+     @media (max-width: 480px) {
+        
+     }
+</style>
+
 <!-- calendario -->
 <section id="calendario">
     <h2>Próximas Fechas</h2>
@@ -93,6 +468,7 @@ Template Name: Agenda
         <ul>
             <?php
             $escuelas = [
+                "barcelona" => "Barcelona - Mil Esquinas",
                 "gandia" => "Gandía - Mila García",
                 "getafe" => "Getafe - Lolamy Atelier",
                 "gijon" => "Gijón - Efecto Seda",
@@ -128,7 +504,8 @@ Template Name: Agenda
                 "tarragona" => ["https://www.instagram.com/martacasanova_academia/?hl=es", "marta.jpg"],
                 "valencia" => ["https://victoriaburek.com/", "victoria.jpg"],
                 "gandia" => ["https://corteyconfeccionmila.com/", "mila.png"],
-                "vitoria" => ["https://mclassmoda.com/", "mclass.jpeg"]
+                "vitoria" => ["https://mclassmoda.com/", "mclass.jpeg"],
+                "barcelona" => ["https://milesquinas.org/", "milesquinas.jpg"],
             ];
 
             $theme_url = get_template_directory_uri();
@@ -145,57 +522,4 @@ Template Name: Agenda
             ?>
         </div>
     </div>
-</div>
-</div>
-<section class="moving-texts">
-    <div class="text-expertos">
-        <h1>Escuelas en</h1>
-        <div id="highlight-zone"></div>
-    </div>
-    <div class="ticker-container">
-        <div class="ticker-track">
-            <span class="ticker-item">Gandia</span>
-            <span class="ticker-item">Getafe</span>
-            <span class="ticker-item">Gijon</span>
-            <span class="ticker-item">Huelva</span>
-            <span class="ticker-item">Madrid</span>
-            <span class="ticker-item">Merida</span>
-            <span class="ticker-item">Sevilla</span>
-            <span class="ticker-item">Tarragona</span>
-            <span class="ticker-item">Valencia</span>
-            <span class="ticker-item">Vitoria</span>
-            <span class="ticker-item">Zaragoza</span>
-        </div>
-    </div>
-</section>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".ticker-item");
-
-  function animateHighlight() {
-    const centerX = window.innerWidth / 2;
-    const maxDistance = 160;
-
-    items.forEach(item => {
-      const rect = item.getBoundingClientRect();
-      const itemCenter = rect.left + rect.width / 2;
-      const distance = Math.abs(centerX - itemCenter);
-
-      if (distance < maxDistance) {
-        const intensity = 1 - (distance / maxDistance);
-        const scale = 1 + intensity * 0.2;
-        item.style.color = "#d4a528";
-        item.style.transform = `scale(${scale})`;
-      } else {
-        item.style.color = "#f0eee9";
-        item.style.transform = "scale(1)";
-      }
-    });
-
-    requestAnimationFrame(animateHighlight);
-  }
-
-  requestAnimationFrame(animateHighlight);
-});
-</script>
-<?php get_footer(); ?>
+    <?php get_footer(); ?>

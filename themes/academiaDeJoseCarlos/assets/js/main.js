@@ -54,100 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
-// Agenda
-
-window.addEventListener('load', function () {
-  setTimeout(function () {
-    const loader = document.querySelector('.pespunte-loader');
-    if (loader) {
-      loader.style.display = 'none';
-    }
-  }, 20); // 2000 milisegundos = 2 segundos
-});
-
-document.querySelectorAll('.escuelas-lista li').forEach(item => {
-  item.addEventListener('click', () => {
-    const escuela = item.getAttribute('data-escuela');
-    const wrapper = document.querySelector(`.pin-wrapper.${escuela}`);
-
-    if (wrapper.classList.contains('activo')) {
-      // Si ya está activo, lo desactivamos
-      wrapper.classList.remove('activo');
-    } else {
-      // Si no está activo, quitamos los activos y activamos este
-      document.querySelectorAll('.pin-wrapper').forEach(w => {
-        w.classList.remove('activo');
-      });
-      wrapper.classList.add('activo');
-    }
-  });
-});
-
-/* pestañas moulage */
-
-
-
- document.querySelectorAll('.bloque-plegable-moulage').forEach(boton => {
-        boton.addEventListener('click', () => {
-            const bloqueActual = boton.closest('.bloque-plegable-moulage');
-            const estabaAbierto = bloqueActual.classList.contains('abierto');
-
-            // Cerrar todos los bloques
-            document.querySelectorAll('.bloque-plegable-moulage').forEach(bloque => {
-                bloque.classList.remove('abierto');
-            });
-
-            if (!estabaAbierto) {
-                bloqueActual.classList.add('abierto');
-
-                // Esperar un poco para dejar que la animación comience
-                setTimeout(() => {
-                    const offset = -200; // Ajustá esto si querés más separación del borde
-                    const topPos = bloqueActual.getBoundingClientRect().top + window.pageYOffset + offset;
-
-                    window.scrollTo({
-                        top: topPos,
-                        behavior: 'smooth'
-                    });
-                }, 350); // Esto debe coincidir con el tiempo de transición en CSS
-            }
-        });
-    });
-
-
-
-/* pestañas corset */
-
-
- document.querySelectorAll('.bloque-plegable-corset').forEach(boton => {
-        boton.addEventListener('click', () => {
-            const bloqueActual = boton.closest('.bloque-plegable-corset');
-            const estabaAbierto = bloqueActual.classList.contains('abierto');
-
-            // Cerrar todos los bloques
-            document.querySelectorAll('.bloque-plegable-corset').forEach(bloque => {
-                bloque.classList.remove('abierto');
-            });
-
-            if (!estabaAbierto) {
-                bloqueActual.classList.add('abierto');
-
-                // Esperar un poco para dejar que la animación comience
-                setTimeout(() => {
-                    const offset = -200; // Ajustá esto si querés más separación del borde
-                    const topPos = bloqueActual.getBoundingClientRect().top + window.pageYOffset + offset;
-
-                    window.scrollTo({
-                        top: topPos,
-                        behavior: 'smooth'
-                    });
-                }, 350); // Esto debe coincidir con el tiempo de transición en CSS
-            }
-        });
-    });
-
-
 //mensajes de texto carrusel
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -238,3 +144,55 @@ document.addEventListener("DOMContentLoaded", function () {
     navList.classList.toggle('open');
     hamburger.classList.toggle('active');
   });
+
+  // Agenda
+
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    const loader = document.querySelector('.pespunte-loader');
+    if (loader) {
+      loader.style.display = 'none';
+    }
+  }, 20); // 2000 milisegundos = 2 segundos
+});
+
+document.querySelectorAll('.escuelas-lista li').forEach(item => {
+  item.addEventListener('click', () => {
+    const escuela = item.getAttribute('data-escuela');
+    const wrapper = document.querySelector(`.pin-wrapper.${escuela}`);
+
+    if (wrapper.classList.contains('activo')) {
+      // Si ya está activo, lo desactivamos
+      wrapper.classList.remove('activo');
+    } else {
+      // Si no está activo, quitamos los activos y activamos este
+      document.querySelectorAll('.pin-wrapper').forEach(w => {
+        w.classList.remove('activo');
+      });
+      wrapper.classList.add('activo');
+    }
+  });
+});
+
+
+
+/* pestañas moulage */
+
+
+document.querySelectorAll('.bloque-plegable-moulage').forEach(boton => {
+  boton.addEventListener('click', () => {
+    const bloqueActual = boton.closest('.bloque-plegable-moulage');
+    bloqueActual.classList.toggle('abierto');
+  });
+});
+
+
+/* pestañas corset */
+
+
+document.querySelectorAll('.bloque-plegable-corset').forEach(boton => {
+  boton.addEventListener('click', () => {
+    const bloqueActual = boton.closest('.bloque-plegable-corset');
+    bloqueActual.classList.toggle('abierto');
+  });
+});
