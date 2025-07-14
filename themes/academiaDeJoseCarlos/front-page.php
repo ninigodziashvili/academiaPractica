@@ -44,15 +44,14 @@
 
         <!-- Curso 1 -->
         <div class="curso" data-aos="fade-right">
-            <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3888.png"
-                alt="Curso de Patronaje Avanzado" />
+           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico"/>
             <div>
                 <h3>taller de patrón técnico de corset a medida (20h)</h3>
                 <strong>resuelve el volumen del seno con presición y adapta cualquier copa a la morfología de la persona.</strong>
                 <strong>lo que aprenderas:</strong>
-                <p>Este taller te enseña a crear en plano un corset técnico a medida, resolviendo el volumen del busto y adaptándolo a cualquier cuerpo.
-                    Ya seas principiante o profesional, dominarás una técnica que muchos aún no conocen.
-                    Este curso no trata de lencería, sino de <strong>corsetería como soporte de vestidos</strong> o como pieza exterior con el que dominarás la creación de vestido de alta costura</p>
+                <p class="line-break">Este taller te enseña a crear en plano un corset técnico a medida, resolviendo el volumen del busto y adaptándolo a cualquier cuerpo.</p>
+                    <p class="line-break">Ya seas principiante o profesional, dominarás una técnica que muchos aún no conocen.</p>
+                    <p class="line-break">Este curso no trata de lencería, sino de <strong>corsetería como soporte de vestidos</strong> o como pieza exterior con el que dominarás la creación de vestido de alta costura</p>
                 <a href="/corset" class="btn-acento">Más información</a>
             </div>
         </div>
@@ -62,15 +61,15 @@
             <div class="ml-md-5">
                 <h3>Taller de Moulage Técnico (20h)</h3>
                 <strong>Aprende a hacer el patrón perfecto a la primera</strong>
-                <p>El moulage es la técnica de crear patrones directamente sobre el maniquí para luego llevarlos a plano y poder industrializarlos.</p>
+                <p class="line-break">El moulage es la técnica de crear patrones directamente sobre el maniquí para luego llevarlos a plano y poder industrializarlos.</p>
                 <strong>lo que aprenderas:</strong>
-                <p>Técnicas prácticas de moulage: desde el brazo, americana, corset y drapeados
-                    Con este taller se te hará muy fácil drapear o ajustar volúmenes sin ninguna limitación técnica, serás capaz crear prendas directamente sobre maniquí para luego poder trasladarlos al plano
+                <p class="line-break">Técnicas prácticas de moulage: desde el brazo, americana, corset y drapeados</p>
+                   <p class="line-break">Con este taller se te hará muy fácil drapear o ajustar volúmenes sin ninguna limitación técnica, serás capaz crear prendas directamente sobre maniquí para luego poder trasladarlos al plano
                 </p>
                 <a href="/moulage" class="btn-acento">Más información</a>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico" />
-
+            <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3888.png"
+                alt="Curso de Patronaje Avanzado" />
         </div>
     </section>
     <section class="testimonios">

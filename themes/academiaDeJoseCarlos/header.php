@@ -18,7 +18,7 @@
         <ul class="nav-list" id="nav-list">
             <li><a href="<?php echo home_url(); ?>">Inicio</a></li>
             <li><a href="/cursos/">Cursos</a></li>
-             <li><a href="/corset/">Corset a Medida</a></li>
+             <li><a href="/corsete/">Corset a Medida</a></li>
              <li><a href="/moulage/">Moulage Técnico</a></li>
             <li><a href="/agenda/">Agenda</a></li>
             <li><a href="/biografia/">Biografia</a></li>

@@ -53,6 +53,10 @@ Template Name: Corsete
         justify-content: flex-end;
     }
 
+     a{
+        text-decoration: none;
+    }
+
     .button-corset {
         padding: 20px 24px;
         border: none;
@@ -71,19 +75,18 @@ Template Name: Corsete
     }
 
     .carousel-corset {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px;
-        padding: 20px 5%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        padding: 2rem 5%;
     }
 
     .carousel-corset img {
-        width: 400px;
-        height: 300px;
+        width: 100%;
+        height: auto;
         object-fit: cover;
-        flex-shrink: 0;
-        border-radius: 5px;
+        border-radius: 0.5rem;
+        aspect-ratio: 4 / 3;
     }
 
     .taller-section-corset {
@@ -197,7 +200,6 @@ Template Name: Corsete
     .bloque-plegable-corset {
         border: 1px solid #ccc;
         border-radius: 1rem;
-        margin-bottom: 1rem;
         overflow: hidden;
         transition: max-height 0.3s ease;
         cursor: pointer;
@@ -245,6 +247,36 @@ Template Name: Corsete
         transform: rotate(180deg);
     }
 
+    /* Versión más compacta para bloques plegables */
+
+    .bloque-corset-taller-compacto-corset {
+        background: linear-gradient(145deg, #f7f7f5, #e7e7e4);
+        box-shadow: var(--sombra-suave);
+        border-radius: 1rem;
+        padding: 1.2rem 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .bloque-corset-taller-compacto-corset p,
+    .bloque-corset-taller-compacto-corset li {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 0.6rem;
+    }
+
+    .moulage-taller-h2-compacto-corset {
+        font-size: 24px;
+        margin-bottom: 0.8rem;
+        color: var(--nav-texto);
+    }
+
+    .boton-toggle-corset {
+        font-size: 1.1rem;
+    }
+
+
 
     @media (max-width: 1200px) {
         .taller-section-corset {
@@ -260,48 +292,79 @@ Template Name: Corsete
         }
     }
 
-    @media (max-width: 1024px) {
-        .carousel-corset {
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .carousel-corset img {
-            width: 45%;
-            height: auto;
-        }
-    }
-
     @media (max-width: 768px) {
-        .carousel-corset {
-            flex-direction: column;
-            align-items: center;
+        
+        .bloque-corset-taller-compacto-corset {
+            padding: 1rem 1.2rem;
+            font-size: 0.9rem;
         }
 
-        .carousel-corset img {
-            width: 90%;
-            height: auto;
+        .corset-taller-h2-compacto-corset {
+            font-size: 1.1rem;
+        }
+
+        .boton-toggle-corset {
+            font-size: 1rem;
         }
     }
 
     @media (max-width: 480px) {
-        .carousel-corset img {
-            width: 100%;
-            height: auto;
-
+        .inicio_contenido-corset h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            margin-left: 8px;
         }
 
-        .inicio_contenido-corset h1 {
-            font-size: 2em;
+        .inicio_contenido-corset p {
+            font-size: 1em;
+        }
+
+        .button-corset {
+            font-size: 1em;
+            padding: 12px 18px;
         }
 
         .corset-taller-h1 {
-            margin-top: 1em;
-            font-size: 2rem;
+            font-size: 1.6rem;
+            margin: 8px;
         }
 
         .corset-taller-h2 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
+        }
+
+        .corset-taller-h3 {
+            font-size: 1.1rem;
+        }
+
+        .corset-taller-p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .corset-taller-ul li {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .frase-final-corset {
+            font-size: 1.5rem;
+            padding: 0.8rem;
+        }
+
+        .boton-toggle-corset {
+            font-size: 1rem;
+            gap: 0.3rem;
+            padding: 0.4rem 0.8rem;
+        }
+
+        .carousel-corset img {
+            width: 100%;
+            height: auto;
+        }
+
+        .bloque-corset-taller {
+            padding: 1.2rem;
         }
     }
 </style>
@@ -312,10 +375,12 @@ Template Name: Corsete
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/patron_tecnico/hero.jpeg" alt="" />
     </div>
     <div class="inicio_contenido-corset">
-        <h1>Domina el patrón técnico del corset de copas… sin misterios, sin frustraciones</h1>
+        <h1>Domina el patrón técnico del corset de copas</h1>
         <p>Una técnica precisa que te permitirá adaptar cualquier copa a cualquier cuerpo.</p>
         <div class="botones-corset">
-            <button class="button-corset">Quiero apuntarme</button>
+            <a href="/agenda/">
+                <button class="button-corset">Quiero apuntarme</button>
+            </a>
         </div>
     </div>
 </section>
@@ -333,10 +398,10 @@ Template Name: Corsete
 
         <div class="bloque-plegable-corset">
             <button class="boton-toggle-corset">
-                <h2 class="corset-taller-h2"><span class="icono">💼</span>Descripción general</h2>
+                <h2 class="corset-taller-h2-compacto-corset"><span class="icono">💼</span>Descripción general</h2>
             </button>
             <div class="contenido-plegable">
-                <div class="bloque-corset-taller">
+                <div class="bloque-corset-taller-compacto-corset">
 
                     <p class="corset-taller-p"><strong>Taller de Patrón Técnico de Corset a Medida (20h)</strong></p>
                     <p class="corset-taller-p"><strong>Impartido por:</strong> Jose Carlos Herrera – Diseñador de moda y patronista</p>
@@ -358,10 +423,10 @@ Template Name: Corsete
 
         <div class="bloque-plegable-corset">
             <button class="boton-toggle-corset">
-                <h2 class="corset-taller-h2"><span class="icono">✅</span>Lo que aprenderás</h2>
+                <h2 class="corset-taller-h2-compacto-corset"><span class="icono">✅</span>Lo que aprenderás</h2>
             </button>
             <div class="contenido-plegable">
-                <div class="bloque-corset-taller">
+                <div class="bloque-corset-taller-compacto-corset">
 
                     <p class="corset-taller-p"><strong>Fundamentos y preparación:</strong></p>
                     <ul class="corset-taller-ul">
@@ -395,10 +460,10 @@ Template Name: Corsete
 
         <div class="bloque-plegable-corset">
             <button class="boton-toggle-corset">
-                <h2 class="corset-taller-h2"><span class="icono">🧰</span>Material incluido</h2>
+                <h2 class="corset-taller-h2-compacto-corset"><span class="icono">🧰</span>Material incluido</h2>
             </button>
             <div class="contenido-plegable">
-                <div class="bloque-corset-taller">
+                <div class="bloque-corset-taller-compacto-corset">
                     <ul class="corset-taller-ul">
                         <p class="corset-taller-p"><strong>Te llevas todo lo necesario para realizar el corset y seguir
                                 trabajando en casa:</strong></p>
@@ -424,10 +489,10 @@ Template Name: Corsete
 
         <div class="bloque-plegable-corset">
             <button class="boton-toggle-corset">
-                <h2 class="corset-taller-h2"><span class="icono">🎒</span>Material que debes traer tú</h2>
+                <h2 class="corset-taller-h2-compacto-corset"><span class="icono">🎒</span>Material que debes traer tú</h2>
             </button>
             <div class="contenido-plegable">
-                <div class="bloque-corset-taller">
+                <div class="bloque-corset-taller-compacto-corset">
                     <ul class="corset-taller-ul">
                         <li>Kit básico de costura: cinta métrica, tijeras (papel y tela), alfileres, agujas, hilo de
                             hilvanar, dedal</li>
@@ -442,10 +507,10 @@ Template Name: Corsete
 
         <div class="bloque-plegable-corset">
             <button class="boton-toggle-corset">
-                <h2 class="corset-taller-h2"><span class="icono">⏰</span>Duración y horarios</h2>
+                <h2 class="corset-taller-h2-compacto-corset"><span class="icono">⏰</span>Duración y horarios</h2>
             </button>
             <div class="contenido-plegable">
-                <div class="bloque-corset-taller">
+                <div class="bloque-corset-taller-compacto-corset">
                     <p class="corset-taller-p">
                         El taller tiene una <strong>duración total de 20 horas</strong>, distribuidas en tres jornadas:<br><br>
                         <strong>Viernes:</strong> 15:30 – 19:30<br>
@@ -458,10 +523,10 @@ Template Name: Corsete
 
         <div class="bloque-plegable-corset">
             <button class="boton-toggle-corset">
-                <h2 class="corset-taller-h2"><span class="icono">🎓</span>Un diploma, una motivación</h2>
+                <h2 class="corset-taller-h2-compacto-corset"><span class="icono">🎓</span>Un diploma, una motivación</h2>
             </button>
             <div class="contenido-plegable">
-                <div class="bloque-corset-taller">
+                <div class="bloque-corset-taller-compacto-corset">
                     <p class="corset-taller-p"> Al finalizar el curso recibirás un <strong>diploma de asistencia</strong>.
                         Un <strong>reconocimiento real</strong> para ti y una <strong>motivación más para seguir creciendo</strong> como profesional.</p>
                 </div>
@@ -470,10 +535,10 @@ Template Name: Corsete
 
         <div class="bloque-plegable-corset">
             <button class="boton-toggle-corset">
-                <h2 class="corset-taller-h2"><span class="icono">💶</span>Precio</h2>
+                <h2 class="corset-taller-h2-compacto-corset"><span class="icono">💶</span>Precio</h2>
             </button>
             <div class="contenido-plegable">
-                <div class="bloque-corset-taller">
+                <div class="bloque-corset-taller-compacto-corset">
                     <p class="corset-taller-p"> <strong>450 € – todo incluido.</strong><br>
                         <strong>Plazas limitadas</strong> a un grupo muy reducido para garantizar <strong>atención individualizada</strong>.
                     </p>
@@ -483,10 +548,10 @@ Template Name: Corsete
 
         <div class="bloque-plegable-corset">
             <button class="boton-toggle-corset">
-                <h2 class="corset-taller-h2"><span class="icono">👨‍🏫</span>El profesor: Jose Carlos Herrera</h2>
+                <h2 class="corset-taller-h2-compacto-corset"><span class="icono">👨‍🏫</span>El profesor: Jose Carlos Herrera</h2>
             </button>
             <div class="contenido-plegable">
-                <div class="bloque-corset-taller">
+                <div class="bloque-corset-taller-compacto-corset">
                     <p class="corset-taller-p">Con <strong>más de 30 años de experiencia</strong> como diseñador y docente, Jose Carlos es <strong>experto en patronaje técnico y moulage</strong>.<br>
                         Dirige su propia escuela y firma, y <strong>comparte su conocimiento</strong> con profesionales y amantes de la moda que <strong>buscan crecer y perfeccionarse</strong>. </p>
                 </div>
