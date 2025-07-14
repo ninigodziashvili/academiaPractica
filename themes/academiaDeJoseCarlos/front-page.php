@@ -44,7 +44,8 @@
 
         <!-- Curso 1 -->
         <div class="curso" data-aos="fade-right">
-           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/portada/curso clase SAM3665.png" alt="Curso de Diseño de Moda Básico"/>
+             <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/corset.jpg"
+                alt="Curso de Patronaje Avanzado1" />
             <div>
                 <h3>taller de patrón técnico de corset a medida (20h)</h3>
                 <strong>resuelve el volumen del seno con presición y adapta cualquier copa a la morfología de la persona.</strong>
@@ -68,7 +69,7 @@
                 </p>
                 <a href="/moulage" class="btn-acento">Más información</a>
             </div>
-            <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/_SAM3888.png"
+            <img src="/wp-content/themes/academiaDeJoseCarlos/assets/img-clases/mulage.jpg"
                 alt="Curso de Patronaje Avanzado" />
         </div>
     </section>
