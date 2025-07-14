@@ -572,9 +572,12 @@ Template Name: Moulage
     </div>
 
 
-    <div class="gif-derecha-moulage" aria-label="Gif decorativo">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/moulage/maniqui-tela.gif" alt="" role="presentation">
-    </div>
+<div class="gif-derecha-moulage" aria-label="Video decorativo">
+    <video autoplay muted loop playsinline role="presentation">
+        <source src="<?php echo get_template_directory_uri(); ?>/assets/img/moulage/0714.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+</div>
 </section>
 <p class="frase-final-moulage">#Nada Es Imposible Solo Hay Que Encontrar La Manera</p>
 
