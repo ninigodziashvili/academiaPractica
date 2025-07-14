@@ -437,7 +437,15 @@ Template Name: Agenda
     }
 
      @media (max-width: 480px) {
-        
+        @media (max-width: 480px) {
+        .escuelas-lista {
+            flex: 0 0 90%;
+        }
+
+        .mapa-wrapper{
+            margin: 1em;
+        }
+    }
      }
 </style>
 
