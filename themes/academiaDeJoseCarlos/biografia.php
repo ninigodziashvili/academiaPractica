@@ -55,7 +55,6 @@
 }
 
 .profile-section:nth-child(even) {
-  background-color: #e8e6e2;
   flex-direction: row-reverse;
 }
 
@@ -306,9 +305,18 @@ ul li:before {
 
 .cta-button:hover {
   background: var(--color-fondo-buttom);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(212, 166, 40, 0.4);
+  transform: translateY(-2px);x
 }
+
+  .biografia-contact {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+  }
+
+  .biografia-contact p {
+    margin: 0.5rem 0;
+  }
 
 /* Responsive Design */
 @media (max-width: 768px) {
