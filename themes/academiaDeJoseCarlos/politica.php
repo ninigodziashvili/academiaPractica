@@ -5,11 +5,9 @@ Template Name: Politica
 ?>
 <?php get_header(); ?>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-      color: #333;
+
+    .header-class {
+        margin-top: 5em;
     }
     h1, h2 {
       color: #1a1a1a;
@@ -18,20 +16,23 @@ Template Name: Politica
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
     }
+
     section {
+      margin: 20px;
+      line-height: 1.6;
+      color: #333;
       margin-bottom: 40px;
     }
+
     ul {
       padding-left: 20px;
     }
-    .divider {
-      border-top: 1px solid #ccc;
-      margin: 40px 0;
-    }
+
     .updated {
       font-size: 0.9em;
       color: #666;
     }
+
     .icon {
       font-size: 1.5em;
       margin-right: 5px;
@@ -40,7 +41,7 @@ Template Name: Politica
 </head>
 <body>
 
-  <section>
+  <section class="header-class">
     <h1><span class="icon">🛡️</span>Política de Privacidad</h1>
     <p class="updated">Última actualización: 09/07/2025</p>
     <p>En <strong>JoseCarlosHerrera.com</strong>, nos comprometemos a proteger la privacidad de nuestros usuarios. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos tu información personal al utilizar nuestros servicios y acceder a nuestros cursos de moulage y patronaje.</p>
@@ -101,8 +102,6 @@ Template Name: Politica
     <p>Nos reservamos el derecho de modificar esta política para adaptarla a cambios normativos o mejoras del servicio. Los cambios se publicarán en esta misma página con antelación razonable.</p>
   </section>
 
-  <div class="divider"></div>
-
   <section>
     <h1><span class="icon">📜</span>Términos y Condiciones</h1>
     <p class="updated">Última actualización: 09/07/2025</p>
@@ -142,8 +141,6 @@ Template Name: Politica
     <h2>6. Legislación aplicable</h2>
     <p>Estos Términos se rigen por la legislación española. Cualquier controversia se someterá a los Juzgados y Tribunales de Vitoria-Gasteiz, salvo disposición legal que indique lo contrario.</p>
   </section>
-
-  <div class="divider"></div>
 
   <section>
     <h1><span class="icon">🍪</span>Política de Cookies</h1>

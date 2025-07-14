@@ -560,7 +560,6 @@
 
     .team-list {
         grid-template-columns: 1fr;
-        justify-items: center;
     }
 
     .social-links {
