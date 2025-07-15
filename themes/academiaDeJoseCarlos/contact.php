@@ -4,6 +4,10 @@ get_header();
 ?>
 
 <style>
+  *, *::before, *::after {
+  box-sizing: border-box;
+}
+
   .contacto-container {
     max-width: 1000px;
     margin: 5em auto;
@@ -186,6 +190,66 @@ get_header();
       padding: 1.5rem 1rem;
     }
   }
+
+  /* Target both folded and unfolded Galaxy Z Fold 5 states */
+@media screen and (max-width: 920px) {
+  .iletisim_form {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .sol50, .sag50, .full100 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .iletisim_form input,
+  .iletisim_form textarea,
+  .iletisim_form select {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .iletisim_form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .iletisim_form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .container-contacto {
+    padding: 1.5rem;
+  }
+
+  .contacto-titulo,
+  .cursos-apuntarse-p {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .contacto-mapa iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+    .iletisim_form input,
+  .iletisim_form textarea,
+  .iletisim_form select {
+    max-width: 9em;
+  }
+
+}
+
 </style>
 
 <div class="contacto-container">
