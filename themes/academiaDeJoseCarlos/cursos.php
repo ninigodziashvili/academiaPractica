@@ -550,6 +550,41 @@ Template Name: Cursos
     }
 }
 
+@media screen and (max-width: 767px) {
+    .cursos-apuntarse-p,
+    .contacto-titulo {
+        font-size: 2em;
+    }
+
+    .iletisim_form {
+        flex-direction: column;
+    }
+
+    .sol50,
+    .sag50,
+    .full100 {
+        flex: 1 1 100%;
+    }
+
+    .iletisim_form input,
+    .iletisim_form textarea,
+    .iletisim_form select {
+        font-size: 1em;
+    }
+
+    .iletisim_form button {
+        width: 100%;
+        font-size: 1em;
+    }
+}
+
+/* Add responsiveness for tablets */
+@media screen and (max-width: 1024px) {
+    .container-contacto {
+        width: 100%;
+    }
+}
+
 .iletisim_form button {
     display: inline-block;
     padding: 17px 20px;
@@ -1370,24 +1405,31 @@ document.addEventListener("DOMContentLoaded", () => {
             new HorizontalGallery();
         });
 
-         document.addEventListener('DOMContentLoaded', function() {
-            // Corrected selector - use class selector with dot
-            const video = document.querySelector(".responsive-video");
-            const button = document.getElementById("toggleSound");
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector(".responsive-video");
+    const button = document.getElementById("toggleSound");
 
-            // Check if elements exist
-            if (video && button) {
-                button.addEventListener("click", () => {
-                    // Toggle mute/unmute only
-                    video.muted = !video.muted;
-                    
-                    // Update button icon based on mute state
-                    button.textContent = video.muted ? "🔇" : "🔊";
-                });
-            } else {
-                console.error("Video or button not found");
-            }
+    if (video && button) {
+        // Sound toggle
+        button.addEventListener("click", () => {
+            video.muted = !video.muted;
+            button.textContent = video.muted ? "🔇" : "🔊";
         });
+
+        // Restart video and keep size optimized
+        video.addEventListener("ended", () => {
+            video.currentTime = 0;
+            video.play();
+
+            // Optional: Reapply size in case it changes
+            video.style.maxWidth = "100%";
+            video.style.height = "auto";
+        });
+    } else {
+        console.error("Video or button not found");
+    }
+});
+
 
         const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
