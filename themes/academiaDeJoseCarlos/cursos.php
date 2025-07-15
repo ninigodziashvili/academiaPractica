@@ -550,6 +550,41 @@ Template Name: Cursos
     }
 }
 
+@media screen and (max-width: 767px) {
+    .cursos-apuntarse-p,
+    .contacto-titulo {
+        font-size: 2em;
+    }
+
+    .iletisim_form {
+        flex-direction: column;
+    }
+
+    .sol50,
+    .sag50,
+    .full100 {
+        flex: 1 1 100%;
+    }
+
+    .iletisim_form input,
+    .iletisim_form textarea,
+    .iletisim_form select {
+        font-size: 1em;
+    }
+
+    .iletisim_form button {
+        width: 100%;
+        font-size: 1em;
+    }
+}
+
+/* Add responsiveness for tablets */
+@media screen and (max-width: 1024px) {
+    .container-contacto {
+        width: 100%;
+    }
+}
+
 .iletisim_form button {
     display: inline-block;
     padding: 17px 20px;
