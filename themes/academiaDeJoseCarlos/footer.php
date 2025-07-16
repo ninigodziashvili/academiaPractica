@@ -620,13 +620,13 @@
                     <?php
                     // Team members array - you can move this to theme options or custom fields
                     $team_members = [
-                        ['name' => 'Niño', 'role' => 'DevOps Engineer', 'url' => 'https://www.linkedin.com/in/nino-godziashvili-05874a163/'],
-                        ['name' => 'Adrian', 'role' => 'eCommerce Content Manager', 'url' => 'https://www.instagram.com/adrianml___10?igsh=ajZrcGV2aGNweTkw'],
-                        ['name' => 'Axel A', 'role' => 'Front-End Developer (JS)', 'url' => 'https://axellpkmn.github.io/prueba-portfolio/'],
-                        ['name' => 'Axel S', 'role' => 'UI/UX Designer & Front-End Dev', 'url' => 'https://axelsanchez25.github.io/sanchezdvlinks/'],
-                        ['name' => 'Carol', 'role' => 'Compliance & Data Protection', 'url' => 'https://www.instagram.com/dicavel33?utm_source=qr&igsh=MWo4enFxY2NvdTAy'],
-                        ['name' => 'Blanca', 'role' => 'QA Tester', 'url' => '#'],
-                        ['name' => 'Dominguito', 'role' => 'Project Manager & Brand Designer', 'url' => 'http://domingoorive.com/'],
+                        ['name' => 'Nino Godziashvili', 'role' => 'DevOps Engineer', 'url' => 'https://www.linkedin.com/in/nino-godziashvili-05874a163/'],
+                        ['name' => 'Adrian Molina', 'role' => 'eCommerce Content Manager', 'url' => 'https://www.instagram.com/adrianml___10?igsh=ajZrcGV2aGNweTkw'],
+                        ['name' => 'Axel Ivan Lascano', 'role' => 'Front-End Developer (JS)', 'url' => 'https://axellpkmn.github.io/prueba-portfolio/'],
+                        ['name' => 'Axel Sanchez', 'role' => 'UI/UX Designer & Front-End Dev', 'url' => 'https://axelsanchez25.github.io/sanchezdvlinks/'],
+                        ['name' => 'Diana Velásquez', 'role' => 'Compliance & Data Protection', 'url' => 'https://www.instagram.com/dicavel33?utm_source=qr&igsh=MWo4enFxY2NvdTAy'],
+                        ['name' => 'Blanca Dorado', 'role' => 'QA Tester', 'url' => '#'],
+                        ['name' => 'Domingo Orive', 'role' => 'Project Manager & Brand Designer', 'url' => 'http://domingoorive.com/'],
                     ];
 
                     foreach ($team_members as $member) :
